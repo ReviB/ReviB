@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/practice_rcp_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/real_rcp_btn"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/real_rcp_btn"
+        android:layout_marginBottom="65dip"
+        android:text="@string/practice_rcp_str" />
+
+    <Button
+        android:id="@+id/real_rcp_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/real_rcp_str"
+        android:layout_below="@id/practice_rcp_btn" />
+
+</RelativeLayout>

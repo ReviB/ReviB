@@ -1,7 +1,16 @@
 ReviB
 =====
 
-CPR training App
+This app has been created as a learning tool in order to teach people what to do 
+in case of finding an unconscious person and how to perform cardiopulmonary 
+resuscitation manouevres during a cardiac arrest.
+
+It comes with graphic instructions and voice commands in different languages addapted
+to the casualty age (adult, child or baby) and incorporates a chronometer that counts
+up the time since we start CPR. Besides, with its "training mode", you can also have 
+the opportunity of self-learning and practice at any time.
+
+Thanks for its easy use, "ReviB" will show you all the steps until medical help arrives.
 
 Copyright
 =========

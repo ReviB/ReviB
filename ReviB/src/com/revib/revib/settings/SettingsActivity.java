@@ -23,35 +23,12 @@ public class SettingsActivity extends Activity implements OnItemSelectedListener
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		String locale_code	=	LocaleFunctions.getLocaleCodeVariable(this.getApplicationContext());
-		LocaleFunctions.changeCurrentLocale(this.getApplicationContext(), locale_code);
+		Context context		=	this.getBaseContext();
+		String locale_code	=	LocaleFunctions.getLocaleCodeVariable(context);
+		LocaleFunctions.changeCurrentLocale(context, locale_code);
+		int locale_index	=	LocaleFunctions.getLocaleCodeArrayIndex(context, locale_code);
 		
-		setContentView(R.layout.activity_settings);
-		
-		Spinner spinner = (Spinner) findViewById(R.id.settings_languages_spnr);
-		spinner.setOnItemSelectedListener(this);
-		// Create an ArrayAdapter using the string array and a default spinner layout
-		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-		        R.array.language_list, android.R.layout.simple_spinner_item);
-		// Specify the layout to use when the list of choices appears
-		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		// Apply the adapter to the spinner
-		spinner.setAdapter(adapter);
-		
-		spinner = (Spinner) findViewById(R.id.settings_sounds_spnr);
-		spinner.setOnItemSelectedListener(this);
-		// Create an ArrayAdapter using the string array and a default spinner layout
-		adapter = ArrayAdapter.createFromResource(this,
-		        R.array.sound_list, android.R.layout.simple_spinner_item);
-		// Specify the layout to use when the list of choices appears
-		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		// Apply the adapter to the spinner
-		spinner.setAdapter(adapter);
-		
-		// Show the Up button in the action bar.
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-			getActionBar().setDisplayHomeAsUpEnabled(true);
-		}
+		initView(locale_index);
 	}
 
 	@Override
@@ -81,16 +58,16 @@ public class SettingsActivity extends Activity implements OnItemSelectedListener
 	@Override
 	public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
 		switch(parent.getId()){
-		case R.id.settings_languages_spnr:
-			Context context			=	this.getApplicationContext();
+		case R.id.settings_language_spnr:
+			Context context			=	this.getBaseContext();
 			Resources res			=	context.getResources();
 			String[] language_codes =	res.getStringArray(R.array.language_code_list);
 			
 			LocaleFunctions.changeCurrentLocale(this,language_codes[pos]);
-
-			setContentView(R.layout.activity_settings);
+			
+			initView(pos);
 			break;
-		case R.id.settings_sounds_spnr:
+		case R.id.settings_sound_spnr:
 			break;
 	}
 		
@@ -100,6 +77,37 @@ public class SettingsActivity extends Activity implements OnItemSelectedListener
 	public void onNothingSelected(AdapterView<?> arg0) {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	private void initView(int locale_index){
+		setContentView(R.layout.activity_settings);
+		
+		// Language Spinner
+		Spinner spinner = (Spinner) findViewById(R.id.settings_language_spnr);
+		
+		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+		        R.array.language_list, android.R.layout.simple_spinner_item);
+		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		spinner.setAdapter(adapter);
+		spinner.setSelection(locale_index, false);
+		spinner.setOnItemSelectedListener(this); // this activity as listener
+		
+		// Sound Spinner
+		spinner = (Spinner) findViewById(R.id.settings_sound_spnr);
+		
+		adapter = ArrayAdapter.createFromResource(this,
+		        R.array.sound_list, android.R.layout.simple_spinner_item);
+		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		spinner.setAdapter(adapter);
+		
+		spinner.setOnItemSelectedListener(this); // this activity as listener
+		
+		// Set activity title (language changing)
+		setTitle(getResources().getString(R.string.settings));
+		// Show the Up button in the action bar.
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+			getActionBar().setDisplayHomeAsUpEnabled(true);
+		}
 	}
 
 }

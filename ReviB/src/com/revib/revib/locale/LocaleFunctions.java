@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 
+import com.revib.revib.R;
 import android.content.Context;
 import android.content.res.Resources;
 import android.util.DisplayMetrics;
@@ -15,12 +16,13 @@ public class LocaleFunctions {
 	public static final String FILENAME = "ReviBLangCode";
 
 	public static boolean changeCurrentLocale(Context context, String locale_code){
-		String current_locale_code	=	Locale.getDefault().getLanguage();
+		Resources res = context.getResources();
+	    DisplayMetrics dm = res.getDisplayMetrics();
+	    Configuration conf = res.getConfiguration();
+	    
+		String current_locale_code	=	conf.locale.getLanguage();
 		if(!current_locale_code.equals(locale_code)){
 			try{
-				Resources res = context.getResources();
-			    DisplayMetrics dm = res.getDisplayMetrics();
-			    Configuration conf = res.getConfiguration();
 				
 			    // Change locale settings in the app.
 			    conf.locale = new Locale(locale_code);
@@ -55,7 +57,7 @@ public class LocaleFunctions {
 			locale_code="";
 		}
 		if(locale_code.equals(""))
-			locale_code	=	Locale.getDefault().getLanguage();
+			locale_code	=	context.getResources().getConfiguration().locale.getLanguage();
 		return locale_code;
 	}
 
@@ -67,5 +69,21 @@ public class LocaleFunctions {
 		}catch(Exception e){
 			
 		}
+	}
+
+	public static int getLocaleCodeArrayIndex(Context context, String locale_code) {
+
+		Resources res = context.getResources();
+		String[] locale_array	=	res.getStringArray(R.array.language_code_list);
+		int index	=	0;
+		for(String lc : locale_array){
+			if(lc.equals(locale_code))
+				return index;
+			else
+				index++;
+		}
+		
+		//if there is no match, return -1
+		return -1;
 	}
 }

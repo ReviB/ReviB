@@ -5,6 +5,7 @@ import com.revib.revib.settings.SettingsActivity;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,10 +16,13 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		String locale_code	=	LocaleFunctions.getLocaleCodeVariable(this.getApplicationContext());
-		LocaleFunctions.changeCurrentLocale(this.getApplicationContext(), locale_code);
+		Context context		=	this.getBaseContext();
+		String locale_code	=	LocaleFunctions.getLocaleCodeVariable(context);
+		LocaleFunctions.changeCurrentLocale(context, locale_code);
 
 		setContentView(R.layout.activity_main);
+
+		setTitle(getResources().getString(R.string.app_name));
 	}
 
 	@Override

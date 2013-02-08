@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">ReviB</string>
+    <string name="app_name">ReviB CPR</string>
     <string name="settings">Settings</string>
-    <string name="practice_rcp_str">Practicar RCP</string>
-    <string name="real_rcp_str">Realizar RCP de verdad</string>
+    <string name="practice_rcp_str">Practice CPR</string>
+    <string name="real_rcp_str">Perform real CPR</string>
 
 </resources>

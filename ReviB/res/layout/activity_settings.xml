@@ -19,12 +19,12 @@
         android:background="#000000" />
 
     <Spinner
-        android:id="@+id/settings_languages_spnr"
+        android:id="@+id/settings_language_spnr"
         android:layout_width="match_parent"
         android:layout_height="47dp" />
 
     <TextView
-        android:id="@+id/settings_sounds_tv"
+        android:id="@+id/settings_sound_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -41,13 +41,13 @@
         android:layout_height="wrap_content" >
 
         <Spinner
-            android:id="@+id/settings_sounds_spnr"
+            android:id="@+id/settings_sound_spnr"
             android:layout_width="0dip"
             android:layout_height="47dp"
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/settings_play_btn"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="47dp"
             android:layout_height="47dp"
@@ -57,7 +57,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/settings_about_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/about_revib" />

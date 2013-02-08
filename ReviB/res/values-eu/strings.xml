@@ -6,4 +6,19 @@
     <string name="practice_rcp_str">RCPan trebatu</string>
     <string name="real_rcp_str">Benetazko RCPari ekin</string>
 
+    <!-- SettingsActivity -->
+    <string name="language">HIZKUNTZA</string>
+    <string name="sound">SOINUA</string>
+    <string name="about_revib">ReviB-eri buruz</string>
+    <string-array name="sound_list">
+        <item>Mota 1</item>
+        <item>Mota 2</item>
+        <item>Mota 3</item>
+    </string-array>
+    
+    <!-- Age activity -->
+    <string name="title_activity_age">Biktimaren heldutasuna</string>
+    <string name="age_adult_str">Heldua (8 urte baino gehiago)</string>
+    <string name="age_child_str">"Haurra (1 eta 8 urte bitartean)"</string>
+    <string name="age_baby_str">Jaioberria (12 hilabete baino gutxiago)</string>
 </resources>

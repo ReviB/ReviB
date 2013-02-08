@@ -2,8 +2,36 @@
 <resources>
 
     <string name="app_name">ReviB CPR</string>
-    <string name="settings">Settings</string>
     <string name="practice_rcp_str">Practice CPR</string>
     <string name="real_rcp_str">Perform real CPR</string>
+    <string name="hello_world">Hello world!</string>
+    
+    
+    <!-- Settings activity -->
+    <string name="settings">Settings</string>
+    <string name="language">LANGUAGE</string>
+    <string name="sound">SOUND</string>
+    <string name="about_revib">About ReviB</string>
+    <string-array name="language_list">
+        <item>English</item>
+        <item>Español</item>
+        <item>Euskara</item>
+    </string-array>
+    <string-array name="language_code_list">
+        <item>en</item>
+        <item>es</item>
+        <item>eu</item>
+    </string-array>
+    <string-array name="sound_list">
+        <item>Type 1</item>
+        <item>Type 2</item>
+        <item>Type 3</item>
+    </string-array>
+    
+    <!-- Age activity -->
+    <string name="title_activity_age">AgeActivity</string>
+    <string name="age_adult_str">Adult (more than 8 years old)</string>
+    <string name="age_child_str">Child (between 1 and 8 years old)</string>
+    <string name="age_baby_str">Baby (less than 12 months old)</string>
 
 </resources>

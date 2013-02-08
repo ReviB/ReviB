@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- MainActivity -->
     <string name="app_name">ReviB RCP</string>
     <string name="settings">Ajustes</string>
     <string name="practice_rcp_str">Practicar RCP</string>
     <string name="real_rcp_str">Realizar RCP de verdad</string>
 
+    <!-- SettingsActivity -->
+    <string name="language">IDIOMA</string>
+    <string name="sound">SONIDO</string>
+    <string name="about_revib">Sobre ReviB</string>
+    <string-array name="sound_list">
+        <item>Tipo 1</item>
+        <item>Tipo 2</item>
+        <item>Tipo 3</item>
+    </string-array>
+    
+    <!-- Age activity -->
+    <string name="title_activity_age">Edad de la victima</string>
+    <string name="age_adult_str">Adulto (más de 8 años)</string>
+    <string name="age_child_str">Niño (entre 1 y 8 años)</string>
+    <string name="age_baby_str">Bebé (menos de 12 meses)</string>
 </resources>

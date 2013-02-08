@@ -58,18 +58,18 @@ public class SettingsActivity extends Activity implements OnItemSelectedListener
 	@Override
 	public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
 		switch(parent.getId()){
-		case R.id.settings_language_spnr:
-			Context context			=	this.getBaseContext();
-			Resources res			=	context.getResources();
-			String[] language_codes =	res.getStringArray(R.array.language_code_list);
-			
-			LocaleFunctions.changeCurrentLocale(this,language_codes[pos]);
-			
-			initView(pos);
-			break;
-		case R.id.settings_sound_spnr:
-			break;
-	}
+			case R.id.settings_language_spnr:
+				Context context			=	this.getBaseContext();
+				Resources res			=	context.getResources();
+				String[] language_codes =	res.getStringArray(R.array.language_code_list);
+				
+				LocaleFunctions.changeCurrentLocale(this,language_codes[pos]);
+				
+				initView(pos);
+				break;
+			case R.id.settings_sound_spnr:
+				break;
+		}
 		
 	}
 

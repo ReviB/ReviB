@@ -32,6 +32,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.revib.revib.MainActivity" />
         </activity>
+        <activity
+            android:name="com.revib.revib.AgeActivity"
+            android:label="@string/title_activity_age"
+            android:parentActivityName="com.revib.revib.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.revib.revib.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

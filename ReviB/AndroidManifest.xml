@@ -24,9 +24,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.revib.revib.SettingsActivity"
+            android:name="com.revib.revib.settings.SettingsActivity"
             android:configChanges="locale"
-            android:label="@string/title_activity_settings"
+            android:label="@string/settings"
             android:parentActivityName="com.revib.revib.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

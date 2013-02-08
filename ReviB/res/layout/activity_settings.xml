@@ -21,7 +21,7 @@
     <Spinner
         android:id="@+id/settings_languages_spnr"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="47dp" />
 
     <TextView
         android:id="@+id/settings_sounds_tv"
@@ -43,14 +43,14 @@
         <Spinner
             android:id="@+id/settings_sounds_spnr"
             android:layout_width="0dip"
-            android:layout_height="wrap_content"
+            android:layout_height="47dp"
             android:layout_weight="1" />
 
         <Button
             android:id="@+id/button2"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="47dp"
-            android:layout_height="match_parent"
+            android:layout_height="47dp"
             android:layout_weight="0.07"
             android:icon="?android:drawable/ic_media_play" />
 

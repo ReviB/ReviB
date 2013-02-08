@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ReviB</string>
+    <string name="settings">Ezarpenak</string>
+    <string name="practice_rcp_str">RCPan trebatu</string>
+    <string name="real_rcp_str">Benetazko RCPari ekin</string>
+
+</resources>

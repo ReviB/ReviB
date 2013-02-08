@@ -1,5 +1,8 @@
 package com.revib.revib;
 
+import com.revib.revib.locale.LocaleFunctions;
+import com.revib.revib.settings.SettingsActivity;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -11,6 +14,10 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
+		String locale_code	=	LocaleFunctions.getLocaleCodeVariable(this.getApplicationContext());
+		LocaleFunctions.changeCurrentLocale(this.getApplicationContext(), locale_code);
+
 		setContentView(R.layout.activity_main);
 	}
 

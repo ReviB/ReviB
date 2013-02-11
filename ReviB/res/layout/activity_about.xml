@@ -24,7 +24,7 @@
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        android:layout_gravity="center_horizontal"
-	        android:background="@android:drawable/gallery_selected_default"
+	        android:background="@drawable/"
 	        android:gravity="center_horizontal"
 	        android:orientation="vertical" >
 	

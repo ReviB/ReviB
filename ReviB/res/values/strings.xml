@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Main activity -->
     <string name="app_name">ReviB CPR</string>
-    <string name="practice_rcp_str">Practice CPR</string>
-    <string name="real_rcp_str">Perform real CPR</string>
-    <string name="hello_world">Hello world!</string>
-    
-    
+    <string name="main_question">Are you in a real emergency or would you like to train CPR?</string>
+    <string name="real_cpr">Real emergency</string>
+    <string name="practice_cpr">Train CPR</string>
+
     <!-- Settings activity -->
     <string name="settings">Settings</string>
-    <string name="language">LANGUAGE</string>
-    <string name="sound">SOUND</string>
-    <string name="about_revib">About ReviB</string>
+    <string name="language">Language:</string>
+
     <string-array name="language_list">
         <item>English</item>
         <item>Español</item>
@@ -22,16 +21,35 @@
         <item>es</item>
         <item>eu</item>
     </string-array>
-    <string-array name="sound_list">
-        <item>Type 1</item>
-        <item>Type 2</item>
-        <item>Type 3</item>
-    </string-array>
     
+    <!-- About Activity -->
+    <string name="about_revib">About ReviB</string>
+    <string name="about_logo_description">ReviB logo</string>
+    <string name="about_version">ReviB v0.1</string>
+    <string name="about_copyright">©2013 Alain Perez</string>
+    <string name="about_code_license">
+        All ReviB code is licensed by
+        Alain Perez under the GNU General
+        Public License (2.0).</string>
+    <string name="about_artwork_license">    
+        All ReviB artwork is licensed by
+        Ines Fernandez under the Creative Commons
+        Attribution-NonCommercial-ShareAlike 3.0
+        Unported License.</string>
+    <string name="about_warning">This program is
+        distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY.</string>
+
     <!-- Age activity -->
     <string name="title_activity_age">AgeActivity</string>
-    <string name="age_adult_str">Adult (more than 8 years old)</string>
-    <string name="age_child_str">Child (between 1 and 8 years old)</string>
-    <string name="age_baby_str">Baby (less than 12 months old)</string>
+    <string name="age_question">How old is the victim?</string>
+    <string name="age_adult">Adult (more than 8 years old)</string>
+    <string name="age_child">Child (between 1 and 8 years old)</string>
+    <string name="age_baby">Baby (less than 12 months old)</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_about">AboutActivity</string>
+    
+    
 
 </resources>

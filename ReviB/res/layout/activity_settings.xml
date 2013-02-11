@@ -2,64 +2,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="15dp"
+    android:layout_marginLeft="7dp"
+    android:layout_marginRight="7dp"
     android:orientation="vertical"
+    android:textAlignment="textEnd"
     tools:context=".SettingsActivity" >
-
-    <TextView
-        android:id="@+id/settings_language_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/language"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:background="#000000" />
-
-    <Spinner
-        android:id="@+id/settings_language_spnr"
-        android:layout_width="match_parent"
-        android:layout_height="47dp" />
-
-    <TextView
-        android:id="@+id/settings_sound_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="@string/sound"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:background="#000000" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="14dp">
+
+        <TextView
+            android:id="@+id/settings_language_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:text="@string/language"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <Spinner
-            android:id="@+id/settings_sound_spnr"
+            android:id="@+id/settings_language_spnr"
             android:layout_width="0dip"
-            android:layout_height="47dp"
-            android:layout_weight="1" />
-
-        <Button
-            android:id="@+id/settings_play_btn"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="47dp"
-            android:layout_height="47dp"
-            android:layout_weight="0.07"
-            android:icon="?android:drawable/ic_media_play" />
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5" />
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/settings_about_btn"
+	<View
+	    android:layout_width="fill_parent"
+	    android:layout_height="1dp"
+	    android:background="#CCCCCC" />
+
+    <TextView
+        android:id="@+id/settings_about"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/about_revib" />
+        android:clickable="true"
+        android:onClick="goToAbout"
+        android:padding="14dp"
+        android:text="@string/about_revib"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC" />
 
 </LinearLayout>

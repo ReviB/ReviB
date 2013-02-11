@@ -1,33 +1,50 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".AgeActivity" >
 
-    <Button
-        android:id="@+id/age_adult_btn"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="55dip"
-        android:text="@string/age_adult_str" />
+        android:gravity="center_horizontal"
+        android:padding="7dp"
+        android:text="@string/age_question"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <Button
-        android:id="@+id/age_child_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="55dip"
-        android:text="@string/age_child_str"
-        android:layout_below="@id/age_adult_btn"  />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center" >
 
-    <Button
-        android:id="@+id/age_baby_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="@string/age_baby_str"
-        android:layout_below="@id/age_child_btn" />
+        <Button
+            android:id="@+id/age_adult_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dip"
+            android:text="@string/age_adult" />
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/age_child_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/age_adult_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dip"
+            android:text="@string/age_child" />
+
+        <Button
+            android:id="@+id/age_baby_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/age_child_btn"
+            android:text="@string/age_baby" />
+
+    </RelativeLayout>
+
+</LinearLayout>

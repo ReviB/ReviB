@@ -1,6 +1,7 @@
 package com.revib.revib;
 
 import com.revib.revib.locale.LocaleFunctions;
+import com.revib.revib.session.SessionVariables;
 import com.revib.revib.settings.SettingsActivity;
 
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends Activity {
 
@@ -21,6 +23,13 @@ public class MainActivity extends Activity {
 		LocaleFunctions.changeCurrentLocale(context, locale_code);
 
 		setContentView(R.layout.activity_main);
+		
+		// Add button listeners
+		/*Button button = (Button) findViewById(R.id.practice_cpr_btn);
+		button.setOnClickListener(this);
+		button = (Button) findViewById(R.id.real_cpr_btn);
+		button.setOnClickListener(this);*/
+		
 
 		setTitle(getResources().getString(R.string.app_name));
 	}
@@ -35,7 +44,6 @@ public class MainActivity extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		int itemId	=	item.getItemId();
-		String title=	item.getTitle().toString();
 		switch (itemId) {
 		case R.id.menu_settings:
 			Intent intent = new Intent(this, SettingsActivity.class);
@@ -43,6 +51,25 @@ public class MainActivity extends Activity {
 			return true;
 		}
 		return false;
+	}
+
+	public void goToAge(View v) {
+		Boolean	reality	=	null;
+		int viewId	=	v.getId();
+		switch (viewId) {
+		case R.id.practice_cpr_btn:
+			reality=false;
+			break;
+		case R.id.real_cpr_btn:
+			reality=true;
+			break;
+		}
+		if(reality!=null){
+			SessionVariables	sv	=	SessionVariables.getInstance();
+			sv.setReality(reality);
+			Intent intent = new Intent(this, AgeActivity.class);
+		    startActivity(intent);
+		}
 	}
 
 }

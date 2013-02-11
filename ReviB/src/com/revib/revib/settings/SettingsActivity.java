@@ -2,11 +2,14 @@ package com.revib.revib.settings;
 
 import com.revib.revib.R;
 import com.revib.revib.locale.LocaleFunctions;
+import com.revib.revib.settings.AboutActivity;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -33,8 +36,6 @@ public class SettingsActivity extends Activity implements OnItemSelectedListener
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		//getMenuInflater().inflate(R.menu.activity_settings, menu);
 		return true;
 	}
 
@@ -42,13 +43,6 @@ public class SettingsActivity extends Activity implements OnItemSelectedListener
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case android.R.id.home:
-			// This ID represents the Home or Up button. In the case of this
-			// activity, the Up button is shown. Use NavUtils to allow users
-			// to navigate up one level in the application structure. For
-			// more details, see the Navigation pattern on Android Design:
-			//
-			// http://developer.android.com/design/patterns/navigation.html#up-vs-back
-			//
 			NavUtils.navigateUpFromSameTask(this);
 			return true;
 		}
@@ -67,18 +61,11 @@ public class SettingsActivity extends Activity implements OnItemSelectedListener
 				
 				initView(pos);
 				break;
-			case R.id.settings_sound_spnr:
-				break;
 		}
 		
 	}
-
-	@Override
-	public void onNothingSelected(AdapterView<?> arg0) {
-		// TODO Auto-generated method stub
-		
-	}
 	
+	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	private void initView(int locale_index){
 		setContentView(R.layout.activity_settings);
 		
@@ -92,16 +79,6 @@ public class SettingsActivity extends Activity implements OnItemSelectedListener
 		spinner.setSelection(locale_index, false);
 		spinner.setOnItemSelectedListener(this); // this activity as listener
 		
-		// Sound Spinner
-		spinner = (Spinner) findViewById(R.id.settings_sound_spnr);
-		
-		adapter = ArrayAdapter.createFromResource(this,
-		        R.array.sound_list, android.R.layout.simple_spinner_item);
-		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		spinner.setAdapter(adapter);
-		
-		spinner.setOnItemSelectedListener(this); // this activity as listener
-		
 		// Set activity title (language changing)
 		setTitle(getResources().getString(R.string.settings));
 		// Show the Up button in the action bar.
@@ -110,4 +87,16 @@ public class SettingsActivity extends Activity implements OnItemSelectedListener
 		}
 	}
 
+	@Override
+	public void onNothingSelected(AdapterView<?> arg0) {}
+
+
+	public void goToAbout(View v) {
+		try{
+			Intent intent = new Intent(this, AboutActivity.class);
+		    startActivity(intent);
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+		}
+	}
 }

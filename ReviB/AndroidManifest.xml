@@ -35,10 +35,20 @@
         <activity
             android:name="com.revib.revib.AgeActivity"
             android:label="@string/title_activity_age"
+            android:configChanges="locale"
             android:parentActivityName="com.revib.revib.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.revib.revib.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.revib.revib.settings.AboutActivity"
+            android:label="@string/about_revib"
+            android:configChanges="locale"
+            android:parentActivityName="com.revib.revib.settings.SettingsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.revib.revib.settings.SettingsActivity" />
         </activity>
     </application>
 

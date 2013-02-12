@@ -11,8 +11,8 @@
         android:id="@+id/textView1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:padding="7dp"
+        android:gravity="center"
+        android:background="@drawable/gallery_negative"
         android:text="@string/age_question"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -27,7 +27,12 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="50dip"
-            android:text="@string/age_adult" />
+            android:background="@drawable/blue_grey_btn"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/age_adult" 
+            android:textColor="@android:color/primary_text_dark"
+        	android:textAppearance="?android:attr/textAppearanceMedium"/>
 
         <Button
             android:id="@+id/age_child_btn"
@@ -36,15 +41,25 @@
             android:layout_below="@id/age_adult_btn"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="50dip"
-            android:text="@string/age_child" />
+            android:background="@drawable/blue_grey_btn"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/age_child" 
+            android:textColor="@android:color/primary_text_dark"
+        	android:textAppearance="?android:attr/textAppearanceMedium"/>
 
         <Button
             android:id="@+id/age_baby_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+            android:background="@drawable/blue_grey_btn"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
             android:layout_below="@id/age_child_btn"
-            android:text="@string/age_baby" />
+            android:text="@string/age_baby" 
+            android:textColor="@android:color/primary_text_dark"
+        	android:textAppearance="?android:attr/textAppearanceMedium"/>
 
     </RelativeLayout>
 

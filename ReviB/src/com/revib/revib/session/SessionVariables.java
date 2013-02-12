@@ -1,5 +1,9 @@
 package com.revib.revib.session;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
+
 public class SessionVariables {
 	public static final int BABY	=	0;
 	public static final int CHILD	=	1;
@@ -31,6 +35,13 @@ public class SessionVariables {
 	
 	public void setAge(int age) {
 		this.age = age;
+	}
+	
+	public void callEmergencyNumber(Activity activity){
+		Uri callUri = Uri.parse("tel://946033656");
+		Intent callIntent = new Intent(Intent.ACTION_CALL,callUri);
+		callIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_NO_USER_ACTION);
+		activity.startActivity(callIntent);
 	}
 	   
 	   

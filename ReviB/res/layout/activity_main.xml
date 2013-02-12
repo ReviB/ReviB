@@ -12,12 +12,10 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="2dp"
-        android:background="@android:drawable/gallery_selected_default"
-        android:gravity="center_horizontal"
-        android:padding="17dp"
+        android:background="@drawable/gallery_negative"
+        android:gravity="center"
         android:text="@string/main_question"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@android:color/secondary_text_dark" />
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -29,20 +27,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="100dp"
-            android:background="@android:drawable/btn_default"
+            android:background="@drawable/red_grey_btn"
             android:onClick="goToAge"
-            android:text="@string/real_cpr" />
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:tag="@drawable/red_grey_btn"
+            android:text="@string/real_cpr"
+            android:textColor="@android:color/primary_text_dark" />
 
         <Button
             android:id="@+id/practice_cpr_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/btn_default"
             android:layout_alignLeft="@id/real_cpr_btn"
             android:layout_alignRight="@id/real_cpr_btn"
             android:layout_below="@id/real_cpr_btn"
+            android:background="@drawable/blue_grey_btn"
             android:onClick="goToAge"
-            android:text="@string/practice_cpr" />
+            android:text="@string/practice_cpr"
+            android:textColor="@android:color/primary_text_dark" />
 
     </RelativeLayout>
 

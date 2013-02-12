@@ -24,7 +24,7 @@
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        android:layout_gravity="center_horizontal"
-	        android:background="@drawable/"
+	        android:background="@drawable/gallery_negative"
 	        android:gravity="center_horizontal"
 	        android:orientation="vertical" >
 	
@@ -35,8 +35,7 @@
 	            android:gravity="center_horizontal"
 	            android:paddingTop="9dp"
 	            android:text="@string/about_version"
-	            android:textAppearance="?android:attr/textAppearanceMedium"
-	            android:textColor="@android:color/secondary_text_dark" />
+	            android:textAppearance="?android:attr/textAppearanceMedium"/>
 	
 	        <TextView
 	            android:id="@+id/about_copyright_tv"
@@ -44,14 +43,13 @@
 	            android:layout_height="wrap_content"
 	            android:gravity="center_horizontal"
 	            android:text="@string/about_copyright"
-	            android:textAppearance="?android:attr/textAppearanceMedium"
-        		android:textColor="@android:color/secondary_text_dark"  />
+	            android:textAppearance="?android:attr/textAppearanceMedium"/>
 	
 			<View
 			    android:layout_width="fill_parent"
 			    android:layout_height="1dp"
 			    android:layout_margin="14dp"
-			    android:background="#777777" />
+			    android:background="#111111" />
 	
 	        <TextView
 	            android:id="@+id/about_code_license_tv"
@@ -62,8 +60,7 @@
 	            android:gravity="center_horizontal"
 	            android:paddingBottom="5dp"
 	            android:text="@string/about_code_license"
-	            android:textAppearance="?android:attr/textAppearanceMedium"
-      		  	android:textColor="@android:color/secondary_text_dark" />
+	            android:textAppearance="?android:attr/textAppearanceMedium"/>
 	
 	        <TextView
 	            android:id="@+id/about_artwork_license_tv"
@@ -74,14 +71,13 @@
 	            android:gravity="center_horizontal"
 	            android:paddingRight="5dp"
 	            android:text="@string/about_artwork_license"
-	            android:textAppearance="?android:attr/textAppearanceMedium"
-        		android:textColor="@android:color/secondary_text_dark"  />
+	            android:textAppearance="?android:attr/textAppearanceMedium"/>
 	        
 			<View
 			    android:layout_width="fill_parent"
 			    android:layout_height="1dp"
 			    android:layout_margin="14dp"
-			    android:background="#777777" />
+			    android:background="#111111" />
 	
 	        <TextView
 	            android:id="@+id/about_warning"
@@ -93,8 +89,7 @@
 	            android:gravity="center_horizontal"
 	            android:paddingRight="9dp"
 	            android:text="@string/about_warning"
-	            android:textAppearance="?android:attr/textAppearanceLarge"
-	            android:textColor="@android:color/secondary_text_dark" />
+	            android:textAppearance="?android:attr/textAppearanceLarge"/>
 	        
 	    </LinearLayout>
 	</LinearLayout>

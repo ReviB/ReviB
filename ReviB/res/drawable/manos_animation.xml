@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@drawable/manos_1" android:duration="2000" />
+    <item android:drawable="@drawable/manos_2" android:duration="4000" />
+ </animation-list>
+ <!-- 
+ 
+	@Override
+	public void onWindowFocusChanged (boolean hasFocus){
+		ImageView manosImage = (ImageView) findViewById(R.id.manos_iv);
+		AnimationDrawable manosAnimation = (AnimationDrawable) manosImage.getBackground();
+		manosAnimation.start();
+
+	}
+	 -->

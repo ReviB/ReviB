@@ -27,11 +27,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="100dp"
-            android:background="@drawable/red_grey_btn"
+            android:background="@drawable/red_button_dark"
             android:onClick="goToAge"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:tag="@drawable/red_grey_btn"
             android:text="@string/real_cpr"
             android:textColor="@android:color/primary_text_dark" />
 
@@ -42,7 +41,7 @@
             android:layout_alignLeft="@id/real_cpr_btn"
             android:layout_alignRight="@id/real_cpr_btn"
             android:layout_below="@id/real_cpr_btn"
-            android:background="@drawable/blue_grey_btn"
+            android:background="@drawable/light_button_dark"
             android:onClick="goToAge"
             android:text="@string/practice_cpr"
             android:textColor="@android:color/primary_text_dark" />

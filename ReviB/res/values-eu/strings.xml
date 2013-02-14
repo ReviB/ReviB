@@ -1,20 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+	<!-- EU -->
+    <!-- MainActivity -->
     <string name="app_name">ReviB BBB</string>
     <string name="settings">Ezarpenak</string>
     <string name="main_question">Benetako larrialdi batean zaude edo Bihotz-Biriketako Bizkortzean trebatu nahiko zenuke?</string>
-    <string name="real_cpr_str">Benetako larrialdia</string>
-    <string name="practice_cpr_str">BBB-an trebatu</string>
-    
+    <string name="real_cpr">Benetako larrialdia</string>
+    <string name="practice_cpr">BBB-an trebatu</string>
+
     <!-- SettingsActivity -->
     <string name="language">Hizkuntza:</string>
+
+    <!-- About Activity -->
     <string name="about_revib">ReviB-eri buruz</string>
-    
+    <string name="about_logo_description">ReviB logo</string>
+    <string name="about_version">ReviB v0.1</string>
+    <string name="about_copyright">©2013 Alain Perez</string>
+    <string name="about_code_license">
+        ReviB-en kodea GNU General
+        Public License (2.0) lizentziapean dago
+        Alain Perez-en eskutik.</string>
+    <string name="about_artwork_license">
+        ReviB-en ilustrazio guztiak Creative Commons
+        Attribution-NonCommercial-ShareAlike 3.0
+        Unported License lizentziapean dago
+        Ines Fernandez-en eskutik.</string>
+    <string name="about_warning">
+        Programa hau erabilgarri izango den
+        esperoan banatzen da baina
+        INONGO BERMERIK GABE.</string>
+
     <!-- Age activity -->
     <string name="title_activity_age">Biktimaren heldutasuna</string>
     <string name="age_question">Zenbat urte ditu biktimak?</string>
-    <string name="age_adult_str">Heldua (8 urte baino gehiago)</string>
-    <string name="age_child_str">"Haurra (1 eta 8 urte bitartean)"</string>
-    <string name="age_baby_str">Jaioberria (12 hilabete baino gutxiago)</string>
+    <string name="age_adult">Heldua (8 urte baino gehiago)</string>
+    <string name="age_child">"Haurra (1 eta 8 urte bitartean)"</string>
+    <string name="age_baby">Jaioberria (12 hilabete baino gutxiago)</string>
+    <string name="title_activity_cons_check">Kontsientzia egiaztatu</string>
+	
+	<!-- Other -->
+    <string name="state_view">Egoeraren deskribapena</string>
+    <string name="state_image_description">Egoeraren irudia</string>
+    <string name="state_reload_description">Egoera birkargatu</string>
+    <string name="yes">Bai</string>
+    <string name="no">Ez</string>
+    <string name="question">Galdera?</string>
 </resources>

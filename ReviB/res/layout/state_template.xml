@@ -13,19 +13,22 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.2"
-        android:src="@drawable/warning" />
+        android:contentDescription="@string/state_image_description"/>
 
     <TextView
         android:id="@+id/state_question_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:color/background_dark"
         android:gravity="center"
         android:text="@string/question"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/primary_text_dark" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:color/background_dark"
         android:gravity="center" >
 
         <Button
@@ -35,14 +38,15 @@
             android:layout_weight="0.5"
             android:onClick="onStateBtnClicked"
             android:text="@string/no"
-            android:background="@drawable/red_button_light" />
+            android:background="@drawable/left_btn_selector" />
 
         <ImageButton
             android:id="@+id/imageButton1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/blue_grey_btn"
-            android:src="@android:drawable/ic_popup_sync" />
+            android:background="@drawable/reload_btn_selector"
+            android:src="@android:drawable/ic_popup_sync"
+        	android:contentDescription="@string/state_reload_description" />
 
         <Button
             android:id="@+id/state_right_btn"
@@ -51,7 +55,7 @@
             android:layout_weight="0.5"
             android:onClick="onStateBtnClicked"
             android:text="@string/yes"
-            android:background="@drawable/green_button_light" />
+            android:background="@drawable/right_btn_selector" />
 
     </LinearLayout>
 

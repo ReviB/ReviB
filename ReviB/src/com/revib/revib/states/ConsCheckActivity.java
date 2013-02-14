@@ -8,7 +8,9 @@ import android.os.Bundle;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.res.Resources;
+import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,7 +18,8 @@ import android.widget.ImageView;
 import android.support.v4.app.NavUtils;
 
 public class ConsCheckActivity extends Activity {
-
+	private static final String TAG = "ConsCheckActivity";
+	
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,11 @@ public class ConsCheckActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.state_template, menu);
 		return true;
+	}
+	
+	@Override
+	public void onWindowFocusChanged (boolean hasFocus){
+		animateManos();
 	}
 
 	@Override
@@ -63,16 +71,25 @@ public class ConsCheckActivity extends Activity {
 
 		switch(age){
 		case SessionVariables.ADULT:
-			draw=res.getDrawable(R.drawable.gallery_negative);
+			draw=res.getDrawable(R.drawable.manos_animation);
 			break;
 		case SessionVariables.CHILD:
 			draw=res.getDrawable(R.drawable.gallery_negative);
 			break;
 		case SessionVariables.BABY:
-			draw=res.getDrawable(R.drawable.gallery_negative);
+			draw=res.getDrawable(R.drawable.warning);
 			break;
 		}
 		image.setImageDrawable(draw);
+	}
+	public void animateManos(){
+		try{
+			ImageView iv = (ImageView) findViewById(R.id.state_iv);
+			AnimationDrawable animation = (AnimationDrawable) iv.getDrawable();
+			animation.start();
+		}catch(Exception e){
+			Log.w(TAG, "Drawable animation can not be started: "+e.getMessage());
+		}
 	}
 	
 	public void onStateBtnClicked(View v) {

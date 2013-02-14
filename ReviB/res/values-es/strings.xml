@@ -1,21 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+	<!-- ES -->
     <!-- MainActivity -->
     <string name="app_name">ReviB RCP</string>
-    <string name="main_question">Benetako larrialdi batean zaude edo BBB-an trebatu nahiko zenuke?</string>
+    <string name="main_question">¿Es una emergencia de verdad o es que quieres entrenar la Reanimación Cardio-Pulmonar?</string>
     <string name="settings">Ajustes</string>
-    <string name="real_cpr_str">Realizar RCP de verdad</string>
-    <string name="practice_cpr_str">Practicar RCP</string>
+    <string name="real_cpr">Emergencia real</string>
+    <string name="practice_cpr">Practicar RCP</string>
 
     <!-- SettingsActivity -->
     <string name="language">Idioma:</string>
+
+    <!-- About Activity -->
     <string name="about_revib">Sobre ReviB</string>
-    
+    <string name="about_logo_description">ReviB logo</string>
+    <string name="about_version">ReviB v0.1</string>
+    <string name="about_copyright">©2013 Alain Perez</string>
+    <string name="about_code_license">
+        El código de ReviB está licenciado por
+        Alain Perez bajo GNU General
+        Public License (2.0).</string>
+    <string name="about_artwork_license">
+        Todas las ilustraciones de ReviB están licenciadas por
+        Ines Fernandez bajo la licencia Creative Commons
+        Attribution-NonCommercial-ShareAlike 3.0
+        Unported License.</string>
+    <string name="about_warning">
+        Este programa se distribuye con la
+        esperanza de que pueda ser útil pero
+        SIN NINGUNA GARANTIA.</string>
+
     <!-- Age activity -->
     <string name="title_activity_age">Edad de la victima</string>
     <string name="age_question">¿Qué edad tiene la victima?</string>
-    <string name="age_adult_str">Adulto (más de 8 años)</string>
-    <string name="age_child_str">Niño (entre 1 y 8 años)</string>
-    <string name="age_baby_str">Bebé (menos de 12 meses)</string>
+    <string name="age_adult">Adulto (más de 8 años)</string>
+    <string name="age_child">Niño (entre 1 y 8 años)</string>
+    <string name="age_baby">Bebé (menos de 12 meses)</string>
+    <string name="title_activity_cons_check">Comprueba la consciencia</string>
+	
+	<!-- Other -->
+    <string name="state_view">Descripcion de la etapa</string>
+    <string name="state_image_description">Imagen de la etapa</string>
+    <string name="state_reload_description">Recarga la etapa</string>
+    <string name="yes">Si</string>
+    <string name="no">No</string>
+    <string name="question">¿Pregunta?</string>
 </resources>

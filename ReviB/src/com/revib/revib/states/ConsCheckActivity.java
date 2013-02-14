@@ -1,38 +1,30 @@
-package com.revib.revib;
+package com.revib.revib.states;
 
+import com.revib.revib.R;
 import com.revib.revib.session.SessionVariables;
-import com.revib.revib.states.ConsCheckActivity;
 
 import android.os.Build;
 import android.os.Bundle;
 import android.annotation.TargetApi;
 import android.app.Activity;
-import android.content.Intent;
-import android.graphics.drawable.AnimationDrawable;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.support.v4.app.NavUtils;
 
-public class AgeActivity extends Activity implements OnClickListener {
+public class ConsCheckActivity extends Activity {
 
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_age);
+		setContentView(R.layout.state_template);
 		
-		// Add button listeners
-		Button button = (Button) findViewById(R.id.age_adult_btn);
-		button.setOnClickListener(this);
-		button = (Button) findViewById(R.id.age_child_btn);
-		button.setOnClickListener(this);
-		button = (Button) findViewById(R.id.age_baby_btn);
-		button.setOnClickListener(this);
-
+		setViewVariables();
+		
 		// Show the Up button in the action bar.
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
 			getActionBar().setDisplayHomeAsUpEnabled(true);
@@ -42,7 +34,7 @@ public class AgeActivity extends Activity implements OnClickListener {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.activity_age, menu);
+		getMenuInflater().inflate(R.menu.state_template, menu);
 		return true;
 	}
 
@@ -63,30 +55,27 @@ public class AgeActivity extends Activity implements OnClickListener {
 		return super.onOptionsItemSelected(item);
 	}
 
-	@Override
-	public void onClick(View v) {
-		int	age	=	-1;
-		Intent intent	=	null;
-		int viewId	=	v.getId();
-		switch (viewId) {
-		case R.id.age_adult_btn:
-			age=SessionVariables.ADULT;
-			intent = new Intent(this, ConsCheckActivity.class);
-			break;
-		case R.id.age_child_btn:
-			age=SessionVariables.CHILD;
-			intent = new Intent(this, ConsCheckActivity.class);
-			break;
-		case R.id.age_baby_btn:
-			age=SessionVariables.BABY;
-			intent = new Intent(this, ConsCheckActivity.class);
-			break;
-		}
-		if(age!=-1){
-			SessionVariables	sv	=	SessionVariables.getInstance();
-			sv.setAge(age);
-		    startActivity(intent);
-		}
-	}
+	public void setViewVariables(){
+		Resources	res		=	getResources();
+		Drawable	draw	=	null;
+		int 		age		=	SessionVariables.getInstance().getAge();
+		ImageView 	image 	=	(ImageView) findViewById(R.id.state_iv);
 
+		switch(age){
+		case SessionVariables.ADULT:
+			draw=res.getDrawable(R.drawable.gallery_negative);
+			break;
+		case SessionVariables.CHILD:
+			draw=res.getDrawable(R.drawable.gallery_negative);
+			break;
+		case SessionVariables.BABY:
+			draw=res.getDrawable(R.drawable.gallery_negative);
+			break;
+		}
+		image.setImageDrawable(draw);
+	}
+	
+	public void onStateBtnClicked(View v) {
+	
+	}
 }

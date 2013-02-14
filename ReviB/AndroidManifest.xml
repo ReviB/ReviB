@@ -34,8 +34,8 @@
         </activity>
         <activity
             android:name="com.revib.revib.AgeActivity"
-            android:label="@string/title_activity_age"
             android:configChanges="locale"
+            android:label="@string/title_activity_age"
             android:parentActivityName="com.revib.revib.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -43,12 +43,20 @@
         </activity>
         <activity
             android:name="com.revib.revib.settings.AboutActivity"
-            android:label="@string/about_revib"
             android:configChanges="locale"
+            android:label="@string/about_revib"
             android:parentActivityName="com.revib.revib.settings.SettingsActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.revib.revib.settings.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="com.revib.revib.states.ConsCheckActivity"
+            android:label="@string/title_activity_cons_check"
+            android:parentActivityName="com.revib.revib.AgeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.revib.revib.AgeActivity" />
         </activity>
     </application>
 

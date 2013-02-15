@@ -66,7 +66,19 @@ public class ConsCheckState extends State {
 
 	@Override
 	public int getInfoResource() {
-		return R.string.cons_check_info;
+		int $ret=-1;
+		switch(AGE){
+		case SessionVariables.ADULT:
+			$ret = R.string.cons_check_info;
+			break;
+		case SessionVariables.CHILD:
+			$ret = R.string.cons_check_info_child;
+			break;
+		case SessionVariables.BABY:
+			$ret = R.string.cons_check_info_baby;
+			break;
+		}
+		return $ret;
 	}
 	
 	@Override

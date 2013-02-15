@@ -3,7 +3,14 @@
     <string name="cons_check_activity">Check consciousness</string>
     <string name="cons_check_question">Is the victim conscious?</string>
     <string name="cons_check_info">"In order to check consciousness:
-1.- Shake the victim
-1.- Ask: 'Are you alright?'
+1.- Shake the victim.
+2.- Ask: 'Are you alright?'.
 ¿Does the victim respond?"</string>
+    <string name="cons_check_info_child">"In order to check consciousness:
+1.- Shake the child.
+2.- Ask: 'Are you alright?'.
+¿Does the child respond?"</string>
+    <string name="cons_check_info_baby">"In order to check consciousness:
+Gently stimulate the baby, patting the sole of the foot and calling him/her by his/her name.
+¿Does the baby respond?"</string>
 </resources>

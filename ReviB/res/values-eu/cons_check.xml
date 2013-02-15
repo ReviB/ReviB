@@ -4,6 +4,13 @@
     <string name="cons_check_question">Biktima kontziente al dago?</string>
     <string name="cons_check_info">"Kontzientzia egiaztatzeko:
 1.- Biktima leunki astindu.
-2.- Galdetu: 'Ondo al zaude?'
+2.- Galdetu: 'Ondo al zaude?'.
+Erantzuten al du?"</string>
+    <string name="cons_check_info_child">"Kontzientzia egiaztatzeko:
+1.- Haurra leunki astindu.
+2.- Galdetu: 'Ondo al zaude?'.
+Erantzuten al du?"</string>
+    <string name="cons_check_info_baby">"Kontzientzia egiaztatzeko:
+Titikumea leunki estimulatu, oinazpian golpe leun batzuk emanez eta bere izenaren bidez deitu ezazu.
 Erantzuten al du?"</string>
 </resources>

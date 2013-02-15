@@ -47,6 +47,7 @@ public class StateActivity extends Activity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
+		boolean $ret	=	false;
 		switch (item.getItemId()) {
 		case android.R.id.home:
 			
@@ -58,9 +59,15 @@ public class StateActivity extends Activity {
 				currentState.setStateView();
 				currentState.startAnimation();
 			}
-			return true;
+			$ret = true;
+			break;
+		case R.id.menu_view:
+			currentState.setInfoDialog();
+		default:
+			return super.onOptionsItemSelected(item);
 		}
-		return super.onOptionsItemSelected(item);
+		
+		return $ret;
 	}
 	
 	public void onStateBtnClicked(View v) {

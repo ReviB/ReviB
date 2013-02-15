@@ -39,7 +39,7 @@
         but WITHOUT ANY WARRANTY.</string>
 
     <!-- Age activity -->
-    <string name="title_activity_age">AgeActivity</string>
+    <string name="title_activity_age">The age of the victim</string>
     <string name="age_question">How old is the victim?</string>
     <string name="age_adult">Adult (more than 8 years old)</string>
     <string name="age_child">Child (between 1 and 8 years old)</string>
@@ -53,4 +53,6 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="question">Question?</string>
+    <string name="dialog_info">What to do</string>
+    <string name="dialog_ok">OK</string>
 </resources>

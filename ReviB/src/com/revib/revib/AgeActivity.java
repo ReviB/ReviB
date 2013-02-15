@@ -34,6 +34,7 @@ public class AgeActivity extends Activity implements OnClickListener {
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
 			getActionBar().setDisplayHomeAsUpEnabled(true);
 		}
+		setTitle(getResources().getString(R.string.title_activity_age));
 	}
 
 	@Override

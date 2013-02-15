@@ -45,4 +45,6 @@
     <string name="yes">Si</string>
     <string name="no">No</string>
     <string name="question">¿Pregunta?</string>
+    <string name="dialog_info">Qué hacer</string>
+    <string name="dialog_ok">Vale</string>
 </resources>

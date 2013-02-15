@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ES -->
+    <string name="cons_check_activity">Comprobación de la consciencia</string>
+    <string name="cons_check_question">¿Está la victima consciente?</string>
+    <string name="cons_check_info">"Para comprobar si está consiente:
+1.- Agite a la victima
+1.- Preguntele: '¿Está usted bien?'
+¿Responde?"</string>
+</resources>

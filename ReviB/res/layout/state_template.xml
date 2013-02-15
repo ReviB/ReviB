@@ -44,6 +44,7 @@
             android:id="@+id/state_reload_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onStateBtnClicked"
             android:background="@drawable/reload_btn_selector"
             android:src="@android:drawable/ic_popup_sync"
         	android:contentDescription="@string/state_reload_description" />

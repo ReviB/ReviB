@@ -45,4 +45,6 @@
     <string name="yes">Bai</string>
     <string name="no">Ez</string>
     <string name="question">Galdera?</string>
+    <string name="dialog_info">Zer egin</string>
+    <string name="dialog_ok">Ados</string>
 </resources>

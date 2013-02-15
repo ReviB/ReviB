@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cons_check_activity">Egiaztatu kontzientzia</string>
+    <string name="cons_check_question">Biktima kontziente al dago?</string>
+    <string name="cons_check_info">"Kontzientzia egiaztatzeko:
+1.- Biktima leunki astindu.
+2.- Galdetu: 'Ondo al zaude?'
+Erantzuten al du?"</string>
+</resources>

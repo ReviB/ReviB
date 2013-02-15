@@ -19,7 +19,6 @@ public class ConsCheckState extends State {
 	public void setStateView() {
 		try{
 			Resources	res		=	activity.getResources();
-			int 		age		=	SessionVariables.getInstance().getAge();
 			
 			// Set title
 			activity.setTitle(res.getString(R.string.cons_check_activity));
@@ -30,8 +29,18 @@ public class ConsCheckState extends State {
 			
 			// Set image
 			ImageView 	image 	=	(ImageView) activity.findViewById(R.id.state_iv);
-
-			image.setImageDrawable(res.getDrawable(R.drawable.manos_animation));
+			switch(AGE){
+			case SessionVariables.ADULT:
+				image.setImageDrawable(res.getDrawable(R.drawable.shake_victim));
+				break;
+			case SessionVariables.CHILD:
+				image.setImageDrawable(res.getDrawable(R.drawable.warning));
+			case SessionVariables.BABY:
+				image.setImageDrawable(res.getDrawable(R.drawable.warning));
+			}
+			
+			// Set title (for multi-lingual issues)
+			activity.setTitle(R.string.cons_check_activity);
 		}catch(Exception e){
 			Log.w(TAG, "State view could not be set: "+e.getMessage());
 		}
@@ -39,7 +48,7 @@ public class ConsCheckState extends State {
 
 	@Override
 	public State getNextState(int buttonRes) {
-		State nextState	=	null;
+		State nextState	=	this;
 		switch(buttonRes){
 			case R.id.state_left_btn:
 				//nextState	=	new ScreamForHelpState(activity,this);
@@ -53,6 +62,16 @@ public class ConsCheckState extends State {
 				break;
 		}
 		return nextState;
+	}
+
+	@Override
+	public int getInfoResource() {
+		return R.string.cons_check_info;
+	}
+	
+	@Override
+	public void startAnimation(){
+		//There is no animation, so don't do anything
 	}
 
 }

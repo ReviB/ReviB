@@ -55,10 +55,10 @@
                 android:value="com.revib.revib.settings.SettingsActivity" />
         </activity>
         <activity
-            android:name="com.revib.revib.states.ConsCheckActivity"
+            android:name="com.revib.revib.StateActivity"
             android:screenOrientation="portrait"
             android:configChanges="locale"
-            android:label="@string/title_activity_cons_check"
+            android:label="@string/cons_check_activity"
             android:parentActivityName="com.revib.revib.AgeActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cons_check_activity">Check consciousness</string>
+    <string name="cons_check_question">Is the victim conscious?</string>
+    <string name="cons_check_info">"In order to check consciousness:
+Shake the victim
+Ask: 'Are you alright?'
+¿Does the victim respond?"</string>
+</resources>

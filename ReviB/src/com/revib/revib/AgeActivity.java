@@ -1,20 +1,17 @@
 package com.revib.revib;
 
 import com.revib.revib.session.SessionVariables;
-import com.revib.revib.states.ConsCheckActivity;
 
 import android.os.Build;
 import android.os.Bundle;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.drawable.AnimationDrawable;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.support.v4.app.NavUtils;
 
 public class AgeActivity extends Activity implements OnClickListener {
@@ -71,15 +68,15 @@ public class AgeActivity extends Activity implements OnClickListener {
 		switch (viewId) {
 		case R.id.age_adult_btn:
 			age=SessionVariables.ADULT;
-			intent = new Intent(this, ConsCheckActivity.class);
+			intent = new Intent(this, StateActivity.class);
 			break;
 		case R.id.age_child_btn:
 			age=SessionVariables.CHILD;
-			intent = new Intent(this, ConsCheckActivity.class);
+			intent = new Intent(this, StateActivity.class);
 			break;
 		case R.id.age_baby_btn:
 			age=SessionVariables.BABY;
-			intent = new Intent(this, ConsCheckActivity.class);
+			intent = new Intent(this, StateActivity.class);
 			break;
 		}
 		if(age!=-1){

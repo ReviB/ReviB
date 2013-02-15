@@ -41,7 +41,7 @@
             android:background="@drawable/left_btn_selector" />
 
         <ImageButton
-            android:id="@+id/imageButton1"
+            android:id="@+id/state_reload_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/reload_btn_selector"

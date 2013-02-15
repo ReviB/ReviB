@@ -21,7 +21,7 @@ public class SessionVariables {
 		return instance;
    }
 
-	public Boolean issReal() {
+	public Boolean isReal() {
 		return reality;
 	}
 

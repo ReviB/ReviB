@@ -4,8 +4,8 @@ import com.revib.revib.R;
 import com.revib.revib.session.SessionVariables;
 
 import android.app.Activity;
-import android.content.res.Resources;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -37,6 +37,12 @@ public class ConsCheckState extends State {
 				image.setImageDrawable(res.getDrawable(R.drawable.warning));
 				break;
 			}
+
+			// Set buttons text
+			Button		btn		=	(Button) activity.findViewById(R.id.state_left_btn);
+			btn.setText(R.string.no);
+			btn					=	(Button) activity.findViewById(R.id.state_right_btn);
+			btn.setText(R.string.yes);
 			
 			// Set title (for multi-lingual issues)
 			activity.setTitle(R.string.cons_check_activity);

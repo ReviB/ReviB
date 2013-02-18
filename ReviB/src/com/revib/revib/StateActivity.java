@@ -2,6 +2,7 @@ package com.revib.revib;
 
 import com.revib.revib.R;
 import com.revib.revib.audio.AudioFunctions;
+import com.revib.revib.settings.SettingsActivity;
 import com.revib.revib.states.ConsCheckState;
 import com.revib.revib.states.State;
 
@@ -9,6 +10,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -36,7 +38,7 @@ public class StateActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.state_template, menu);
+		getMenuInflater().inflate(R.menu.revib_menu, menu);
 		return true;
 	}
 	
@@ -62,8 +64,10 @@ public class StateActivity extends Activity {
 			}
 			$ret = true;
 			break;
-		case R.id.menu_view:
-			currentState.setInfoDialog();
+		case R.id.menu_settings:
+			Intent intent = new Intent(this, SettingsActivity.class);
+		    startActivity(intent);
+			return true;
 		default:
 			return super.onOptionsItemSelected(item);
 		}

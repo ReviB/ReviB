@@ -19,6 +19,8 @@ public class ScreamForHelpState extends State {
 	@Override
 	public void setStateView() {
 		try{
+			super.setStateView();
+			
 			Resources	res		=	activity.getResources();
 			
 			// Set Question

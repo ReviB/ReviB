@@ -13,6 +13,7 @@ import com.revib.revib.session.SessionVariables;
 public class AudioFunctions {
 	public static void checkAudio(Activity activity){
 		SessionVariables	sv	=	SessionVariables.getInstance();
+		
 	    if(!isAudioOn(activity)&&!sv.isAudioDialogShown()){
 	    	setAudioDialog(activity);
 	    }

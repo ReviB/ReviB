@@ -18,7 +18,7 @@ public class ConsCheckState extends State {
 	@Override
 	public void setStateView() {
 		try{
-			Resources	res		=	activity.getResources();
+			super.setStateView();
 			
 			// Set Question
 			TextView	question_tv	=	(TextView) activity.findViewById(R.id.state_question_tv);
@@ -83,6 +83,11 @@ public class ConsCheckState extends State {
 	@Override
 	public void startAnimation(){
 		//There is no animation, so don't do anything
+	}
+
+	@Override
+	public int getAudioResource() {
+		return R.raw.bip;
 	}
 
 }

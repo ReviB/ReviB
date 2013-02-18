@@ -1,13 +1,17 @@
 package com.revib.revib.states;
 
 import com.revib.revib.R;
+import com.revib.revib.audio.AudioFunctions;
 import com.revib.revib.session.SessionVariables;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.res.Resources;
 import android.graphics.drawable.AnimationDrawable;
+import android.media.MediaPlayer;
 import android.util.Log;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public abstract class State {
@@ -16,6 +20,9 @@ public abstract class State {
 	public		String		TAG;
 	public		Activity	activity		=	null;
 	private 	State		previousState	=	null;
+	public		MediaPlayer mediaPlayer 	= 	null;
+	
+	public		Resources	res;
 	
 	public State(Activity activity,State previousState){
 		SessionVariables sv	=	SessionVariables.getInstance();
@@ -25,9 +32,21 @@ public abstract class State {
 		this.TAG			=	this.getClass().getName();
 		this.activity		=	activity;
 		this.previousState	=	previousState;
+
+		res		=	activity.getResources();
 	}
 	
-	public abstract void setStateView();
+	public void setStateView(){
+		ImageButton	ib	=	(ImageButton)	activity.findViewById(R.id.state_audio_btn);
+		if(AudioFunctions.isAudioOn(activity)){
+			ib.setVisibility(ImageButton.INVISIBLE);
+		}else{
+			ib.setVisibility(ImageButton.VISIBLE);
+		}
+		
+		// Start audio
+		startAudio();
+	}
 	
 	public void setInfoDialog(){
 		try{
@@ -63,6 +82,7 @@ public abstract class State {
 	}
 	
 	abstract public int getInfoResource();
+	abstract public int getAudioResource();
 	
 	public void startAnimation(){
 		try{
@@ -71,6 +91,17 @@ public abstract class State {
 			animation.start();
 		}catch(Exception e){
 			Log.w(TAG, "Drawable animation can not be started: "+e.getMessage());
+		}
+	}
+	
+	public void startAudio(){
+		try{
+			AudioFunctions.checkAudio(activity);
+			if(mediaPlayer!=null)	mediaPlayer.stop();
+			mediaPlayer	=	MediaPlayer.create(activity,getAudioResource());
+			mediaPlayer.start();
+		}catch(Exception e){
+			Log.w(TAG, "Audio can not be started: "+e.getMessage());
 		}
 	}
 
@@ -83,5 +114,6 @@ public abstract class State {
 	public void reloadState(){
 		setStateView();
 		startAnimation();
+		startAudio();
 	}
 }

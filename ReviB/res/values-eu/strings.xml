@@ -7,6 +7,11 @@
     <string name="main_question">Benetako larrialdi batean zaude edo Bihotz-Biriketako Bizkortzean trebatu nahiko zenuke?</string>
     <string name="real_cpr">Benetako larrialdia</string>
     <string name="practice_cpr">BBB-an trebatu</string>
+    
+    <!-- Audio Dialog -->
+    <string name="audio_dialog_title">Soinua ezgaituta</string>
+    <string name="audio_dialog_message">Soinua ezgaituta daukazu.
+        Mesedez, igo ezazu bolumena aplikazioaren instrukzioak entzun nahi badituzu.</string>
 
     <!-- SettingsActivity -->
     <string name="language">Hizkuntza:</string>
@@ -42,6 +47,7 @@
     <string name="state_view">Egoeraren deskribapena</string>
     <string name="state_image_description">Egoeraren irudia</string>
     <string name="state_reload_description">Egoera birkargatu</string>
+    <string name="state_audio_description">Soinua ezgaituta dago</string>
     <string name="yes">Bai</string>
     <string name="no">Ez</string>
     <string name="question">Galdera?</string>

@@ -37,6 +37,7 @@ public class ScreamForHelpState extends State {
 			
 			// Set title (for multi-lingual issues)
 			activity.setTitle(R.string.scream_for_help_activity);
+			startAudio();
 		}catch(Exception e){
 			Log.w(TAG, "State view could not be set: "+e.getMessage());
 		}
@@ -63,6 +64,11 @@ public class ScreamForHelpState extends State {
 	@Override
 	public int getInfoResource() {
 		return R.string.scream_for_help_info;
+	}
+
+	@Override
+	public int getAudioResource() {
+		return R.raw.bip;
 	}
 
 }

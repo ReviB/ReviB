@@ -17,12 +17,12 @@
         android:onClick="onStateBtnClicked" >
 
             <ImageView
-	        android:id="@+id/state_iv"
-	        android:layout_width="fill_parent"
-	        android:layout_height="fill_parent"
-	        android:src="@drawable/warning"
-	        android:onClick="onStateBtnClicked"
-	        android:contentDescription="@string/state_image_description"/>
+		        android:id="@+id/state_iv"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:src="@drawable/warning"
+		        android:onClick="onStateBtnClicked"
+		        android:contentDescription="@string/state_image_description"/>
 
 	        <ImageButton
 	            android:id="@+id/state_view_btn"
@@ -35,6 +35,18 @@
 	            android:onClick="onStateBtnClicked"
 	            android:padding="10dp"
 	            android:src="@android:drawable/ic_menu_view" />
+
+	        <ImageButton
+	            android:id="@+id/state_audio_btn"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignRight="@id/state_iv"
+	            android:layout_alignTop="@id/state_iv"
+	            android:background="@android:color/transparent"
+	            android:contentDescription="@string/state_audio_description"
+	            android:onClick="onStateBtnClicked"
+	            android:padding="10dp"
+	            android:src="@android:drawable/ic_lock_silent_mode" />
             
     </RelativeLayout>
 

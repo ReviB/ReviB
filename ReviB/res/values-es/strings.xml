@@ -7,6 +7,11 @@
     <string name="settings">Ajustes</string>
     <string name="real_cpr">Emergencia real</string>
     <string name="practice_cpr">Practicar RCP</string>
+    
+    <!-- Audio Dialog -->
+    <string name="audio_dialog_title">Volumen deshabilitado.</string>
+    <string name="audio_dialog_message">El volumen de tu dispositivo esta deshabilitado.
+        Por favor, sube el volumen si quieres escuchar las instrucciones.</string>
 
     <!-- SettingsActivity -->
     <string name="language">Idioma:</string>
@@ -42,6 +47,7 @@
     <string name="state_view">Descripcion de la etapa</string>
     <string name="state_image_description">Imagen de la etapa</string>
     <string name="state_reload_description">Recarga la etapa</string>
+    <string name="state_audio_description">El audio esta deshabilitado</string>
     <string name="yes">Si</string>
     <string name="no">No</string>
     <string name="question">¿Pregunta?</string>

@@ -6,6 +6,11 @@
     <string name="main_question">Are you in a real emergency or would you like to train CPR?</string>
     <string name="real_cpr">Real emergency</string>
     <string name="practice_cpr">Train CPR</string>
+    
+    <!-- Audio Dialog -->
+    <string name="audio_dialog_title">Sound is disabled.</string>
+    <string name="audio_dialog_message">your audio is disabled.
+    If you want to hear the instructions, please raise the volume.</string>
 
     <!-- Settings activity -->
     <string name="settings">Settings</string>
@@ -51,6 +56,7 @@
     <string name="state_image_description">State image</string>
     <string name="state_view_description">View help for state</string>
     <string name="state_reload_description">Reload the state</string>
+    <string name="state_audio_description">Audio is disabled</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="question">Question?</string>

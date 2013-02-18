@@ -1,6 +1,7 @@
 package com.revib.revib;
 
 import com.revib.revib.R;
+import com.revib.revib.audio.AudioFunctions;
 import com.revib.revib.states.ConsCheckState;
 import com.revib.revib.states.State;
 
@@ -83,6 +84,9 @@ public class StateActivity extends Activity {
 			case R.id.state_rl:
 			case R.id.state_view_btn:
 				currentState.setInfoDialog();
+				break;
+			case R.id.state_audio_btn:
+				AudioFunctions.setAudioDialog(this);
 				break;
 		}
 	}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- ES -->
+    <string name="scream_for_help_activity">Grita pidiendo ayuda</string>
+    <string name="scream_for_help_question">"¿Quién va a llamar al 112?"</string>
+    <string name="scream_for_help_left_btn">Yo</string>
+    <string name="scream_for_help_right_btn">Otra persona</string>
+    <string name="scream_for_help_info">"Texto sin definir"</string>
+    <string name="scream_for_help_info_child">"Texto sin definir"</string>
+    <string name="scream_for_help_info_baby">"Texto sin definir"</string>
+</resources>

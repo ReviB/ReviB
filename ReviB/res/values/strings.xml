@@ -49,6 +49,7 @@
 	<!-- Other -->
     <string name="state_view">Step descriptions</string>
     <string name="state_image_description">State image</string>
+    <string name="state_view_description">View help for state</string>
     <string name="state_reload_description">Reload the state</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>

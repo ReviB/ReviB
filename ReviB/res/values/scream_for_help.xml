@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- EN -->
+    <string name="scream_for_help_activity">Scream for help</string>
+    <string name="scream_for_help_question">"Who will call 112?"</string>
+    <string name="scream_for_help_left_btn">Me</string>
+    <string name="scream_for_help_right_btn">Somebody else</string>
+    <string name="scream_for_help_info">"Text not defined yet"</string>
+    <string name="scream_for_help_info_child">"Text not defined yet"</string>
+    <string name="scream_for_help_info_baby">"Text not defined yet"</string>
+</resources>

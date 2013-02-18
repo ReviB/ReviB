@@ -79,6 +79,11 @@ public class StateActivity extends Activity {
 			case R.id.state_reload_btn:
 				currentState.reloadState();
 				break;
+			case R.id.state_iv:
+			case R.id.state_rl:
+			case R.id.state_view_btn:
+				currentState.setInfoDialog();
+				break;
 		}
 	}
 }

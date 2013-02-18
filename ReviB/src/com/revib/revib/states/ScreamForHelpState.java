@@ -6,12 +6,13 @@ import com.revib.revib.session.SessionVariables;
 import android.app.Activity;
 import android.content.res.Resources;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class ConsCheckState extends State {
-	
-	public ConsCheckState(Activity activity, State previousState) {
+public class ScreamForHelpState extends State {
+
+	public ScreamForHelpState(Activity activity, State previousState) {
 		super(activity, previousState);
 	}
 
@@ -22,24 +23,20 @@ public class ConsCheckState extends State {
 			
 			// Set Question
 			TextView	question_tv	=	(TextView) activity.findViewById(R.id.state_question_tv);
-			question_tv.setText(R.string.cons_check_question);
+			question_tv.setText(R.string.scream_for_help_question);
 			
 			// Set image
 			ImageView 	image 	=	(ImageView) activity.findViewById(R.id.state_iv);
-			switch(AGE){
-			case SessionVariables.ADULT:
-				image.setImageDrawable(res.getDrawable(R.drawable.shake_victim));
-				break;
-			case SessionVariables.CHILD:
-				image.setImageDrawable(res.getDrawable(R.drawable.warning));
-				break;
-			case SessionVariables.BABY:
-				image.setImageDrawable(res.getDrawable(R.drawable.warning));
-				break;
-			}
+			image.setImageDrawable(res.getDrawable(R.drawable.scream_for_help_animation));
+
+			// Set buttons text
+			Button		btn		=	(Button) activity.findViewById(R.id.state_left_btn);
+			btn.setText(R.string.scream_for_help_left_btn);
+			btn					=	(Button) activity.findViewById(R.id.state_right_btn);
+			btn.setText(R.string.scream_for_help_right_btn);
 			
 			// Set title (for multi-lingual issues)
-			activity.setTitle(R.string.cons_check_activity);
+			activity.setTitle(R.string.scream_for_help_activity);
 		}catch(Exception e){
 			Log.w(TAG, "State view could not be set: "+e.getMessage());
 		}
@@ -50,7 +47,7 @@ public class ConsCheckState extends State {
 		State nextState	=	this;
 		switch(buttonRes){
 			case R.id.state_left_btn:
-				nextState	=	new ScreamForHelpState(activity,this);
+				//nextState	=	new ScreamForHelpState(activity,this);
 				break;
 			case R.id.state_right_btn:
 				if(AGE==SessionVariables.BABY){
@@ -65,24 +62,7 @@ public class ConsCheckState extends State {
 
 	@Override
 	public int getInfoResource() {
-		int $ret=-1;
-		switch(AGE){
-		case SessionVariables.ADULT:
-			$ret = R.string.cons_check_info;
-			break;
-		case SessionVariables.CHILD:
-			$ret = R.string.cons_check_info_child;
-			break;
-		case SessionVariables.BABY:
-			$ret = R.string.cons_check_info_baby;
-			break;
-		}
-		return $ret;
-	}
-	
-	@Override
-	public void startAnimation(){
-		//There is no animation, so don't do anything
+		return R.string.scream_for_help_info;
 	}
 
 }

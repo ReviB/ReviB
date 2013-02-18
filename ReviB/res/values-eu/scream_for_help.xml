@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- EN -->
+    <string name="scream_for_help_activity">Laguntza eske oihu egin</string>
+    <string name="scream_for_help_question">"Nork deituko du 112 telefonora?"</string>
+    <string name="scream_for_help_left_btn">Nik</string>
+    <string name="scream_for_help_right_btn">Beste norbaitek</string>
+    <string name="scream_for_help_info">"Definitu gabeko testua"</string>
+    <string name="scream_for_help_info_child">"Definitu gabeko testua"</string>
+    <string name="scream_for_help_info_baby">"Definitu gabeko testua"</string>
+</resources>

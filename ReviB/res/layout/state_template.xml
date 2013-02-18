@@ -8,12 +8,35 @@
     android:background="@drawable/revib_pattern_bm"
     android:orientation="vertical" >
 
-    <ImageView
-        android:id="@+id/state_iv"
+    <RelativeLayout
+        android:id="@+id/state_rl"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.2"
-        android:contentDescription="@string/state_image_description"/>
+        android:gravity="bottom|center_horizontal"
+        android:onClick="onStateBtnClicked" >
+
+            <ImageView
+	        android:id="@+id/state_iv"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:src="@drawable/warning"
+	        android:onClick="onStateBtnClicked"
+	        android:contentDescription="@string/state_image_description"/>
+
+	        <ImageButton
+	            android:id="@+id/state_view_btn"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignBottom="@id/state_iv"
+	            android:layout_alignRight="@id/state_iv"
+	            android:background="@android:color/transparent"
+	            android:contentDescription="@string/state_view_description"
+	            android:onClick="onStateBtnClicked"
+	            android:padding="10dp"
+	            android:src="@android:drawable/ic_menu_view" />
+            
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/state_question_tv"

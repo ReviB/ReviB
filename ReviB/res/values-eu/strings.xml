@@ -35,7 +35,7 @@
     <string name="age_question">Zenbat urte ditu biktimak?</string>
     <string name="age_adult">Heldua (8 urte baino gehiago)</string>
     <string name="age_child">"Haurra (1 eta 8 urte bitartean)"</string>
-    <string name="age_baby">Jaioberria (12 hilabete baino gutxiago)</string>
+    <string name="age_baby">Haurtxoa (12 hilabete baino gutxiago)</string>
     <string name="title_activity_cons_check">Kontsientzia egiaztatu</string>
 	
 	<!-- Other -->

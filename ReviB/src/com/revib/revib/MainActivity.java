@@ -6,8 +6,11 @@ import com.revib.revib.settings.SettingsActivity;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -46,9 +49,28 @@ public class MainActivity extends Activity {
 		int itemId	=	item.getItemId();
 		switch (itemId) {
 		case R.id.menu_settings:
-			Intent intent = new Intent(this, SettingsActivity.class);
+			/*Intent intent = new Intent(this, SettingsActivity.class);
 		    startActivity(intent);
-			return true;
+			return true;*/
+			AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		    builder.setTitle(R.string.language)
+		           .setItems(R.array.language_list, new DialogInterface.OnClickListener() {
+		               public void onClick(DialogInterface dialog, int pos) {
+		            	   Context context			=	getBaseContext();
+		            	   Resources res			=	context.getResources();
+		            	   String[] language_codes =	res.getStringArray(R.array.language_code_list);
+		            	   
+		            	   LocaleFunctions.changeCurrentLocale(context,language_codes[pos]);
+		            	   initView();
+		           }
+		    });
+		    
+			// create alert dialog
+			AlertDialog alertDialog = builder.create();
+
+			// show it
+			alertDialog.show();
+		    return true;
 		}
 		return false;
 	}
@@ -72,4 +94,8 @@ public class MainActivity extends Activity {
 		}
 	}
 
+	public void initView(){
+		setContentView(R.layout.activity_main);
+		setTitle(getResources().getString(R.string.app_name));
+	}
 }

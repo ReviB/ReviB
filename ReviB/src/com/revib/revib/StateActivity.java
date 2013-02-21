@@ -1,8 +1,9 @@
 package com.revib.revib;
 
 import com.revib.revib.R;
+import com.revib.revib.about.AboutDialog;
 import com.revib.revib.audio.AudioFunctions;
-import com.revib.revib.settings.SettingsActivity;
+import com.revib.revib.locale.LocaleDialog;
 import com.revib.revib.states.ConsCheckState;
 import com.revib.revib.states.State;
 
@@ -10,7 +11,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.annotation.TargetApi;
 import android.app.Activity;
-import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,7 +27,7 @@ public class StateActivity extends Activity {
 		
 		if(currentState == null)
 			currentState	=	new ConsCheckState(this,null);
-		currentState.setStateView();
+		initView();
 		
 		// Show the Up button in the action bar.
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
@@ -64,10 +64,14 @@ public class StateActivity extends Activity {
 			}
 			$ret = true;
 			break;
-		case R.id.menu_settings:
-			Intent intent = new Intent(this, SettingsActivity.class);
-		    startActivity(intent);
+		case R.id.menu_language:
+			LocaleDialog ld	=	new LocaleDialog(this);
+			ld.startDialog();
 			return true;
+		case R.id.menu_about:
+			AboutDialog ad	=	new AboutDialog(this);
+			ad.startDialog();
+		    return true;
 		default:
 			return super.onOptionsItemSelected(item);
 		}
@@ -93,5 +97,9 @@ public class StateActivity extends Activity {
 				AudioFunctions.setAudioDialog(this);
 				break;
 		}
+	}
+
+	public void initView(){
+		currentState.setStateView();
 	}
 }

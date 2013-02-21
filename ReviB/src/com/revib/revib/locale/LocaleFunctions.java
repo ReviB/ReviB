@@ -1,4 +1,5 @@
 package com.revib.revib.locale;
+import com.revib.revib.R;
 
 import java.util.Locale;
 import java.io.BufferedReader;
@@ -6,7 +7,6 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 
-import com.revib.revib.R;
 import android.content.Context;
 import android.content.res.Resources;
 import android.util.DisplayMetrics;

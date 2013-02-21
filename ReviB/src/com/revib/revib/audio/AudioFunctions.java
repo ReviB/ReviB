@@ -21,8 +21,7 @@ public class AudioFunctions {
 	
 	public static Boolean isAudioOn(Activity activity){
 		Boolean audioOn	=	true;
-		Context context	=	activity.getApplicationContext();
-		AudioManager	mAudioManager	=	(AudioManager)activity.getSystemService(context.AUDIO_SERVICE);
+		AudioManager	mAudioManager	=	(AudioManager)activity.getSystemService(Context.AUDIO_SERVICE);
 		
 	    int vol	=	mAudioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
 	    

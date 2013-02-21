@@ -1,7 +1,8 @@
 package com.revib.revib;
 
+import com.revib.revib.about.AboutDialog;
+import com.revib.revib.locale.LocaleDialog;
 import com.revib.revib.session.SessionVariables;
-import com.revib.revib.settings.SettingsActivity;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -22,20 +23,13 @@ public class AgeActivity extends Activity implements OnClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_age);
-		
-		// Add button listeners
-		Button button = (Button) findViewById(R.id.age_adult_btn);
-		button.setOnClickListener(this);
-		button = (Button) findViewById(R.id.age_child_btn);
-		button.setOnClickListener(this);
-		button = (Button) findViewById(R.id.age_baby_btn);
-		button.setOnClickListener(this);
 
+		initView();
+		
 		// Show the Up button in the action bar.
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
 			getActionBar().setDisplayHomeAsUpEnabled(true);
 		}
-		setTitle(getResources().getString(R.string.title_activity_age));
 	}
 
 	@Override
@@ -52,10 +46,14 @@ public class AgeActivity extends Activity implements OnClickListener {
 			NavUtils.navigateUpFromSameTask(this);
 			return true;
 
-		case R.id.menu_settings:
-			Intent intent = new Intent(this, SettingsActivity.class);
-		    startActivity(intent);
+		case R.id.menu_language:
+			LocaleDialog ld	=	new LocaleDialog(this);
+			ld.startDialog();
 			return true;
+		case R.id.menu_about:
+			AboutDialog ad	=	new AboutDialog(this);
+			ad.startDialog();
+		    return true;
 		}
 		return super.onOptionsItemSelected(item);
 	}
@@ -84,6 +82,18 @@ public class AgeActivity extends Activity implements OnClickListener {
 			sv.setAge(age);
 		    startActivity(intent);
 		}
+	}
+	
+	public void initView(){
+		// Add button listeners
+		Button button = (Button) findViewById(R.id.age_adult_btn);
+		button.setOnClickListener(this);
+		button = (Button) findViewById(R.id.age_child_btn);
+		button.setOnClickListener(this);
+		button = (Button) findViewById(R.id.age_baby_btn);
+		button.setOnClickListener(this);
+		
+		setTitle(getResources().getString(R.string.title_activity_age));
 	}
 
 }

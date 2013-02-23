@@ -7,13 +7,16 @@ import com.revib.revib.locale.LocaleDialog;
 import com.revib.revib.states.ConsCheckState;
 import com.revib.revib.states.State;
 
+import android.media.AudioManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.support.v4.app.NavUtils;
 
 public class StateActivity extends Activity {
@@ -23,6 +26,11 @@ public class StateActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		// Screen never sleeps
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        // Audio buttons changes multimedia volume
+        setVolumeControlStream(AudioManager.STREAM_MUSIC);
+        
 		setContentView(R.layout.state_template);
 		
 		if(currentState == null)
@@ -102,4 +110,19 @@ public class StateActivity extends Activity {
 	public void initView(){
 		currentState.setStateView();
 	}
+	
+	@Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_VOLUME_UP)){
+        	int volume	=	AudioFunctions.getVolume(this);
+            if(volume==1)
+				currentState.reloadState();
+        }
+        if ((keyCode == KeyEvent.KEYCODE_VOLUME_DOWN)){
+        	int volume	=	AudioFunctions.getVolume(this);
+            if(volume==0)
+				currentState.reloadState();
+        }
+        return super.onKeyUp(keyCode, event);
+    }
 }

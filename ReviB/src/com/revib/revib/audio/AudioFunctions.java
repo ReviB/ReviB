@@ -56,4 +56,9 @@ public class AudioFunctions {
 			Log.w("SoundConfig", "Info dialog couldn't be set: "+e.getMessage());
 		}
 	}
+	
+	public static int getVolume(Activity activity){
+		AudioManager	audioManager		= 	(AudioManager)activity.getSystemService(Context.AUDIO_SERVICE);
+		return audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
+	}
 }

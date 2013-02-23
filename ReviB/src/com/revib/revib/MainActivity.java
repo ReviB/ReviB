@@ -5,6 +5,7 @@ import com.revib.revib.locale.LocaleDialog;
 import com.revib.revib.locale.LocaleFunctions;
 import com.revib.revib.session.SessionVariables;
 
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
@@ -18,6 +19,8 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+        // Audio buttons changes multimedia volume
+        setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
 		Context context		=	this.getBaseContext();
 		String locale_code	=	LocaleFunctions.getLocaleCodeVariable(context);

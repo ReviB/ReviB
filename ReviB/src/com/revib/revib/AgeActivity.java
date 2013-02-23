@@ -4,6 +4,7 @@ import com.revib.revib.about.AboutDialog;
 import com.revib.revib.locale.LocaleDialog;
 import com.revib.revib.session.SessionVariables;
 
+import android.media.AudioManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.annotation.TargetApi;
@@ -22,6 +23,9 @@ public class AgeActivity extends Activity implements OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+        // Audio buttons changes multimedia volume
+        setVolumeControlStream(AudioManager.STREAM_MUSIC);
+        
 		setContentView(R.layout.activity_age);
 
 		initView();
@@ -95,5 +99,4 @@ public class AgeActivity extends Activity implements OnClickListener {
 		
 		setTitle(getResources().getString(R.string.title_activity_age));
 	}
-
 }

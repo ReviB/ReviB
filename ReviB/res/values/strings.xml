@@ -62,4 +62,5 @@
     <string name="question">Question?</string>
     <string name="dialog_info">What to do</string>
     <string name="dialog_ok">OK</string>
+    <string name="false_phone_call">In a real emergency a dial will appear with the emergency phone number.</string>
 </resources>

@@ -4,51 +4,11 @@ import com.revib.revib.R;
 import com.revib.revib.session.SessionVariables;
 
 import android.app.Activity;
-import android.util.Log;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 public class ConsCheckState extends State {
 	
 	public ConsCheckState(Activity activity, State previousState) {
 		super(activity, previousState);
-	}
-
-	@Override
-	public void setStateView() {
-		try{
-			super.setStateView();
-			
-			// Set Question
-			TextView	question_tv	=	(TextView) activity.findViewById(R.id.state_question_tv);
-			question_tv.setText(R.string.cons_check_question);
-			
-			// Set image
-			ImageView 	image 	=	(ImageView) activity.findViewById(R.id.state_iv);
-			switch(AGE){
-			case SessionVariables.ADULT:
-				image.setImageDrawable(res.getDrawable(R.drawable.shake_victim));
-				break;
-			case SessionVariables.CHILD:
-				image.setImageDrawable(res.getDrawable(R.drawable.warning));
-				break;
-			case SessionVariables.BABY:
-				image.setImageDrawable(res.getDrawable(R.drawable.warning));
-				break;
-			}
-
-			// Set buttons text
-			Button		btn		=	(Button) activity.findViewById(R.id.state_left_btn);
-			btn.setText(R.string.no);
-			btn					=	(Button) activity.findViewById(R.id.state_right_btn);
-			btn.setText(R.string.yes);
-			
-			// Set title (for multi-lingual issues)
-			activity.setTitle(R.string.cons_check_activity);
-		}catch(Exception e){
-			Log.w(TAG, "State view could not be set: "+e.getMessage());
-		}
 	}
 
 	@Override
@@ -60,9 +20,10 @@ public class ConsCheckState extends State {
 				break;
 			case R.id.state_right_btn:
 				if(AGE==SessionVariables.BABY){
+					// Keep checking cons. periodically
 					//nextState	=	new KeepConsCheckState(activity,this);
 				}else{
-					//nextState	=	new LSPState(activity,this);
+					nextState	=	new LateralRecoveryPositionState(activity,this);
 				}
 				break;
 		}
@@ -94,6 +55,41 @@ public class ConsCheckState extends State {
 	@Override
 	public int getAudioResource() {
 		return R.raw.bip;
+	}
+
+	@Override
+	public int getImageResource() {
+		int resource	=	R.drawable.image_warning;
+		switch(AGE){
+		case SessionVariables.ADULT:
+			resource	=	R.drawable.adult_shake_victim;
+			break;
+		case SessionVariables.CHILD:
+			break;
+		case SessionVariables.BABY:
+			break;
+		}
+		return resource;
+	}
+
+	@Override
+	public int getLeftBtnResource() {
+		return R.string.no;
+	}
+
+	@Override
+	public int getRightBtnResource() {
+		return R.string.yes;
+	}
+
+	@Override
+	public int getQuestionResource() {
+		return R.string.cons_check_question;
+	}
+
+	@Override
+	public int getTitleResource() {
+		return R.string.cons_check_title;
 	}
 
 }

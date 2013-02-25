@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- EN -->
+    <string name="lateral_recovery_position_title">Lateral recovery position</string>
+    <string name="lateral_recovery_position_question">not defined</string>
+    <string name="lateral_recovery_position_left">not defined</string>
+    <string name="lateral_recovery_position_right">not defined</string>
+    <string name="lateral_recovery_position_info">not defined</string>
+</resources>

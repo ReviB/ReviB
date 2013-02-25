@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/revib_pattern_bm"
+    android:background="@drawable/pattern_revib_bm"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".MainActivity" >
@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="100dp"
-            android:background="@drawable/red_dark_btn_selector"
+            android:background="@drawable/selector_button_red_dark"
             android:onClick="goToAge"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
@@ -41,7 +41,7 @@
             android:layout_alignLeft="@id/real_cpr_btn"
             android:layout_alignRight="@id/real_cpr_btn"
             android:layout_below="@id/real_cpr_btn"
-            android:background="@drawable/dark_btn_selector"
+            android:background="@drawable/selector_button_dark"
             android:onClick="goToAge"
             android:text="@string/practice_cpr"
             android:textColor="@android:color/primary_text_dark" />

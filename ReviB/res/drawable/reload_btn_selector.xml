@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-  <item android:state_pressed="true"
-   android:drawable="@drawable/grey_dark_static_btn" /> <!-- pressed -->
-  <item android:drawable="@drawable/blue_grey_static_btn" /> <!-- default -->
-</selector>

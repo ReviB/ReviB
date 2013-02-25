@@ -122,6 +122,14 @@ public class StateActivity extends Activity {
         	int volume	=	AudioFunctions.getVolume(this);
             if(volume==0)
 				currentState.reloadState();
+            return super.onKeyUp(keyCode, event);
+        }
+        if ((keyCode == KeyEvent.KEYCODE_BACK)){
+        	currentState	=	currentState.getPreviousState();
+        	if(currentState!=null){
+        		currentState.reloadState();
+        		return false;
+        	}
         }
         return super.onKeyUp(keyCode, event);
     }

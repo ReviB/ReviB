@@ -7,7 +7,8 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="17" />
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!-- uses-permission android:name="android.permission.WAKE_LOCK"/-->
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
 
     <application
         android:allowBackup="true"
@@ -59,7 +60,7 @@
             android:name="com.revib.revib.StateActivity"
             android:screenOrientation="portrait"
             android:configChanges="locale"
-            android:label="@string/cons_check_activity"
+            android:label="@string/cons_check_title"
             android:parentActivityName="com.revib.revib.AgeActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ES -->
+    <string name="cons_check_title">Comprobación de la consciencia</string>
+    <string name="cons_check_question">¿Está la victima consciente?</string>
+    <string name="cons_check_info">"Para comprobar si está consiente:
+1.- Agite a la victima.
+2.- Preguntele: '¿Está usted bien?'.
+¿Responde?"</string>
+    <string name="cons_check_info_child">"Para comprobar si está consiente:
+1.- Agite al niño.
+2.- Preguntele: '¿Estás bien?'.
+¿Responde?"</string>
+    <string name="cons_check_info_baby">"Para comprobar si está consiente:
+Estimular suavemente al bebé, palmeando la planta del pie y llamarle por su nombre.
+¿Responde?"</string>
+</resources>

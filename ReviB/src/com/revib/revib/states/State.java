@@ -11,8 +11,10 @@ import android.content.res.Resources;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public abstract class State {
 	public		int			AGE;
@@ -37,15 +39,40 @@ public abstract class State {
 	}
 	
 	public void setStateView(){
-		ImageButton	ib	=	(ImageButton)	activity.findViewById(R.id.state_audio_btn);
-		if(AudioFunctions.isAudioOn(activity)){
-			ib.setVisibility(ImageButton.INVISIBLE);
-		}else{
-			ib.setVisibility(ImageButton.VISIBLE);
+		try{
+
+			ImageButton	ib	=	(ImageButton)	activity.findViewById(R.id.state_audio_btn);
+			if(AudioFunctions.isAudioOn(activity)){
+				ib.setVisibility(ImageButton.INVISIBLE);
+			}else{
+				ib.setVisibility(ImageButton.VISIBLE);
+			}
+			
+			// Start audio
+			startAudio();
+			
+			Resources	res		=	activity.getResources();
+			
+			// Set Question
+			TextView	question_tv	=	(TextView) activity.findViewById(R.id.state_question_tv);
+			question_tv.setText(getQuestionResource());
+			
+			// Set image
+			ImageView 	image 	=	(ImageView) activity.findViewById(R.id.state_iv);
+			image.setImageDrawable(res.getDrawable(getImageResource()));
+
+			// Set buttons text
+			Button		btn		=	(Button) activity.findViewById(R.id.state_left_btn);
+			btn.setText(getLeftBtnResource());
+			btn					=	(Button) activity.findViewById(R.id.state_right_btn);
+			btn.setText(getRightBtnResource());
+			
+			// Set title (for multi-lingual issues)
+			activity.setTitle(getTitleResource());
+			startAudio();
+		}catch(Exception e){
+			Log.w(TAG, "State view could not be set: "+e.getMessage());
 		}
-		
-		// Start audio
-		startAudio();
 	}
 	
 	public void setInfoDialog(){
@@ -57,7 +84,8 @@ public abstract class State {
 			alertDialogBuilder.setTitle(R.string.dialog_info);
  
 			// set dialog message
-			alertDialogBuilder.setMessage(getInfo());
+			String message	=	activity.getResources().getString(getInfoResource());
+			alertDialogBuilder.setMessage(message);
 			alertDialogBuilder.setCancelable(false);
 			alertDialogBuilder.setNeutralButton(R.string.dialog_ok, new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog,int id) {
@@ -75,15 +103,16 @@ public abstract class State {
 		}
 	}
 	
-	public String getInfo(){
-		return	activity.getResources().getString(
-				getInfoResource()
-		);
-	}
-	
+	// Resources
 	abstract public int getInfoResource();
 	abstract public int getAudioResource();
+	abstract public int getImageResource();
+	abstract public int getLeftBtnResource();
+	abstract public int getRightBtnResource();
+	abstract public int getQuestionResource();
+	abstract public int getTitleResource();
 	
+	// Multimedia
 	public void startAnimation(){
 		try{
 			ImageView iv = (ImageView) activity.findViewById(R.id.state_iv);
@@ -105,11 +134,12 @@ public abstract class State {
 		}
 	}
 
+	// States
+	public abstract State getNextState(int buttonRes);
+	
 	public State getPreviousState() {
 		return previousState;
 	}
-	
-	public abstract State getNextState(int buttonRes);
 	
 	public void reloadState(){
 		setStateView();

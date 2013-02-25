@@ -53,4 +53,5 @@
     <string name="question">¿Pregunta?</string>
     <string name="dialog_info">Qué hacer</string>
     <string name="dialog_ok">Vale</string>
+    <string name="false_phone_call">En una emergencia real se llamaria al teléfono de emergencia.</string>
 </resources>

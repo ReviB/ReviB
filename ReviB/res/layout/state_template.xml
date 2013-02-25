@@ -5,7 +5,7 @@
     android:layout_gravity="bottom"
     android:gravity="bottom|center_horizontal"
     android:onClick="onStateBtnClicked"
-    android:background="@drawable/revib_pattern_bm"
+    android:background="@drawable/pattern_revib_bm"
     android:orientation="vertical" >
 
     <RelativeLayout
@@ -20,7 +20,7 @@
 		        android:id="@+id/state_iv"
 		        android:layout_width="fill_parent"
 		        android:layout_height="fill_parent"
-		        android:src="@drawable/warning"
+		        android:src="@drawable/image_warning"
 		        android:onClick="onStateBtnClicked"
 		        android:contentDescription="@string/state_image_description"/>
 
@@ -73,14 +73,14 @@
             android:layout_weight="0.5"
             android:onClick="onStateBtnClicked"
             android:text="@string/no"
-            android:background="@drawable/left_btn_selector" />
+            android:background="@drawable/selector_button_lef" />
 
         <ImageButton
             android:id="@+id/state_reload_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onStateBtnClicked"
-            android:background="@drawable/reload_btn_selector"
+            android:background="@drawable/selector_button_reload"
             android:src="@android:drawable/ic_popup_sync"
         	android:contentDescription="@string/state_reload_description" />
 
@@ -91,7 +91,7 @@
             android:layout_weight="0.5"
             android:onClick="onStateBtnClicked"
             android:text="@string/yes"
-            android:background="@drawable/right_btn_selector" />
+            android:background="@drawable/selector_button_right" />
 
     </LinearLayout>
 

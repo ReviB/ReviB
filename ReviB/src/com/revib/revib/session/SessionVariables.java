@@ -1,8 +1,10 @@
 package com.revib.revib.session;
 
+import com.revib.revib.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
+import android.widget.Toast;
 
 public class SessionVariables {
 	public static final int BABY	=	0;
@@ -40,10 +42,18 @@ public class SessionVariables {
 	}
 	
 	public void callEmergencyNumber(Activity activity){
-		Uri callUri = Uri.parse("tel://679064051");
-		Intent callIntent = new Intent(Intent.ACTION_CALL,callUri);
-		callIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_NO_USER_ACTION);
-		activity.startActivity(callIntent);
+		if(isReal()){
+			try{
+				Uri callUri = Uri.parse("tel://112");
+				Intent callIntent = new Intent(Intent.ACTION_CALL,callUri);
+				callIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_NO_USER_ACTION);
+				activity.startActivity(callIntent);
+			}catch(Exception e){
+				
+			}
+		}else{
+			Toast.makeText(activity, R.string.false_phone_call, Toast.LENGTH_LONG).show();
+		}
 	}
 
 	public Boolean isAudioDialogShown() {

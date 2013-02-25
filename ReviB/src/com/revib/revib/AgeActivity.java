@@ -2,6 +2,7 @@ package com.revib.revib;
 
 import com.revib.revib.about.AboutDialog;
 import com.revib.revib.locale.LocaleDialog;
+import com.revib.revib.locale.LocaleFunctions;
 import com.revib.revib.session.SessionVariables;
 
 import android.media.AudioManager;
@@ -9,6 +10,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -25,6 +27,10 @@ public class AgeActivity extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
         // Audio buttons changes multimedia volume
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
+
+		Context context		=	this.getBaseContext();
+		String locale_code	=	LocaleFunctions.getLocaleCodeVariable(context);
+		LocaleFunctions.changeCurrentLocale(context, locale_code);
         
 		setContentView(R.layout.activity_age);
 

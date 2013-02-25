@@ -4,6 +4,7 @@ import com.revib.revib.R;
 import com.revib.revib.about.AboutDialog;
 import com.revib.revib.audio.AudioFunctions;
 import com.revib.revib.locale.LocaleDialog;
+import com.revib.revib.locale.LocaleFunctions;
 import com.revib.revib.states.ConsCheckState;
 import com.revib.revib.states.State;
 
@@ -12,6 +13,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Context;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -30,6 +32,10 @@ public class StateActivity extends Activity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         // Audio buttons changes multimedia volume
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
+
+		Context context		=	this.getBaseContext();
+		String locale_code	=	LocaleFunctions.getLocaleCodeVariable(context);
+		LocaleFunctions.changeCurrentLocale(context, locale_code);
         
 		setContentView(R.layout.state_template);
 		

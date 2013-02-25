@@ -11,6 +11,7 @@ import android.content.res.Resources;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -62,16 +63,24 @@ public abstract class State {
 			image.setImageDrawable(res.getDrawable(getImageResource()));
 
 			// Set buttons text
-			Button		btn		=	(Button) activity.findViewById(R.id.state_left_btn);
-			btn.setText(getLeftBtnResource());
-			btn					=	(Button) activity.findViewById(R.id.state_right_btn);
-			btn.setText(getRightBtnResource());
+			setBtn(R.id.state_left_btn,getLeftBtnResource());
+			setBtn(R.id.state_right_btn,getRightBtnResource());
 			
 			// Set title (for multi-lingual issues)
 			activity.setTitle(getTitleResource());
 			startAudio();
 		}catch(Exception e){
 			Log.w(TAG, "State view could not be set: "+e.getMessage());
+		}
+	}
+	
+	private void setBtn(int viewResource,int stringResource){
+		Button		btn		=	(Button) activity.findViewById(viewResource);
+		if(stringResource!=-1){
+			btn.setVisibility(View.VISIBLE);
+			btn.setText(stringResource);
+		}else{
+			btn.setVisibility(View.GONE);
 		}
 	}
 	

@@ -16,14 +16,14 @@ public class ScreamForHelpState extends State {
 		State nextState	=	this;
 		switch(buttonRes){
 			case R.id.state_left_btn:
-				SessionVariables sv	= SessionVariables.getInstance();
+				/*SessionVariables sv	= SessionVariables.getInstance();
 				sv.callEmergencyNumber(activity);
-				break;
+				break;*/
 			case R.id.state_right_btn:
 				if(AGE==SessionVariables.BABY){
 					//nextState	=	new KeepConsCheckState(activity,this);
 				}else{
-					//nextState	=	new LSPState(activity,this);
+					nextState	=	new BreathingCheckState(activity,this);
 				}
 				break;
 		}
@@ -47,7 +47,8 @@ public class ScreamForHelpState extends State {
 
 	@Override
 	public int getLeftBtnResource() {
-		return R.string.scream_for_help_left_btn;
+		return -1;
+		//return R.string.scream_for_help_left_btn;
 	}
 
 	@Override

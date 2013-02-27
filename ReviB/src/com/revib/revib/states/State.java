@@ -10,6 +10,7 @@ import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnCompletionListener;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -17,7 +18,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public abstract class State {
+public abstract class State implements OnCompletionListener {
 	public		int			AGE;
 	public		Boolean		reality;
 	public		String		TAG;
@@ -49,9 +50,6 @@ public abstract class State {
 				ib.setVisibility(ImageButton.VISIBLE);
 			}
 			
-			// Start audio
-			startAudio();
-			
 			Resources	res		=	activity.getResources();
 			
 			// Set Question
@@ -68,7 +66,6 @@ public abstract class State {
 			
 			// Set title (for multi-lingual issues)
 			activity.setTitle(getTitleResource());
-			startAudio();
 		}catch(Exception e){
 			Log.w(TAG, "State view could not be set: "+e.getMessage());
 		}
@@ -135,8 +132,12 @@ public abstract class State {
 	public void startAudio(){
 		try{
 			AudioFunctions.checkAudio(activity);
-			if(mediaPlayer!=null)	mediaPlayer.stop();
+			if(mediaPlayer!=null){
+				mediaPlayer.release();
+			}
 			mediaPlayer	=	MediaPlayer.create(activity,getAudioResource());
+			mediaPlayer.setOnCompletionListener(this);
+			//mediaPlayer.setOnPreparedListener(this);
 			mediaPlayer.start();
 		}catch(Exception e){
 			Log.w(TAG, "Audio can not be started: "+e.getMessage());
@@ -154,5 +155,10 @@ public abstract class State {
 		setStateView();
 		startAnimation();
 		startAudio();
+	}
+
+	@Override
+	public void onCompletion(MediaPlayer mp) {
+		mp.release();
 	}
 }

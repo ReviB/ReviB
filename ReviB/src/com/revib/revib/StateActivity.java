@@ -73,8 +73,9 @@ public class StateActivity extends Activity {
 			if(currentState==null)
 				NavUtils.navigateUpFromSameTask(this);
 			else{
-				currentState.setStateView();
-				currentState.startAnimation();
+				//currentState.setStateView();
+				//currentState.startAnimation();
+				currentState.reloadState();
 			}
 			$ret = true;
 			break;
@@ -98,23 +99,30 @@ public class StateActivity extends Activity {
 		switch(viewId){
 			case R.id.state_left_btn:
 			case R.id.state_right_btn:
-				currentState = currentState.getNextState(viewId);
+				changeState(currentState.getNextState(viewId));
+				break;
 			case R.id.state_reload_btn:
-				currentState.reloadState();
+				// Reload same state;
+				initView();
 				break;
 			case R.id.state_iv:
 			case R.id.state_rl:
 			case R.id.state_view_btn:
+				// Show info dialog
 				currentState.setInfoDialog();
 				break;
 			case R.id.state_audio_btn:
+				// Show audio warning dialog
 				AudioFunctions.setAudioDialog(this);
 				break;
 		}
 	}
 
+	/**
+	 * (Re)Loads currentState
+	 */
 	public void initView(){
-		currentState.setStateView();
+		currentState.reloadState();
 	}
 	
 	@Override
@@ -139,4 +147,9 @@ public class StateActivity extends Activity {
         }
         return super.onKeyUp(keyCode, event);
     }
+	
+	public void changeState(State state){
+		currentState	=	state;
+		initView();
+	}
 }

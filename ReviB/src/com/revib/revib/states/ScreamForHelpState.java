@@ -4,6 +4,7 @@ import com.revib.revib.R;
 import com.revib.revib.session.SessionVariables;
 
 import android.app.Activity;
+import android.media.MediaPlayer;
 
 public class ScreamForHelpState extends State {
 
@@ -66,4 +67,8 @@ public class ScreamForHelpState extends State {
 		return R.string.scream_for_help_activity;
 	}
 
+	@Override
+	public void onCompletion(MediaPlayer mp) {
+		super.onCompletion(mp);
+	}
 }

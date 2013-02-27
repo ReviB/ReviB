@@ -3,6 +3,7 @@ package com.revib.revib.states;
 import com.revib.revib.R;
 
 import android.app.Activity;
+import android.media.MediaPlayer;
 
 public class LateralRecoveryPositionState extends State {
 
@@ -55,6 +56,11 @@ public class LateralRecoveryPositionState extends State {
 	@Override
 	public int getQuestionResource() {
 		return R.string.lateral_recovery_position_question;
+	}
+
+	@Override
+	public void onCompletion(MediaPlayer mp) {
+		super.onCompletion(mp);
 	}
 
 }

@@ -4,6 +4,7 @@ import com.revib.revib.R;
 import com.revib.revib.session.SessionVariables;
 
 import android.app.Activity;
+import android.media.MediaPlayer;
 
 public class ConsCheckState extends State {
 	
@@ -54,7 +55,7 @@ public class ConsCheckState extends State {
 
 	@Override
 	public int getAudioResource() {
-		return R.raw.bip;
+		return R.raw.message;
 	}
 
 	@Override
@@ -92,4 +93,8 @@ public class ConsCheckState extends State {
 		return R.string.cons_check_title;
 	}
 
+	@Override
+	public void onCompletion(MediaPlayer mp) {
+		super.onCompletion(mp);
+	}
 }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- EN -->
+    <string name="conscious_title">Conscious</string>
+    <string name="conscious_question"></string>
+    <string name="conscious_left">Untranslated</string>
+    <string name="conscious_right">Untranslated</string>
+    <string name="conscious_info">"Untranslated"</string>
+    <string name="conscious_info_child">"Untranslated"</string>
+    <string name="conscious_info_baby">"Untranslated"</string>
+</resources>

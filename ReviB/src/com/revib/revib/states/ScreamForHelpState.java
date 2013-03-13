@@ -43,7 +43,9 @@ public class ScreamForHelpState extends State {
 
 	@Override
 	public int getImageResource() {
-		return R.drawable.animation_scream_for_help;
+		int resource	=	R.drawable.no_image;
+		resource		=	R.drawable.animation_scream_for_help;
+		return resource;
 	}
 
 	@Override

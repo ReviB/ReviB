@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- ES -->
+    <string name="conscious_title">Consciente</string>
+    <string name="conscious_question"></string>
+    <string name="conscious_left">Ha perdido la consciencia</string>
+    <string name="conscious_right">Ha llegado al centro de salud</string>
+    <string name="conscious_info">"Deje a la victima en la posición en la que se encuentre.
+- Si se encuentra bien, que acuda acompañada a un centro de salud para valoración facultativa. 
+- Compruebe la consciencia periódicamente hasta la llegada del centro de salud."</string>
+    <string name="conscious_info_child">"Untranslated"</string>
+    <string name="conscious_info_baby">"Untranslated"</string>
+</resources>

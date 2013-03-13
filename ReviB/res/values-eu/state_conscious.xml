@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- EU -->
+    <string name="conscious_title">Kontziente</string>
+    <string name="conscious_question"></string>
+    <string name="conscious_left">Kontzientzia galdu du</string>
+    <string name="conscious_right">Osasun zentrora heldu da</string>
+    <string name="conscious_info">"Untranslated"</string>
+    <string name="conscious_info_child">"Untranslated"</string>
+    <string name="conscious_info_baby">"Untranslated"</string>
+</resources>

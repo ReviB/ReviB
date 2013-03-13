@@ -5,11 +5,16 @@ import com.revib.revib.session.SessionVariables;
 
 import android.app.Activity;
 import android.media.MediaPlayer;
+import android.widget.Chronometer;
 
 public class ConsCheckState extends State {
 	
 	public ConsCheckState(Activity activity, State previousState) {
 		super(activity, previousState);
+
+		Chronometer time_full;
+		time_full	=	(Chronometer) activity.findViewById(R.id.time_full);
+		time_full.start();
 	}
 
 	@Override
@@ -20,12 +25,7 @@ public class ConsCheckState extends State {
 				nextState	=	new ScreamForHelpState(activity,this);
 				break;
 			case R.id.state_right_btn:
-				if(AGE==SessionVariables.BABY){
-					// Keep checking cons. periodically
-					//nextState	=	new KeepConsCheckState(activity,this);
-				}else{
-					nextState	=	new LateralRecoveryPositionState(activity,this);
-				}
+				nextState	=	new ConsciousState(activity,this);
 				break;
 		}
 		return nextState;
@@ -60,7 +60,7 @@ public class ConsCheckState extends State {
 
 	@Override
 	public int getImageResource() {
-		int resource	=	R.drawable.image_warning;
+		int resource	=	R.drawable.no_image;
 		switch(AGE){
 		case SessionVariables.ADULT:
 			resource	=	R.drawable.adult_shake_victim;

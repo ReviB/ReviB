@@ -3,15 +3,7 @@
     <!-- ES -->
     <string name="cons_check_title">Egiaztatu kontzientzia</string>
     <string name="cons_check_question">Biktima kontziente al dago?</string>
-    <string name="cons_check_info">"Kontziente ote dagoen ikusteko:
-1.- Biktima leunki astindu.
-2.- Galdetu: 'Ondo al zaude?'.
-Erantzuten al du?"</string>
-    <string name="cons_check_info_child">"Kontziente ote dagoen ikusteko:
-1.- Haurra leunki astindu.
-2.- Galdetu: 'Ondo al zaude?'.
-Erantzuten al du?"</string>
-    <string name="cons_check_info_baby">"Kontziente ote dagoen ikusteko:
-Haurtxoa leunki estimulatu, oinazpian golpe leun batzuk emanez eta bere izenez deitu.
-Erantzuten al du?"</string>
+    <string name="cons_check_info">"Kontzientzia egiaztatu. Biktima leunki astindu eta galdetu: 'Ondo al zaude?'. Erantzuten al du?"</string>
+    <string name="cons_check_info_child">"Kontzientzia egiaztatu. Haurra leunki astindu eta galdetu: 'Ondo al zaude?'. Erantzuten al du?"</string>
+    <string name="cons_check_info_baby">"Kontzientzia egiaztatu. Haurtxoa leunki estimulatu, oinazpian kolpe leun batzuk emanez eta bere izenez deitu. Erantzuten al du?"</string>
 </resources>

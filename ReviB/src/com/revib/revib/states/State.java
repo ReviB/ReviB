@@ -130,17 +130,19 @@ public abstract class State implements OnCompletionListener {
 	}
 	
 	public void startAudio(){
-		try{
-			AudioFunctions.checkAudio(activity);
-			if(mediaPlayer!=null){
-				mediaPlayer.release();
+		int audioResource	=	getAudioResource();
+		if(audioResource!=-1){
+			try{
+				AudioFunctions.checkAudio(activity);
+				if(mediaPlayer!=null){
+					mediaPlayer.release();
+				}
+				mediaPlayer	=	MediaPlayer.create(activity,getAudioResource());
+				mediaPlayer.setOnCompletionListener(this);
+				mediaPlayer.start();
+			}catch(Exception e){
+				Log.w(TAG, "Audio can not be started: "+e.getMessage());
 			}
-			mediaPlayer	=	MediaPlayer.create(activity,getAudioResource());
-			mediaPlayer.setOnCompletionListener(this);
-			//mediaPlayer.setOnPreparedListener(this);
-			mediaPlayer.start();
-		}catch(Exception e){
-			Log.w(TAG, "Audio can not be started: "+e.getMessage());
 		}
 	}
 

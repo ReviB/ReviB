@@ -5,7 +5,7 @@
     android:layout_gravity="bottom"
     android:gravity="bottom|center_horizontal"
     android:onClick="onStateBtnClicked"
-    android:background="@drawable/pattern_revib_bm"
+    android:background="#b2c0c3"
     android:orientation="vertical" >
 
     <RelativeLayout
@@ -17,12 +17,12 @@
         android:onClick="onStateBtnClicked" >
 
             <ImageView
-		        android:id="@+id/state_iv"
-		        android:layout_width="fill_parent"
-		        android:layout_height="fill_parent"
-		        android:src="@drawable/image_warning"
-		        android:onClick="onStateBtnClicked"
-		        android:contentDescription="@string/state_image_description"/>
+                android:id="@+id/state_iv"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:contentDescription="@string/state_image_description"
+                android:onClick="onStateBtnClicked"
+                android:src="@drawable/no_image" />
 
 	        <ImageButton
 	            android:id="@+id/state_view_btn"
@@ -47,6 +47,19 @@
 	            android:onClick="onStateBtnClicked"
 	            android:padding="10dp"
 	            android:src="@android:drawable/ic_lock_silent_mode" />
+
+	        <Chronometer
+	            android:id="@+id/time_full"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentTop="true"
+	            android:layout_centerHorizontal="true"
+	            android:gravity="right"
+	            android:padding="3dp"
+	            android:shadowColor="#A0A0A0"
+	            android:shadowDx="0"
+	            android:shadowDy="0"
+	            android:shadowRadius="12" />
             
     </RelativeLayout>
 

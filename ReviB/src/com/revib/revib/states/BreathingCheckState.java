@@ -60,7 +60,7 @@ public class BreathingCheckState extends State {
 
 	@Override
 	public int getImageResource() {
-		int resource	=	R.drawable.image_warning;
+		int resource	=	R.drawable.no_image;
 		switch(AGE){
 		case SessionVariables.ADULT:
 			resource	=	R.drawable.animation_adult_breathing;

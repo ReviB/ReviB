@@ -4,7 +4,6 @@ import com.revib.revib.R;
 import com.revib.revib.session.SessionVariables;
 
 import android.app.Activity;
-import android.media.MediaPlayer;
 import android.widget.Chronometer;
 
 public class ConsCheckState extends State {
@@ -55,6 +54,19 @@ public class ConsCheckState extends State {
 
 	@Override
 	public int getAudioResource() {
+		/*int $ret=-1;
+		switch(AGE){
+		case SessionVariables.ADULT:
+			$ret = R.raw.cons_check_info;
+			break;
+		case SessionVariables.CHILD:
+			$ret = R.raw.cons_check_info_child;
+			break;
+		case SessionVariables.BABY:
+			$ret = R.raw.cons_check_info_baby;
+			break;
+		}
+		return $ret;*/
 		return R.raw.message;
 	}
 
@@ -85,16 +97,22 @@ public class ConsCheckState extends State {
 
 	@Override
 	public int getQuestionResource() {
-		return R.string.cons_check_question;
+
+		int $ret=-1;
+		switch(AGE){
+		case SessionVariables.ADULT:
+		case SessionVariables.CHILD:
+			$ret = R.string.cons_check_question;
+			break;
+		case SessionVariables.BABY:
+			$ret = R.string.cons_check_question_baby;
+			break;
+		}
+		return $ret;
 	}
 
 	@Override
 	public int getTitleResource() {
 		return R.string.cons_check_title;
-	}
-
-	@Override
-	public void onCompletion(MediaPlayer mp) {
-		super.onCompletion(mp);
 	}
 }

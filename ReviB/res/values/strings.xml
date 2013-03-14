@@ -49,18 +49,4 @@
     <string name="age_adult">Adult (more than 8 years old)</string>
     <string name="age_child">Child (between 1 and 8 years old)</string>
     <string name="age_baby">Baby (less than 12 months old)</string>
-    <string name="title_activity_cons_check">Check Consciousness</string>
-	
-	<!-- Other -->
-    <string name="state_view">Step descriptions</string>
-    <string name="state_image_description">State image</string>
-    <string name="state_view_description">View help for state</string>
-    <string name="state_reload_description">Reload the state</string>
-    <string name="state_audio_description">Audio is disabled</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
-    <string name="question">Question?</string>
-    <string name="dialog_info">What to do</string>
-    <string name="dialog_ok">OK</string>
-    <string name="false_phone_call">In a real emergency a dial will appear with the emergency phone number.</string>
 </resources>

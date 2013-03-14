@@ -1,7 +1,6 @@
 package com.revib.revib.states;
 
 import com.revib.revib.R;
-import com.revib.revib.session.SessionVariables;
 
 import android.app.Activity;
 
@@ -13,24 +12,12 @@ public class ConsciousState extends State {
 
 	@Override
 	public int getInfoResource() {
-		int $ret=-1;
-		switch(AGE){
-		case SessionVariables.ADULT:
-			$ret = R.string.conscious_info;
-			break;
-		case SessionVariables.CHILD:
-			$ret = R.string.conscious_info_child;
-			break;
-		case SessionVariables.BABY:
-			$ret = R.string.conscious_info_baby;
-			break;
-		}
-		return $ret;
+		return R.string.conscious_info;
 	}
 
 	@Override
 	public int getAudioResource() {
-		return -1;
+		return R.raw.bip;
 	}
 
 	@Override
@@ -40,17 +27,17 @@ public class ConsciousState extends State {
 
 	@Override
 	public int getLeftBtnResource() {
-		return R.string.conscious_left;
+		return R.string.conscious_left_btn;
 	}
 
 	@Override
 	public int getRightBtnResource() {
-		return R.string.conscious_right;
+		return R.string.conscious_right_btn;
 	}
 
 	@Override
 	public int getQuestionResource() {
-		return R.string.conscious_question;
+		return -1;
 	}
 
 	@Override

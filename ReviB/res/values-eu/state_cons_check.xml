@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- ES -->
-    <string name="cons_check_title">Egiaztatu kontzientzia</string>
-    <string name="cons_check_question">Biktima kontziente al dago?</string>
-    <string name="cons_check_info">"Kontzientzia egiaztatu. Biktima leunki astindu eta galdetu: 'Ondo al zaude?'. Erantzuten al du?"</string>
-    <string name="cons_check_info_child">"Kontzientzia egiaztatu. Haurra leunki astindu eta galdetu: 'Ondo al zaude?'. Erantzuten al du?"</string>
-    <string name="cons_check_info_baby">"Kontzientzia egiaztatu. Haurtxoa leunki estimulatu, oinazpian kolpe leun batzuk emanez eta bere izenez deitu. Erantzuten al du?"</string>
-</resources>

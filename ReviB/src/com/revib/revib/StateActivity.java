@@ -150,6 +150,12 @@ public class StateActivity extends Activity {
 	
 	public void changeState(State state){
 		currentState	=	state;
+		//currentState.killThread();
+		initView();
+	}
+	
+	public void autoChangeState(State state){
+		currentState	=	state;
 		initView();
 	}
 }

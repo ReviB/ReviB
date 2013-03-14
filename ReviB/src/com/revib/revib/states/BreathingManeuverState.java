@@ -6,9 +6,9 @@ import com.revib.revib.session.SessionVariables;
 import android.app.Activity;
 import android.media.MediaPlayer;
 
-public class BreathingCheckState extends State {
-	
-	public BreathingCheckState(Activity activity, State previousState) {
+public class BreathingManeuverState extends State {
+
+	public BreathingManeuverState(Activity activity, State previousState) {
 		super(activity, previousState);
 	}
 
@@ -17,15 +17,9 @@ public class BreathingCheckState extends State {
 		State nextState	=	this;
 		switch(buttonRes){
 			case R.id.state_left_btn:
-				//nextState	=	new ScreamForHelpState(activity,this);
-				break;
 			case R.id.state_right_btn:
-				if(AGE==SessionVariables.BABY){
-					// Keep checking cons. periodically
-					//nextState	=	new KeepConsCheckState(activity,this);
-				}else{
-					//nextState	=	new LateralRecoveryPositionState(activity,this);
-				}
+			case -1:
+				nextState	=	new BreathingCheckState(activity,this);
 				break;
 		}
 		return nextState;
@@ -33,19 +27,17 @@ public class BreathingCheckState extends State {
 
 	@Override
 	public int getInfoResource() {
-		/*int $ret=-1;
+		int $ret=-1;
 		switch(AGE){
 		case SessionVariables.ADULT:
-			$ret = R.string.breathing_check_info;
-			break;
 		case SessionVariables.CHILD:
-			$ret = R.string.breathing_check_info_child;
+			$ret = R.string.breathing_maneuver_info;
 			break;
 		case SessionVariables.BABY:
-			$ret = R.string.breathing_check_info_baby;
+			$ret = R.string.breathing_maneuver_info_baby;
 			break;
-		}*/
-		return R.string.breathing_check_info;
+		}
+		return $ret;
 	}
 	
 	@Override
@@ -63,7 +55,7 @@ public class BreathingCheckState extends State {
 		int resource	=	R.drawable.no_image;
 		switch(AGE){
 		case SessionVariables.ADULT:
-			resource	=	R.drawable.animation_adult_breathing;
+			//resource	=	R.drawable.animation_adult_breathing;
 			break;
 		case SessionVariables.CHILD:
 			break;
@@ -75,26 +67,30 @@ public class BreathingCheckState extends State {
 
 	@Override
 	public int getLeftBtnResource() {
-		return R.string.no;
+		//return R.string.breathing_maneuver_left;
+		return -1;
 	}
 
 	@Override
 	public int getRightBtnResource() {
-		return R.string.yes;
+		//return R.string.breathing_maneuver_right;
+		return R.string.next;
 	}
 
 	@Override
 	public int getQuestionResource() {
-		return R.string.breathing_check_question;
+		//return R.string.breathing_maneuver_question;
+		return -1;
 	}
 
 	@Override
 	public int getTitleResource() {
-		return R.string.breathing_check_title;
+		return R.string.breathing_maneuver_title;
 	}
 
 	@Override
 	public void onCompletion(MediaPlayer mp) {
 		super.onCompletion(mp);
 	}
+
 }

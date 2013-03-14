@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--EN-->
+    <!-- General -->
+    <string name="state_view">Step descriptions</string>
+    <string name="state_image_description">State image</string>
+    <string name="state_view_description">View help for state</string>
+    <string name="state_reload_description">Reload the state</string>
+    <string name="state_audio_description">Audio is disabled</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="question">Question?</string>
+    <string name="dialog_info">What to do</string>
+    <string name="dialog_ok">OK</string>
+    <string name="false_phone_call">In a real emergency a dial will appear with the emergency phone number.</string>
+    <string name="next">Continue</string>
+<!-- 
+CONSCIENCE CHECKING
+-->
+    <string name="cons_check_title">Not translated</string>
+    <string name="cons_check_info">
+"Not translated"
+    </string>
+    <string name="cons_check_info_child">
+"Not translated"
+	</string>
+    <string name="cons_check_info_baby">
+"Not translated"
+	</string>
+    <string name="cons_check_question">Not translated</string>
+    <!-- string name="cons_check_question_child"></string-->
+    <string name="cons_check_question_baby">Not translated</string>
+    <!-- string name="cons_check_left_btn"></string-->
+    <!-- string name="cons_check_right_btn"></string-->
+    
+<!-- 
+CONSCIOUS 
+-->
+    <string name="conscious_title">Conscious</string>
+    <string name="conscious_info">
+"Not translated."
+	</string>
+    <!-- string name="conscious_info_child"></string-->
+    <!--string name="conscious_info_baby"></string-->
+    <!-- string name="conscious_question"></string-->
+    <string name="conscious_left_btn">Not translated</string>
+    <string name="conscious_right_btn">Not translated</string>
+    
+<!--
+SCREAM FOR HELP
+-->
+    <string name="scream_for_help_activity">Not translated</string>
+    <!-- string name="scream_for_help_question"></string-->
+    <!-- string name="scream_for_help_left_btn"></string-->
+    <!-- string name="scream_for_help_right_btn">Seguir</string-->
+    <string name="scream_for_help_info">
+"Not translated."
+    </string>
+    
+<!--
+BREATHING MANEUVER
+-->
+    <string name="breathing_maneuver_title">Not translated</string>
+    <string name="breathing_maneuver_info">
+"Not translated."
+	</string>
+    <!-- string name="breathing_check_info_child"></string-->
+    <string name="breathing_maneuver_info_baby">
+"Not translated."
+	</string>
+    <!-- string name="breathing_maneuver_question">¿Respira normalmente y sin dificultad?</string-->
+    <!-- string name="breathing_maneuver_left"></string-->
+    <!-- string name="breathing_maneuver_right"></string-->
+    
+<!--
+BREATHING CHECKING
+-->
+    <string name="breathing_check_title">Not translated</string>
+    <string name="breathing_check_info">
+"Not translated"
+	</string>
+    <string name="breathing_check_question">Not translated</string>
+    <!-- string name="breathing_check_left"></string-->
+    <!-- string name="breathing_check_right"></string-->
+    
+<!--
+LATERAL RECOVERY POSITION
+-->
+    <string name="lateral_recovery_position_title">Not translated</string>
+    <string name="lateral_recovery_position_info">
+"Not translated"
+	</string>
+	<string name="lateral_recovery_position_info_child">
+"Not translated"
+	</string>
+	<string name="lateral_recovery_position_info_baby">
+"Not translated"
+	</string>
+    <!-- string name="lateral_recovery_position_question">not defined</string-->
+    <!-- string name="lateral_recovery_position_left"></string-->
+    <!-- string name="lateral_recovery_position_right"></string-->
+    
+<!--
+CALL 112
+-->
+	<string name="call_title">Breaths</string>
+    <string name="call_info">
+"Not translated"
+	</string>
+    <!-- string name="call_question">not defined</string-->
+    <string name="call_left">112</string>
+    <string name="call_right"></string>
+<!--
+START CPR
+-->
+	<string name="start_cpr_title">Start CPR</string>
+    <string name="start_cpr_info">
+"Untranslated"
+	</string>
+    <string name="start_cpr_info_child">
+"Untranslated"
+	</string>
+    <!-- string name="start_cpr_question"></string-->
+    <!-- string name="start_cpr_left"></string-->
+    <!-- string name="start_cpr_right"></string-->
+<!--
+COMPRESSIONS
+-->
+	<string name="compressions_title">Untranslated</string>
+    <string name="compressions_info">
+"Untranslated"
+	</string>
+    <string name="compressions_info_child">
+"Untranslated"
+    </string>
+    <string name="compressions_info_baby">
+"Untranslated"
+	</string>
+    <!-- string name="compressions_question"></string-->
+    <!-- string name="compressions_left"></string-->
+    <!-- string name="compressions_right"></string-->
+<!--
+INFLATIONS
+-->
+	<string name="insulfations_title">Untranslated</string>
+    <string name="insuflations_info">
+"Untranslated""
+	</string>
+    <string name="insulfations_info_child">
+"Untranslated""
+	</string>
+    <string name="insulfations_info_baby">
+"Untranslated""
+	</string>
+    <!-- string name="compressions_question"></string-->
+    <!-- string name="compressions_left"></string-->
+    <!-- string name="compressions_right"></string-->
+</resources>

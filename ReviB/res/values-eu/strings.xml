@@ -41,17 +41,4 @@
     <string name="age_adult">Heldua (8 urte baino gehiago)</string>
     <string name="age_child">"Haurra (1 eta 8 urte bitartean)"</string>
     <string name="age_baby">Haurtxoa (12 hilabete baino gutxiago)</string>
-    <string name="title_activity_cons_check">Kontsientzia egiaztatu</string>
-	
-	<!-- Other -->
-    <string name="state_view">Egoeraren deskribapena</string>
-    <string name="state_image_description">Egoeraren irudia</string>
-    <string name="state_reload_description">Egoera birkargatu</string>
-    <string name="state_audio_description">Soinua ezgaituta dago</string>
-    <string name="yes">Bai</string>
-    <string name="no">Ez</string>
-    <string name="question">Galdera?</string>
-    <string name="dialog_info">Zer egin</string>
-    <string name="dialog_ok">Ados</string>
-    <string name="false_phone_call">Benetako larrialdi batean larrialdien telefonora deituko litzateke.</string>
 </resources>

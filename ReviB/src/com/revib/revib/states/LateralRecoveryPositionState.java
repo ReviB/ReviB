@@ -45,17 +45,17 @@ public class LateralRecoveryPositionState extends State {
 
 	@Override
 	public int getLeftBtnResource() {
-		return R.string.lateral_recovery_position_left;
+		return -1;
 	}
 
 	@Override
 	public int getRightBtnResource() {
-		return R.string.lateral_recovery_position_right;
+		return -1;
 	}
 
 	@Override
 	public int getQuestionResource() {
-		return R.string.lateral_recovery_position_question;
+		return -1;
 	}
 
 	@Override

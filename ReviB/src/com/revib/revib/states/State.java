@@ -3,6 +3,7 @@ package com.revib.revib.states;
 import com.revib.revib.R;
 import com.revib.revib.audio.AudioFunctions;
 import com.revib.revib.session.SessionVariables;
+import com.revib.revib.session.SleepThread;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -19,12 +20,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public abstract class State implements OnCompletionListener {
+	private 	State		previousState	=	null;
 	public		int			AGE;
 	public		Boolean		reality;
 	public		String		TAG;
 	public		Activity	activity		=	null;
-	private 	State		previousState	=	null;
 	public		MediaPlayer mediaPlayer 	= 	null;
+	public		SleepThread	thread;
 	
 	public		Resources	res;
 	
@@ -52,20 +54,22 @@ public abstract class State implements OnCompletionListener {
 			
 			Resources	res		=	activity.getResources();
 			
-			// Set Question
-			TextView	question_tv	=	(TextView) activity.findViewById(R.id.state_question_tv);
-			question_tv.setText(getQuestionResource());
-			
 			// Set image
 			ImageView 	image 	=	(ImageView) activity.findViewById(R.id.state_iv);
 			image.setImageDrawable(res.getDrawable(getImageResource()));
 
+			
+			// Set Question
+			setTextView(R.id.state_question_tv,getQuestionResource());
+			
 			// Set buttons text
 			setBtn(R.id.state_left_btn,getLeftBtnResource());
 			setBtn(R.id.state_right_btn,getRightBtnResource());
 			
 			// Set title (for multi-lingual issues)
-			activity.setTitle(getTitleResource());
+			int titleRes	=	getTitleResource();
+			String title	=	res.getString(titleRes);
+			activity.setTitle(titleRes);
 		}catch(Exception e){
 			Log.w(TAG, "State view could not be set: "+e.getMessage());
 		}
@@ -78,6 +82,16 @@ public abstract class State implements OnCompletionListener {
 			btn.setText(stringResource);
 		}else{
 			btn.setVisibility(View.GONE);
+		}
+	}
+	
+	private void setTextView(int viewResource,int stringResource){
+		TextView		view	=	(TextView) activity.findViewById(viewResource);
+		if(stringResource!=-1){
+			view.setVisibility(View.VISIBLE);
+			view.setText(stringResource);
+		}else{
+			view.setVisibility(View.GONE);
 		}
 	}
 	
@@ -162,5 +176,10 @@ public abstract class State implements OnCompletionListener {
 	@Override
 	public void onCompletion(MediaPlayer mp) {
 		mp.release();
+	}
+	
+	public void killThread(){
+		if(thread!=null && thread.isAlive())
+			thread.interrupt();
 	}
 }

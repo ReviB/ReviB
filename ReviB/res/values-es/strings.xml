@@ -41,17 +41,4 @@
     <string name="age_adult">Adulto (más de 8 años)</string>
     <string name="age_child">Niño (entre 1 y 8 años)</string>
     <string name="age_baby">Bebé (menos de 12 meses)</string>
-    <string name="title_activity_cons_check">Comprueba la consciencia</string>
-	
-	<!-- Other -->
-    <string name="state_view">Descripcion de la etapa</string>
-    <string name="state_image_description">Imagen de la etapa</string>
-    <string name="state_reload_description">Recarga la etapa</string>
-    <string name="state_audio_description">El audio esta deshabilitado</string>
-    <string name="yes">Si</string>
-    <string name="no">No</string>
-    <string name="question">¿Pregunta?</string>
-    <string name="dialog_info">Qué hacer</string>
-    <string name="dialog_ok">Vale</string>
-    <string name="false_phone_call">En una emergencia real se llamaria al teléfono de emergencia.</string>
 </resources>

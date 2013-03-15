@@ -18,7 +18,7 @@
 <!-- 
 CONSCIENCE CHECKING
 -->
-    <string name="cons_check_title">Comprobar consciencia</string>
+    <string name="cons_check_title">Kontzientzia egiaztatu</string>
     <string name="cons_check_info">
 "Compruebe la consciencia. Agite a la victima de los hombros y pregúntele: ¿Está usted bien?
 ¿Responde?"
@@ -40,7 +40,7 @@ CONSCIENCE CHECKING
 <!-- 
 CONSCIOUS 
 -->
-    <string name="conscious_title">Consciente</string>
+    <string name="conscious_title">Kontziente</string>
     <string name="conscious_info">
 "Que la víctima acuda acompañada a un centro de salud para valoración facultativa.
 Compruebe la consciencia periódicamente hasta la llegada al centro de salud."
@@ -52,20 +52,20 @@ Compruebe la consciencia periódicamente hasta la llegada al centro de salud."
     <string name="conscious_right_btn">Ha llegado al centro de salud</string>
     
 <!--
-SCREAM FOR HELP
+SHOUT FOR HELP
 -->
-    <string name="scream_for_help_activity">Grite pidiendo ayuda sin abandonar a la victima: ¡Socorro! ¡Auxilio!</string>
-    <!-- string name="scream_for_help_question"></string-->
-    <!-- string name="scream_for_help_left_btn"></string-->
-    <!-- string name="scream_for_help_right_btn">Seguir</string-->
-    <string name="scream_for_help_info">
+    <string name="shout_for_help_title">Laguntza eske oihu egin</string>
+    <!-- string name="shout_for_help_question"></string-->
+    <!-- string name="shout_for_help_left_btn"></string-->
+    <!-- string name="shout_for_help_right_btn">Seguir</string-->
+    <string name="shout_for_help_info">
 "Grite pidiendo ayuda sin abandonar a la victima: ¡Socorro! ¡Auxilio!
 Si está acompañado de otra persona, indíquele que llame al 112. Si está solo, no llame en estos momentos y siga las instrucciones siguientes."
     </string>
 <!--
 BREATHING MANEUVER
 -->
-    <string name="breathing_maneuver_title">Maniobra frente-mentón</string>
+    <string name="breathing_maneuver_title">Arnasbidea ireki</string>
     <string name="breathing_maneuver_info">
 "Apoye una mano sobre la frente y la otra en la barbilla. Extienda el cuello hacia atrás."
 	</string>
@@ -80,7 +80,7 @@ BREATHING MANEUVER
 <!--
 BREATHING CHECKING
 -->
-    <string name="breathing_check_title">Comprobar respiración</string>
+    <string name="breathing_check_title">Arnasketa egiaztatu</string>
     <string name="breathing_check_info">
 "Compruebe la respiración. Acérquese a la cara de la victima y valore si:
 	1.- Mueve el pecho.
@@ -95,7 +95,7 @@ BREATHING CHECKING
 <!--
 LATERAL RECOVERY POSITION
 -->
-    <string name="lateral_recovery_position_title">Respira</string>
+    <string name="lateral_recovery_position_title">Albokako segurtasun posizioa</string>
     <string name="lateral_recovery_position_info">
 "Coloque a la victima el posición lateral de seguridad. Con el paciente boca arriba:
 
@@ -117,7 +117,7 @@ LATERAL RECOVERY POSITION
 <!--
 CALL 112
 -->
-	<string name="call_title">Respira</string>
+	<string name="call_title">112ra deitu</string>
     <string name="call_info">
 "Llame al 112 y diga:
 - Su nombre.
@@ -131,7 +131,7 @@ CALL 112
 <!--
 START CPR
 -->
-	<string name="start_cpr_title">Iniciar RCP</string>
+	<string name="start_cpr_title">Ekin BBBari</string>
     <string name="start_cpr_info">
 "1- Localice este punto en el centro del pecho.
 2- Entrelace las manos.
@@ -146,7 +146,7 @@ START CPR
 <!--
 COMPRESSIONS
 -->
-	<string name="compressions_title">Realizar compresiones</string>
+	<string name="compressions_title">Konpresioak burutu</string>
     <string name="compressions_info">
 "Comprima 30 veces con los brazos extendidos."
 	</string>
@@ -164,7 +164,7 @@ COMPRESSIONS
 <!--
 INFLATIONS
 -->
-	<string name="insulfations_title">Realizar insuflaciones</string>
+	<string name="insulfations_title">Insuflazioak burutu</string>
     <string name="insuflations_info">
 "Pince la nariz con una mano y eleve la barbilla con la otra. Coloque sus labios sobre la boca de la víctima y sople. Realice esto 2 veces."
 	</string>

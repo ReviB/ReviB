@@ -52,13 +52,13 @@ Compruebe la consciencia periódicamente hasta la llegada al centro de salud."
     <string name="conscious_right_btn">Ha llegado al centro de salud</string>
     
 <!--
-SCREAM FOR HELP
+SHOUT FOR HELP
 -->
-    <string name="scream_for_help_activity">Grite pidiendo ayuda sin abandonar a la victima: ¡Socorro! ¡Auxilio!</string>
-    <!-- string name="scream_for_help_question"></string-->
-    <!-- string name="scream_for_help_left_btn"></string-->
-    <!-- string name="scream_for_help_right_btn">Seguir</string-->
-    <string name="scream_for_help_info">
+    <string name="shout_for_help_title">Grite pidiendo ayuda sin abandonar a la victima: ¡Socorro! ¡Auxilio!</string>
+    <!-- string name="shout_for_help_question"></string-->
+    <!-- string name="shout_for_help_left_btn"></string-->
+    <!-- string name="shout_for_help_right_btn">Seguir</string-->
+    <string name="shout_for_help_info">
 "Grite pidiendo ayuda sin abandonar a la victima: ¡Socorro! ¡Auxilio!
 Si está acompañado de otra persona, indíquele que llame al 112. Si está solo, no llame en estos momentos y siga las instrucciones siguientes."
     </string>

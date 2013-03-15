@@ -21,7 +21,7 @@ public class ConsCheckState extends State {
 		State nextState	=	this;
 		switch(buttonRes){
 			case R.id.state_left_btn:
-				nextState	=	new ScreamForHelpState(activity,this);
+				nextState	=	new ShoutForHelpState(activity,this);
 				break;
 			case R.id.state_right_btn:
 				nextState	=	new ConsciousState(activity,this);

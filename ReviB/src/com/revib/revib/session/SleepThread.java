@@ -5,51 +5,58 @@ import com.revib.revib.states.State;
 
 public class SleepThread implements Runnable {
 
+	private static SleepThread instance	=	null; 
+	
 	Thread runner;
 	private StateActivity	activity	=	null;
 	private int 			time		=	0;
-	private State			nextState	=	null;
-	public SleepThread() {
+	private State			state		=	null;
+	//private Boolean			canceled	=	false;
+	
+	public static SleepThread getInstance(){
+		if(instance==null){
+			instance	=	new SleepThread();
+		}
+		return instance;
 	}
-	public SleepThread(
-			String threadName,
-			StateActivity activity,
-			int time,
-			State nextState) {
-		runner 			= new Thread(this, threadName);
-		this.activity	= activity;
-		this.time 		= time;
-		this.nextState	= nextState;
-
-	}
+	private SleepThread() {}
+	
 	public void run() {
 		try {
 			Thread.sleep(time);
-			if(activity!=null && nextState!=null)
-				activity.autoChangeState(nextState);
+			//Only UI Thread can change view
+			activity.runOnUiThread(
+				new Runnable() {
+				     public void run() {
+						if(activity!=null && state!=null)
+							activity.autoChangeState(state);
+		
+				    }
+				}
+			);
 				
-		} catch (InterruptedException e) {
+		} catch (Exception e) {
+			//Toast.makeText(activity, "SleepThread run exception: "+e.getMessage(), Toast.LENGTH_LONG).show();
 			e.printStackTrace();
 		}
 	}
-	
-	public void start(){
+	public void start(StateActivity activity,State state,int time){
+		this.activity	=	activity;
+		this.state		=	state;
+		this.time		=	time;
+		runner			=	new Thread(this, "SleepThread");
 		runner.start();
 	}
-	public void interrupt(){
-		runner.interrupt();
-	}
-	
-	public Boolean isAlive(){
-		return runner.isAlive();
-	}
-	
-	/*public void setActivity(StateActivity activity) {
-		this.activity = activity;
-	}
-	
-	public void setTime(int time) {
-		this.time = time;
-	}*/
 
+	public void interrupt(){
+		if(runner!= null && runner.isAlive()){
+			try{
+				runner.interrupt();
+				runner	=	null;
+			}catch(Exception e){
+				//Toast.makeText(activity, "SleepThread interrupt error: "+e.getMessage(), Toast.LENGTH_LONG).show();
+				e.printStackTrace();
+			}
+		}
+	}
 }

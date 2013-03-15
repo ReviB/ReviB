@@ -5,6 +5,7 @@ import com.revib.revib.about.AboutDialog;
 import com.revib.revib.audio.AudioFunctions;
 import com.revib.revib.locale.LocaleDialog;
 import com.revib.revib.locale.LocaleFunctions;
+import com.revib.revib.session.SleepThread;
 import com.revib.revib.states.ConsCheckState;
 import com.revib.revib.states.State;
 
@@ -68,14 +69,12 @@ public class StateActivity extends Activity {
 		switch (item.getItemId()) {
 		case android.R.id.home:
 			
-			currentState	=	currentState.getPreviousState();
+			State previousState	=	currentState.getPreviousState();
 			
-			if(currentState==null)
+			if(previousState==null)
 				NavUtils.navigateUpFromSameTask(this);
 			else{
-				//currentState.setStateView();
-				//currentState.startAnimation();
-				currentState.reloadState();
+				changeState(previousState);
 			}
 			$ret = true;
 			break;
@@ -103,6 +102,7 @@ public class StateActivity extends Activity {
 				break;
 			case R.id.state_reload_btn:
 				// Reload same state;
+				SleepThread.getInstance().interrupt();
 				initView();
 				break;
 			case R.id.state_iv:
@@ -139,9 +139,9 @@ public class StateActivity extends Activity {
             return super.onKeyUp(keyCode, event);
         }
         if ((keyCode == KeyEvent.KEYCODE_BACK)){
-        	currentState	=	currentState.getPreviousState();
-        	if(currentState!=null){
-        		currentState.reloadState();
+        	State previousState	=	currentState.getPreviousState();
+        	if(previousState!=null){
+        		changeState(previousState);
         		return false;
         	}
         }
@@ -150,7 +150,7 @@ public class StateActivity extends Activity {
 	
 	public void changeState(State state){
 		currentState	=	state;
-		//currentState.killThread();
+		SleepThread.getInstance().interrupt();
 		initView();
 	}
 	

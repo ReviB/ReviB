@@ -7,15 +7,15 @@ import android.media.MediaPlayer;
 import com.revib.revib.session.SleepThread;
 import com.revib.revib.StateActivity;
 
-public class ScreamForHelpState extends State {
+public class ShoutForHelpState extends State {
 
-	public ScreamForHelpState(Activity activity, State previousState) {
+	public ShoutForHelpState(Activity activity, State previousState) {
 		super(activity, previousState);
 	}
 
 	@Override
 	public int getInfoResource() {
-		return R.string.scream_for_help_info;
+		return R.string.shout_for_help_info;
 	}
 
 	@Override
@@ -25,9 +25,7 @@ public class ScreamForHelpState extends State {
 
 	@Override
 	public int getImageResource() {
-		int resource	=	R.drawable.no_image;
-		resource		=	R.drawable.animation_scream_for_help;
-		return resource;
+		return R.drawable.shout;
 	}
 
 	@Override
@@ -49,7 +47,7 @@ public class ScreamForHelpState extends State {
 
 	@Override
 	public int getTitleResource() {
-		return R.string.scream_for_help_activity;
+		return R.string.shout_for_help_title;
 	}
 
 	@Override
@@ -67,7 +65,11 @@ public class ScreamForHelpState extends State {
 	@Override
 	public void onCompletion(MediaPlayer mp) {
 		super.onCompletion(mp);
-		//thread	=	new SleepThread("ScreamForHelp",((StateActivity) activity),2000,this.getNextState(-1));
-		//thread.start();
+		State	nextState	=	getNextState(-1);
+		SleepThread.getInstance().start(
+				((StateActivity) activity),
+				nextState,
+				2000
+		);
 	}
 }

@@ -26,7 +26,6 @@ public abstract class State implements OnCompletionListener {
 	public		String		TAG;
 	public		Activity	activity		=	null;
 	public		MediaPlayer mediaPlayer 	= 	null;
-	public		SleepThread	thread;
 	
 	public		Resources	res;
 	
@@ -67,9 +66,7 @@ public abstract class State implements OnCompletionListener {
 			setBtn(R.id.state_right_btn,getRightBtnResource());
 			
 			// Set title (for multi-lingual issues)
-			int titleRes	=	getTitleResource();
-			String title	=	res.getString(titleRes);
-			activity.setTitle(titleRes);
+			activity.setTitle(res.getString(getTitleResource()));
 		}catch(Exception e){
 			Log.w(TAG, "State view could not be set: "+e.getMessage());
 		}
@@ -168,6 +165,9 @@ public abstract class State implements OnCompletionListener {
 	}
 	
 	public void reloadState(){
+		if(mediaPlayer!=null)
+			mediaPlayer.release();
+		SleepThread.getInstance().interrupt();
 		setStateView();
 		startAnimation();
 		startAudio();
@@ -176,10 +176,5 @@ public abstract class State implements OnCompletionListener {
 	@Override
 	public void onCompletion(MediaPlayer mp) {
 		mp.release();
-	}
-	
-	public void killThread(){
-		if(thread!=null && thread.isAlive())
-			thread.interrupt();
 	}
 }

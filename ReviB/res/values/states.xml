@@ -47,24 +47,24 @@ CONSCIOUS
     <string name="conscious_right_btn">Not translated</string>
     
 <!--
-SCREAM FOR HELP
+SHOUT FOR HELP
 -->
-    <string name="scream_for_help_activity">Not translated</string>
-    <!-- string name="scream_for_help_question"></string-->
-    <!-- string name="scream_for_help_left_btn"></string-->
-    <!-- string name="scream_for_help_right_btn">Seguir</string-->
-    <string name="scream_for_help_info">
+    <string name="shout_for_help_title">Shout for help</string>
+    <!-- string name="shout_for_help_question"></string-->
+    <!-- string name="shout_for_help_left_btn"></string-->
+    <!-- string name="shout_for_help_right_btn">Seguir</string-->
+    <string name="shout_for_help_info">
 "Not translated."
     </string>
     
 <!--
 BREATHING MANEUVER
 -->
-    <string name="breathing_maneuver_title">Not translated</string>
+    <string name="breathing_maneuver_title">Open the airway</string>
     <string name="breathing_maneuver_info">
 "Not translated."
 	</string>
-    <!-- string name="breathing_check_info_child"></string-->
+    <!-- string name="breathing_maneuver_info_child"></string-->
     <string name="breathing_maneuver_info_baby">
 "Not translated."
 	</string>
@@ -75,7 +75,7 @@ BREATHING MANEUVER
 <!--
 BREATHING CHECKING
 -->
-    <string name="breathing_check_title">Not translated</string>
+    <string name="breathing_check_title">Check for breathing</string>
     <string name="breathing_check_info">
 "Not translated"
 	</string>
@@ -86,7 +86,7 @@ BREATHING CHECKING
 <!--
 LATERAL RECOVERY POSITION
 -->
-    <string name="lateral_recovery_position_title">Not translated</string>
+    <string name="lateral_recovery_position_title">Lateral security position</string>
     <string name="lateral_recovery_position_info">
 "Not translated"
 	</string>
@@ -103,7 +103,7 @@ LATERAL RECOVERY POSITION
 <!--
 CALL 112
 -->
-	<string name="call_title">Breaths</string>
+	<string name="call_title">Call 112</string>
     <string name="call_info">
 "Not translated"
 	</string>
@@ -126,7 +126,7 @@ START CPR
 <!--
 COMPRESSIONS
 -->
-	<string name="compressions_title">Untranslated</string>
+	<string name="compressions_title">Perform compressions</string>
     <string name="compressions_info">
 "Untranslated"
 	</string>
@@ -142,7 +142,7 @@ COMPRESSIONS
 <!--
 INFLATIONS
 -->
-	<string name="insulfations_title">Untranslated</string>
+	<string name="insulfations_title">Perform ventilations</string>
     <string name="insuflations_info">
 "Untranslated""
 	</string>

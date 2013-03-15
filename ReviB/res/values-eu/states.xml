@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- EU -->
-    
-    <!-- General -->
+<!--
+GENERAL
+-->
     <string name="state_view">Egoeraren deskribapena</string>
     <string name="state_image_description">Egoeraren irudia</string>
+    <string name="state_view_description">Egoeraren ikuspenerako laguntza</string>
     <string name="state_reload_description">Egoera birkargatu</string>
     <string name="state_audio_description">Soinua ezgaituta dago</string>
     <string name="yes">Bai</string>
@@ -14,26 +16,25 @@
     <string name="dialog_ok">Ados</string>
     <string name="false_phone_call">Benetako larrialdi batean larrialdien telefonora deituko litzateke.</string>
     <string name="next">Jarraitu</string>
-<!-- Untranslated -->
 <!-- 
 CONSCIENCE CHECKING
 -->
     <string name="cons_check_title">Kontzientzia egiaztatu</string>
     <string name="cons_check_info">
-"Compruebe la consciencia. Agite a la victima de los hombros y pregúntele: ¿Está usted bien?
-¿Responde?"
+"Biktimaren kontzientzia egiaztatu. Horretarako biktima leunki astindu eta galdetu: 'Ondo al zaude?'.
+Erantzuten al du?"
     </string>
     <string name="cons_check_info_child">
-"Compruebe la consciencia. Agite al niño de los hombros y pregúntele: ¿Estás bien?
-¿Responde?"
+"Haurra kontzientzia egiaztatu. Horretarako haurra sorbaldetatik helu, leunki astindu eta galdetu: 'Ondo al zaude?'.
+Erantzuten al du?"
 	</string>
     <string name="cons_check_info_baby">
-"Compruebe la consciencia. Golpee suavemente la planta del pie de la victima y llámele por su nombre.
-¿Responde a estímulos o llora?"
+"Haurtxoaren kontzientzia egiaztatu. Horretarako haurtxoa leunki estimulatu, oinazpian golpe leun batzuk emanez eta bere izenaren bidez deitu ezazu.
+Negarrik egin edo estimuluei erantzuten al die?"
 	</string>
-    <string name="cons_check_question">¿Responde?</string>
+    <string name="cons_check_question">Erantzuten al du?</string>
     <!-- string name="cons_check_question_child"></string-->
-    <string name="cons_check_question_baby">¿Responde a estímulos o llora?</string>
+    <string name="cons_check_question_baby">Negarrik egin edo estimuluei erantzuten al die?</string>
     <!-- string name="cons_check_left_btn"></string-->
     <!-- string name="cons_check_right_btn"></string-->
     
@@ -42,14 +43,14 @@ CONSCIOUS
 -->
     <string name="conscious_title">Kontziente</string>
     <string name="conscious_info">
-"Que la víctima acuda acompañada a un centro de salud para valoración facultativa.
-Compruebe la consciencia periódicamente hasta la llegada al centro de salud."
+"Joan dadila osasun zentro batera norbaitek lagunduta mediku batek ikusi dezan.
+Aldian-aldian biktimaren kontzientzia egiaztatu osasun zentrura heldu arte."
 	</string>
     <!-- string name="conscious_info_child"></string-->
     <!--string name="conscious_info_baby"></string-->
     <!-- string name="conscious_question"></string-->
-    <string name="conscious_left_btn">Ha perdido la consciencia</string>
-    <string name="conscious_right_btn">Ha llegado al centro de salud</string>
+    <string name="conscious_left_btn">Kontzientzia galdu du</string>
+    <string name="conscious_right_btn">Heldu da osasun zentrura</string>
     
 <!--
 SHOUT FOR HELP
@@ -57,26 +58,27 @@ SHOUT FOR HELP
     <string name="shout_for_help_title">Laguntza eske oihu egin</string>
     <!-- string name="shout_for_help_question"></string-->
     <!-- string name="shout_for_help_left_btn"></string-->
-    <!-- string name="shout_for_help_right_btn">Seguir</string-->
+    <!-- string name="shout_for_help_right_btn"></string-->
     <string name="shout_for_help_info">
-"Grite pidiendo ayuda sin abandonar a la victima: ¡Socorro! ¡Auxilio!
-Si está acompañado de otra persona, indíquele que llame al 112. Si está solo, no llame en estos momentos y siga las instrucciones siguientes."
+"Biktima utzi gabe laguntza eske oihu egin: Laguntza!
+Beste norbait zurekin badago, esan iezaiozu 112 telefonora deitzeko. Bakarrik bazaude ez deitu oraindik eta jarraitu hurrengo argibideekin."
     </string>
 <!--
 BREATHING MANEUVER
 -->
     <string name="breathing_maneuver_title">Arnasbidea ireki</string>
     <string name="breathing_maneuver_info">
-"Apoye una mano sobre la frente y la otra en la barbilla. Extienda el cuello hacia atrás."
+"Jarri esku bat kopetan eta beste bat kokotsean. Luzatu iezaiozu lepoa atzeraka."
 	</string>
     <!-- string name="breathing_check_info_child"></string-->
     <string name="breathing_maneuver_info_baby">
-"Apoye una mano sobre la frente y la otra en la barbilla. Eleve ligeramente la barbilla hacia arriba."
+"Jarri esku bat kopetan eta beste bat kokotsean. Altza iezaiozu kokotsa apur bat."
 	</string>
     <!-- string name="breathing_maneuver_question">¿Respira normalmente y sin dificultad?</string-->
     <!-- string name="breathing_maneuver_left"></string-->
     <!-- string name="breathing_maneuver_right"></string-->
     
+<!-- Untranslated -->
 <!--
 BREATHING CHECKING
 -->

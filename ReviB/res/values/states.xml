@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--EN-->
-    <!-- General -->
+<!--
+GENERAL
+-->
     <string name="state_view">Step descriptions</string>
     <string name="state_image_description">State image</string>
     <string name="state_view_description">View help for state</string>

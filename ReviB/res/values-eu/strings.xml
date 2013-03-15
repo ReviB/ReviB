@@ -14,7 +14,18 @@
         Mesedez, igo ezazu bolumena aplikazioaren instrukzioak entzun nahi badituzu.</string>
 
     <!-- SettingsActivity -->
-    <string name="language">Hizkuntza:</string>
+    <string name="language">Hizkuntza</string>
+
+    <string-array name="language_list">
+        <item>English</item>
+        <item>Español</item>
+        <item>Euskara</item>
+    </string-array>
+    <string-array name="language_code_list">
+        <item>en</item>
+        <item>es</item>
+        <item>eu</item>
+    </string-array>
 
     <!-- About Activity -->
     <string name="about_revib">ReviB-eri buruz</string>

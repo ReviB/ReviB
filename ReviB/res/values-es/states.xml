@@ -6,6 +6,7 @@ GENERAL
 -->
     <string name="state_view">Descripcion de la etapa</string>
     <string name="state_image_description">Imagen de la etapa</string>
+    <string name="state_view_description">Ayuda para la vista del estado</string>
     <string name="state_reload_description">Recarga la etapa</string>
     <string name="state_audio_description">El audio esta deshabilitado</string>
     <string name="yes">Si</string>

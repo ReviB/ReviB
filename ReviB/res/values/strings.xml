@@ -14,7 +14,7 @@
 
     <!-- Settings activity -->
     <string name="settings">Settings</string>
-    <string name="language">Language:</string>
+    <string name="language">Language</string>
 
     <string-array name="language_list">
         <item>English</item>

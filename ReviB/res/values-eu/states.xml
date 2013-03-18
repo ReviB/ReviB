@@ -78,19 +78,17 @@ BREATHING MANEUVER
     <!-- string name="breathing_maneuver_left"></string-->
     <!-- string name="breathing_maneuver_right"></string-->
     
-<!-- Untranslated -->
 <!--
 BREATHING CHECKING
 -->
     <string name="breathing_check_title">Arnasketa egiaztatu</string>
     <string name="breathing_check_info">
-"Compruebe la respiración. Acérquese a la cara de la victima y valore si:
-	1.- Mueve el pecho.
-	2.- Escucha la respiración o siente el aliento sobre su mejilla.
+"Arnasketa egiaztatu. Biktimaren aurpegira hurbildu eta ebaluatu:
+Bularra mugitzen duen, arnasketa aurpegian sentitzen duzun edo arnasten entzuten duzun.
 
-¿Respira normalmente y sin dificultad?"
+Era normalean eta arazo gabe arnasten al du?"
 	</string>
-    <string name="breathing_check_question">¿Respira normalmente y sin dificultad?</string>
+    <string name="breathing_check_question">Era normalean eta arazo gabe arnasten al du?</string>
     <!-- string name="breathing_check_left"></string-->
     <!-- string name="breathing_check_right"></string-->
     
@@ -99,18 +97,18 @@ LATERAL RECOVERY POSITION
 -->
     <string name="lateral_recovery_position_title">Albokako segurtasun posizioa</string>
     <string name="lateral_recovery_position_info">
-"Coloque a la victima el posición lateral de seguridad. Con el paciente boca arriba:
+"Biktima albokako segurtasunezko posizioan utzi. Biktima buruzgora etzunda dagoelarik:
 
-1- Eleve el brazo izquierdo.
-2- Coloque la mano derecha sobre el hombro izquierdo.
-3- Doble la rodilla derecha.
-4- Voltee a la victima hacia la izquierda."
+1- Ezkerreko besoa altza iezaiozu.
+2- Eskuineko eskua ezkerreko sorbalda gainean jarri.
+3- Eskuineko belauna tolestu.
+4- Ezker aldera irauli ezazu."
 	</string>
 	<string name="lateral_recovery_position_info_child">
-"Deje al niño en la posición en la que se encuentre"
+"Utzi haurra dagoen posizioan."
 	</string>
 	<string name="lateral_recovery_position_info_baby">
-"Deje al bebé en la posición en la que se encuentre"
+"Utzi hautxoa dagoen posizioan."
 	</string>
     <!-- string name="lateral_recovery_position_question">not defined</string-->
     <!-- string name="lateral_recovery_position_left"></string-->
@@ -121,26 +119,26 @@ CALL 112
 -->
 	<string name="call_title">112ra deitu</string>
     <string name="call_info">
-"Llame al 112 y diga:
-- Su nombre.
-- Lugar donde se encuentra.
-- 'Estoy en una urgencia médica'."
+"112 telefonora deitu eta esan:
+- Zure izena.
+- Momentuan aurkitzen zaren tokia.
+- 'Larrialdi mediku batean nago'."
 	</string>
     <!-- string name="call_question">not defined</string-->
     <string name="call_left">112</string>
-    <string name="call_right">112 ya avisado</string>
+    <string name="call_right">Dagoeneko deitua</string>
     
 <!--
 START CPR
 -->
 	<string name="start_cpr_title">Ekin BBBari</string>
     <string name="start_cpr_info">
-"1- Localice este punto en el centro del pecho.
-2- Entrelace las manos.
-3- Coloque las manos sobre centro del pecho."
+"1- Bularreko erdialdeko puntu hau bila ezazu.
+2- Eskuak gurutzatu irudian agertzen den bezala.
+3- Jarri itzazu eskuak bular gainean (aurreko puntuaren gainean)."
 	</string>
     <string name="start_cpr_info_child">
-"Localice este punto en el centro del pecho."
+"Bularreko erdialdeko puntu hau bila ezazu."
 	</string>
     <!-- string name="start_cpr_question"></string-->
     <!-- string name="start_cpr_left"></string-->
@@ -150,15 +148,23 @@ COMPRESSIONS
 -->
 	<string name="compressions_title">Konpresioak burutu</string>
     <string name="compressions_info">
-"Comprima 30 veces con los brazos extendidos."
+"Besoak luzaturik dituzula 30 aldiz konprimatu."
 	</string>
-    <string name="compressions_info_child">
-"(Durante primer minuto de RCP) Comprima 15 veces con la palma de la mano sobre el centro del pecho.
-(Tras el primer minuto de RCP)Continué con maniobras de resucitación hasta la llegada sanitaria.Localice este punto en el centro del pecho. Comprima 15 veces con la palma de la mano sobre el centro del pecho."
+	<!-- (Durante primer minuto de RCP) -->
+    <string name="compressions_info_child_1">
+"Esku-azpia bularraren erdialdean duzularik 15 aldiz konprimatu."
 	</string>
-    <string name="compressions_info_baby">
-"(durante el primer minuto de RCP)Comprima 15 veces con los dedos índice y corazón.
-(Tras primer minuto de RCP)Continué con maniobras de resucitación hasta la llegada sanitaria.Localice este punto en el centro del pecho.Comprima15 veces con los dedos índice y corazón."
+    <string name="compressions_info_baby_1">
+"Hatz luzea eta erakuslea bularraren erdialdean dituzularik 15 aldiz konprimatu."
+	</string>
+	<!-- (Tras el primer minuto de RCP) -->
+    <string name="compressions_info_child_2">
+"Berpizten saiatzen jarraitu osasun-laguntza etorri arte.
+Esku-azpia bularraren erdialdean duzularik 15 aldiz konprimatu."
+	</string>
+    <string name="compressions_info_baby_2">
+"Berpizten saiatzen jarraitu osasun-laguntza etorri arte.
+Hatz luzea eta erakuslea bularraren erdialdean dituzularik 15 aldiz konprimatu."
 	</string>
     <!-- string name="compressions_question"></string-->
     <!-- string name="compressions_left"></string-->
@@ -168,13 +174,25 @@ INFLATIONS
 -->
 	<string name="insulfations_title">Insuflazioak burutu</string>
     <string name="insuflations_info">
-"Pince la nariz con una mano y eleve la barbilla con la otra. Coloque sus labios sobre la boca de la víctima y sople. Realice esto 2 veces."
+"Itxi sudurra esku batekin eta altxatu kokotsa bestearekin. Jarri espainak biktimaren ahoaren gainean eta putz egin ezazu. Ariketa hau 2 aldiz burutu."
 	</string>
-    <string name="insulfations_info_child">
-"(5 insuflaciones de rescate)Pince la nariz con una mano y eleve la barbilla con la otra. Coloque sus labios sobre la boca del niño y sople. Realice esto 5 veces."
+	<!-- (5 insuflaciones de rescate) -->
+    <string name="insulfations_info_child_1">
+"Itxi sudurra esku batekin eta altxatu kokotsa bestearekin. Jarri
+espainak biktimaren ahoaren gainean eta putz egin ezazu. Ariketa hau 5
+aldiz burutu."
 	</string>
-    <string name="insulfations_info_baby">
-"(5 insuflaciones de rescate)Selle la nariz y boca de la victima con sus labios y sople. Realice esto 5 veces."
+    <string name="insulfations_info_baby_1">
+"Haurtxoaren ahoa eta sudurra zure espainekin estali eta putz egin. Ariketa hau 5 aldiz burutu."
+	</string>
+	<!-- (2 insuflaciones durante RCP) -->
+    <string name="insulfations_info_child_2">
+"Itxi sudurra esku batekin eta altxatu kokotsa bestearekin. Jarri
+espainak haurraren ahoaren gainean eta putz egin ezazu. Ariketa hau 2
+aldiz burutu."
+	</string>
+    <string name="insulfations_info_baby_2">
+"Haurtxoaren ahoa eta sudurra zure espainekin estali eta putz egin. Ariketa hau 2 aldiz burutu."
 	</string>
     <!-- string name="compressions_question"></string-->
     <!-- string name="compressions_left"></string-->

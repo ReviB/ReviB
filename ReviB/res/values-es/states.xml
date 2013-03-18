@@ -152,13 +152,19 @@ COMPRESSIONS
     <string name="compressions_info">
 "Comprima 30 veces con los brazos extendidos."
 	</string>
-    <string name="compressions_info_child">
-"(Durante primer minuto de RCP) Comprima 15 veces con la palma de la mano sobre el centro del pecho.
-(Tras el primer minuto de RCP)Continué con maniobras de resucitación hasta la llegada sanitaria.Localice este punto en el centro del pecho. Comprima 15 veces con la palma de la mano sobre el centro del pecho."
+	<!-- (Durante primer minuto de RCP) -->
+    <string name="compressions_info_child_1">
+"Comprima 15 veces con la palma de la mano sobre el centro del pecho."
 	</string>
-    <string name="compressions_info_baby">
-"(durante el primer minuto de RCP)Comprima 15 veces con los dedos índice y corazón.
-(Tras primer minuto de RCP)Continué con maniobras de resucitación hasta la llegada sanitaria.Localice este punto en el centro del pecho.Comprima15 veces con los dedos índice y corazón."
+    <string name="compressions_info_baby_1">
+"Comprima 15 veces con los dedos índice y corazón."
+	</string>
+	<!-- (Tras el primer minuto de RCP) -->
+    <string name="compressions_info_child_2">
+"Continué con maniobras de resucitación hasta la llegada sanitaria.Localice este punto en el centro del pecho. Comprima 15 veces con la palma de la mano sobre el centro del pecho."
+	</string>
+    <string name="compressions_info_baby_2">
+"Continué con maniobras de resucitación hasta la llegada sanitaria.Localice este punto en el centro del pecho.Comprima 15 veces con los dedos índice y corazón."
 	</string>
     <!-- string name="compressions_question"></string-->
     <!-- string name="compressions_left"></string-->
@@ -170,11 +176,19 @@ INFLATIONS
     <string name="insuflations_info">
 "Pince la nariz con una mano y eleve la barbilla con la otra. Coloque sus labios sobre la boca de la víctima y sople. Realice esto 2 veces."
 	</string>
-    <string name="insulfations_info_child">
-"(5 insuflaciones de rescate)Pince la nariz con una mano y eleve la barbilla con la otra. Coloque sus labios sobre la boca del niño y sople. Realice esto 5 veces."
+	<!-- (5 insuflaciones de rescate) -->
+    <string name="insulfations_info_child_1">
+"Pince la nariz con una mano y eleve la barbilla con la otra. Coloque sus labios sobre la boca del niño y sople. Realice esto 5 veces."
 	</string>
-    <string name="insulfations_info_baby">
-"(5 insuflaciones de rescate)Selle la nariz y boca de la victima con sus labios y sople. Realice esto 5 veces."
+    <string name="insulfations_info_baby_1">
+"Selle la nariz y boca de la victima con sus labios y sople. Realice esto 5 veces."
+	</string>
+	<!-- (2 insuflaciones durante RCP) -->
+    <string name="insulfations_info_child_2">
+"Pince la nariz con una mano y eleve la barbilla con la otra. Coloque sus labios sobre la boca del niño y sople. Realice esto 2 veces."
+	</string>
+    <string name="insulfations_info_baby_2">
+"Selle la nariz y boca de la victima con sus labios y sople. Realice esto 2 veces."
 	</string>
     <!-- string name="compressions_question"></string-->
     <!-- string name="compressions_left"></string-->

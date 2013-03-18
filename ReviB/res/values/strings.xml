@@ -46,7 +46,7 @@
     <!-- Age activity -->
     <string name="title_activity_age">The age of the victim</string>
     <string name="age_question">How old is the victim?</string>
-    <string name="age_adult">Adult (more than 8 years old)</string>
+    <string name="age_adult">Adult (over 8 years old)</string>
     <string name="age_child">Child (between 1 and 8 years old)</string>
-    <string name="age_baby">Baby (less than 12 months old)</string>
+    <string name="age_baby">Baby (under 12 months old)</string>
 </resources>

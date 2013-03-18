@@ -17,15 +17,16 @@ public class BreathingCheckState extends State {
 		State nextState	=	this;
 		switch(buttonRes){
 			case R.id.state_left_btn:
-				//nextState	=	new ScreamForHelpState(activity,this);
+				if(AGE==SessionVariables.ADULT){
+					// Keep checking cons. periodically
+					nextState	=	new CallState(activity,this);
+				}else{
+					
+					nextState	=	new RescueInflationsState(activity,this);
+				}
 				break;
 			case R.id.state_right_btn:
-				if(AGE==SessionVariables.BABY){
-					// Keep checking cons. periodically
-					//nextState	=	new KeepConsCheckState(activity,this);
-				}else{
-					//nextState	=	new LateralRecoveryPositionState(activity,this);
-				}
+				nextState	=	new LateralRecoveryPositionState(activity,this);
 				break;
 		}
 		return nextState;

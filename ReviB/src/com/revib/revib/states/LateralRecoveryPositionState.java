@@ -13,14 +13,7 @@ public class LateralRecoveryPositionState extends State {
 
 	@Override
 	public State getNextState(int buttonRes) {
-		State nextState	=	this;
-		switch(buttonRes){
-			case R.id.state_left_btn:
-			case R.id.state_right_btn:
-				// Keep checking cons. periodically
-				//nextState	=	new KeepConsCheckState(activity,this);
-		}
-		return nextState;
+		return	new CallState(activity,this);
 	}
 	
 	@Override
@@ -50,7 +43,7 @@ public class LateralRecoveryPositionState extends State {
 
 	@Override
 	public int getRightBtnResource() {
-		return -1;
+		return R.string.next;
 	}
 
 	@Override

@@ -39,11 +39,6 @@ public class BreathingManeuverState extends State {
 		}
 		return $ret;
 	}
-	
-	@Override
-	public void startAnimation(){
-		//There is no animation, so don't do anything
-	}
 
 	@Override
 	public int getAudioResource() {
@@ -55,7 +50,7 @@ public class BreathingManeuverState extends State {
 		int resource	=	R.drawable.no_image;
 		switch(AGE){
 		case SessionVariables.ADULT:
-			//resource	=	R.drawable.animation_adult_breathing;
+			resource	=	R.drawable.animation_adult_breathing_maneuver;
 			break;
 		case SessionVariables.CHILD:
 			break;

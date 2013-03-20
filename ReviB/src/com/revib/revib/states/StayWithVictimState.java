@@ -1,0 +1,91 @@
+package com.revib.revib.states;
+
+import com.revib.revib.R;
+import com.revib.revib.session.SessionVariables;
+
+import android.app.Activity;
+
+public class StayWithVictimState extends State {
+
+	public StayWithVictimState(Activity activity, State previousState) {
+		super(activity, previousState);
+	}
+
+	@Override
+	public int getInfoResource() {
+		return R.string.stay_with_victim_info;
+		/*switch(AGE){
+			case SessionVariables.ADULT:
+				return R.string.stay_with_victim_info;
+			case SessionVariables.CHILD:
+				return R.string.stay_with_victim_info_child;
+			case SessionVariables.BABY:
+				return R.string.stay_with_victim_info_baby;
+		}
+		return -1;*/
+	}
+
+	@Override
+	public int getAudioResource() {
+		/*
+		switch(AGE){
+			case SessionVariables.ADULT:
+				return R.raw.stay_with_victim;
+			case SessionVariables.CHILD:
+				return R.raw.stay_with_victim_child;
+			case SessionVariables.BABY:
+				return R.raw.stay_with_victim_baby;
+		}
+		 */
+		return R.raw.bip;
+	}
+
+	@Override
+	public int getImageResource() {
+		switch(AGE){
+		case SessionVariables.ADULT:
+			return R.drawable.lateral_recovery_position_4;
+		case SessionVariables.CHILD:
+			return R.drawable.no_image;
+		case SessionVariables.BABY:
+			return R.drawable.no_image;
+		}
+		return R.drawable.no_image;
+	}
+
+	@Override
+	public int getLeftBtnResource() {
+		return R.string.stay_with_victim_left;
+	}
+
+	@Override
+	public int getRightBtnResource() {
+		return R.string.stay_with_victim_right;
+	}
+
+	@Override
+	public int getQuestionResource() {
+		return -1;
+	}
+
+	@Override
+	public int getTitleResource() {
+		return R.string.stay_with_victim_title;
+	}
+
+	@Override
+	public State getNextState(int buttonRes) {
+		State nextState	=	this;
+		if(buttonRes==R.id.state_left_btn){
+			if(AGE==SessionVariables.ADULT){
+				nextState	=	new ExplainCompressionsState(activity,this);
+			}else{
+				nextState	=	new ExplainInflationsState(activity,this);
+			}
+		}else if(buttonRes==R.id.state_right_btn){
+			//Result dialog???
+		}
+		return nextState;
+	}
+
+}

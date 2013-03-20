@@ -21,8 +21,7 @@ public class BreathingCheckState extends State {
 					// Keep checking cons. periodically
 					nextState	=	new CallState(activity,this);
 				}else{
-					
-					nextState	=	new RescueInflationsState(activity,this);
+					nextState	=	new ExplainInflationsState(activity,this);
 				}
 				break;
 			case R.id.state_right_btn:
@@ -64,7 +63,7 @@ public class BreathingCheckState extends State {
 		int resource	=	R.drawable.no_image;
 		switch(AGE){
 		case SessionVariables.ADULT:
-			resource	=	R.drawable.animation_adult_breathing;
+			resource	=	R.drawable.adult_check_breath;
 			break;
 		case SessionVariables.CHILD:
 			break;

@@ -9,66 +9,59 @@ public class CallState extends State {
 
 	public CallState(Activity activity, State previousState) {
 		super(activity, previousState);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public int getInfoResource() {
-		// TODO Auto-generated method stub
-		return 0;
+		return R.string.call_info;
 	}
 
 	@Override
 	public int getAudioResource() {
-		// TODO Auto-generated method stub
-		return 0;
+		return R.raw.bip;
 	}
 
 	@Override
 	public int getImageResource() {
-		// TODO Auto-generated method stub
-		return 0;
+		if(AGE==SessionVariables.ADULT){
+			return R.drawable.call;
+		}
+		return R.drawable.no_image;
 	}
 
 	@Override
 	public int getLeftBtnResource() {
-		// TODO Auto-generated method stub
-		return 0;
+		return R.string.call_left;
 	}
 
 	@Override
 	public int getRightBtnResource() {
-		// TODO Auto-generated method stub
-		return 0;
+		return R.string.call_right;
 	}
 
 	@Override
 	public int getQuestionResource() {
-		// TODO Auto-generated method stub
-		return 0;
+		return -1;
 	}
 
 	@Override
 	public int getTitleResource() {
-		// TODO Auto-generated method stub
-		return 0;
+		return R.string.call_title;
 	}
 
 	@Override
 	public State getNextState(int buttonRes) {
 		State nextState	=	this;
-		switch(buttonRes){
-			case R.id.state_left_btn:
-				SessionVariables sv	= SessionVariables.getInstance();
-				sv.callEmergencyNumber(activity);
-				break;
-			case R.id.state_right_btn:
-				if(AGE==SessionVariables.BABY){
-					//nextState	=	new KeepConsCheckState(activity,this);
-				}else{
-					nextState	=	new BreathingCheckState(activity,this);
-				}
-				break;
+		if(buttonRes==R.id.state_right_btn){
+			SessionVariables.getInstance().callEmergencyNumber(activity);
+		}
+		
+		if(super.getPreviousStateClass()==LateralRecoveryPositionState.class)
+			nextState	=	new	StayWithVictimState(activity,this);
+		else if(AGE==SessionVariables.ADULT){
+			nextState	=	new ExplainCompressionsState(activity,this);
+		}else{
+			nextState	=	new CompressionsState(activity,this);
 		}
 		return nextState;
 	}

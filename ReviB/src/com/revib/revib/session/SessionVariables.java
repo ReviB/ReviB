@@ -7,15 +7,17 @@ import android.net.Uri;
 import android.widget.Toast;
 
 public class SessionVariables {
+	private static		SessionVariables	instance			=	null;
+	
 	public static final int BABY	=	0;
 	public static final int CHILD	=	1;
 	public static final int ADULT	=	2;
 	
-	private static SessionVariables instance = null;
-	private Boolean		reality		=	false;
-	private int		age			=	ADULT;
-	
-	private Boolean		audioDialogShown	=	false;
+	private 	Boolean	reality				=	false;
+	private 	Boolean	audioDialogShown	=	false;
+
+	private 	int		age					=	ADULT;
+	private 	int		inflations			=	0;
 	
 	protected SessionVariables() {}
 	
@@ -62,5 +64,17 @@ public class SessionVariables {
 
 	public void setAudioDialogShown(Boolean audioDialogShown) {
 		this.audioDialogShown = audioDialogShown;
+	}
+
+	public int getInflations() {
+		return inflations;
+	}
+
+	public void sumInflations() {
+		this.inflations++;
+	}
+
+	public void restInflations() {
+		this.inflations--;
 	}
 }

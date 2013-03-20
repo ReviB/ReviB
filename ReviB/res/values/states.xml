@@ -82,8 +82,6 @@ BREATHING CHECKING
 "Not translated"
 	</string>
     <string name="breathing_check_question">Not translated</string>
-    <!-- string name="breathing_check_left"></string-->
-    <!-- string name="breathing_check_right"></string-->
     
 <!--
 LATERAL RECOVERY POSITION
@@ -98,9 +96,6 @@ LATERAL RECOVERY POSITION
 	<string name="lateral_recovery_position_info_baby">
 "Not translated"
 	</string>
-    <!-- string name="lateral_recovery_position_question">not defined</string-->
-    <!-- string name="lateral_recovery_position_left"></string-->
-    <!-- string name="lateral_recovery_position_right"></string-->
     
 <!--
 CALL 112
@@ -110,8 +105,8 @@ CALL 112
 "Not translated"
 	</string>
     <!-- string name="call_question">not defined</string-->
-    <string name="call_left">112</string>
-    <string name="call_right"></string>
+    <string name="call_left">112 already called</string>
+    <string name="call_right">Call 112</string>
 <!--
 START CPR
 -->
@@ -122,9 +117,19 @@ START CPR
     <string name="start_cpr_info_child">
 "Untranslated"
 	</string>
-    <!-- string name="start_cpr_question"></string-->
-    <!-- string name="start_cpr_left"></string-->
-    <!-- string name="start_cpr_right"></string-->
+<!--
+EXPLAIN COMPRESSIONS
+-->
+	<string name="explain_compressions_title">How to compress</string>
+    <string name="explain_compressions_info">
+"Untranslated"
+	</string>
+    <string name="explain_compressions_info_child">
+"Untranslated"
+    </string>
+    <string name="explain_compressions_info_baby">
+"Untranslated"
+	</string>
 <!--
 COMPRESSIONS
 -->
@@ -138,23 +143,39 @@ COMPRESSIONS
     <string name="compressions_info_baby">
 "Untranslated"
 	</string>
-    <!-- string name="compressions_question"></string-->
-    <!-- string name="compressions_left"></string-->
-    <!-- string name="compressions_right"></string-->
+<!--
+EXPLAIN INFLATIONS
+-->
+	<string name="explain_inflations_title">How to ventilate</string>
+    <string name="explain_inflations_info">
+""
+	</string>
+	<!-- (5 insuflaciones de rescate) -->
+    <string name="explain_inflations_info_child">
+"Untranslated"
+	</string>
+    <string name="explain_inflations_info_baby">
+"Untranslated"
+	</string>
 <!--
 INFLATIONS
 -->
-	<string name="insulfations_title">Perform ventilations</string>
-    <string name="insuflations_info">
-"Untranslated""
+	<string name="inflations_title">Perform ventilations</string>
+    <string name="inflations_info">
+"Give 2 ventilations"
 	</string>
-    <string name="insulfations_info_child">
-"Untranslated""
+	<!-- (5 insuflaciones de rescate) -->
+    <string name="inflations_info_child_1">
+"Give 5 ventilations"
 	</string>
-    <string name="insulfations_info_baby">
-"Untranslated""
+<!--
+STAY WITH VICTIM
+-->
+	<string name="stay_with_victim_title">Stay with the victim</string>
+    <string name="stay_with_victim_info">
+"Quédese con la victima y compruebe periódicamente si respira hasta la llegada de la ambulancia."
 	</string>
     <!-- string name="compressions_question"></string-->
-    <!-- string name="compressions_left"></string-->
-    <!-- string name="compressions_right"></string-->
+    <string name="stay_with_victim_left"></string>
+    <string name="stay_with_victim_right"></string>
 </resources>

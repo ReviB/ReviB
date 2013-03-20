@@ -5,9 +5,9 @@ import com.revib.revib.session.SessionVariables;
 
 import android.app.Activity;
 
-public class CompressionsState extends State {
-	
-	public CompressionsState(Activity activity, State previousState) {
+public class ExplainCompressionsState extends State {
+
+	public ExplainCompressionsState(Activity activity, State previousState) {
 		super(activity, previousState);
 	}
 
@@ -15,11 +15,11 @@ public class CompressionsState extends State {
 	public int getInfoResource() {
 		switch(AGE){
 			case SessionVariables.ADULT:
-				return R.string.compressions_info;
+				return R.string.explain_compressions_info;
 			case SessionVariables.CHILD:
 				return R.string.explain_compressions_info_child;
 			case SessionVariables.BABY:
-				return R.string.explain_compressions_info_baby;	
+				return R.string.explain_compressions_info_baby;				
 		}
 		return -1;
 	}
@@ -47,7 +47,7 @@ public class CompressionsState extends State {
 
 	@Override
 	public int getImageResource() {
-		return R.drawable.adult_compressions_2;
+		return R.drawable.sternum_1;
 	}
 
 	@Override
@@ -67,16 +67,12 @@ public class CompressionsState extends State {
 
 	@Override
 	public int getTitleResource() {
-		return R.string.compressions_title;
+		return R.string.explain_compressions_title;
 	}
 
 	@Override
 	public State getNextState(int buttonRes) {
-		if(AGE==SessionVariables.ADULT && super.getPreviousStateClass()==ExplainCompressionsState.class){
-			return new ExplainInflationsState(activity,this);
-		}else{
-			return new InflationsState(activity,this);
-		}
+		return new CompressionsState(activity,this);
 	}
 
 }

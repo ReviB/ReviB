@@ -30,18 +30,16 @@
     <!-- About Activity -->
     <string name="about_revib">About ReviB</string>
     <string name="about_logo_description">ReviB logo</string>
-    <string name="about_version">ReviB v0.1</string>
+    <string name="about_version">ReviB v0.3</string>
     <string name="about_copyright">©2013 Alain Perez</string>
-    <string name="about_code_license">        All ReviB code is licensed by
-        Alain Perez under the GNU General
-        Public License (2.0).</string>
-    <string name="about_artwork_license">        All ReviB artwork is licensed by
-        Ines Fernandez under the Creative Commons
-        Attribution-NonCommercial-ShareAlike 3.0
-        Unported License.</string>
-    <string name="about_warning">This program is
-        distributed in the hope that it will be useful,
-        but WITHOUT ANY WARRANTY.</string>
+    <string name="about_code_license">
+"All ReviB code is licensed by Alain Perez under the GNU General Public License (2.0)."</string>
+    <string name="about_artwork_license">
+"All ReviB artwork is licensed by Ines Fernandez under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License."
+	</string>
+    <string name="about_warning">
+"This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY."
+	</string>
 
     <!-- Age activity -->
     <string name="title_activity_age">The age of the victim</string>

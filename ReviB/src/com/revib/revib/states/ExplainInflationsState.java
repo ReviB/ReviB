@@ -5,21 +5,23 @@ import com.revib.revib.session.SessionVariables;
 
 import android.app.Activity;
 
-public class InflationsState extends State {
+public class ExplainInflationsState extends State {
 
-	private		int		nofinflations			=	0;
-	public InflationsState(Activity activity, State previousState) {
+	public ExplainInflationsState(Activity activity, State previousState) {
 		super(activity, previousState);
-		this.nofinflations	=	SessionVariables.getInstance().getInflations();
 	}
 
 	@Override
 	public int getInfoResource() {
-		int	res	=	R.string.inflations_info;
-		if(AGE==SessionVariables.CHILD && nofinflations==0){
-			res	=	R.string.inflations_info_recovery;		
+		switch(AGE){
+			case SessionVariables.ADULT:
+				return R.string.explain_inflations_info;
+			case SessionVariables.CHILD:
+				return R.string.explain_inflations_info_child;
+			case SessionVariables.BABY:
+				return R.string.explain_inflations_info_baby;				
 		}
-		return res;
+		return -1;
 	}
 
 	@Override
@@ -43,11 +45,10 @@ public class InflationsState extends State {
 
 	@Override
 	public int getImageResource() {
-		int	res	=	R.drawable.no_image;
-		switch(AGE){
-			case SessionVariables.ADULT:
-				return R.drawable.animation_adult_inflations;
-		/*case SessionVariables.CHILD:
+		/*switch(AGE){
+		case SessionVariables.ADULT:
+			return R.raw.inflations_info;
+		case SessionVariables.CHILD:
 			if(nofinflations==0)
 				return R.raw.inflations_child_1;
 			else
@@ -56,9 +57,9 @@ public class InflationsState extends State {
 			if(nofinflations==0)
 				return R.raw.inflations_baby_1;
 			else
-				return R.raw.inflations_baby_2;*/				
-		}
-		return res;
+				return R.raw.inflations_baby_2;				
+		}*/
+		return R.drawable.breathing_1;
 	}
 
 	@Override
@@ -78,30 +79,12 @@ public class InflationsState extends State {
 
 	@Override
 	public int getTitleResource() {
-		return R.string.inflations_title;
+		return R.string.explain_inflations_title;
 	}
 
 	@Override
 	public State getNextState(int buttonRes) {
-		if(AGE==SessionVariables.CHILD || AGE==SessionVariables.BABY){
-			if(nofinflations==0){
-				return	new	ExplainCompressionsState(activity,this);
-			}else if(nofinflations==3){
-				return	new CallState(activity,this);
-			}
-		}
-		//Else
-		return new	CompressionsState(activity,this);
-	}
-	
-	@Override
-	public void beforeGoingBack(){
-		SessionVariables.getInstance().restInflations();
-	}
-	
-	@Override
-	public void beforeGoingForward(){
-		SessionVariables.getInstance().sumInflations();
+		return new	InflationsState(activity,this);
 	}
 
 }

@@ -4,24 +4,24 @@
 <!-- 
 GENERAL
 -->
-    <string name="state_view">Descripcion de la etapa</string>
+    <string name="state_view">Descripción de la etapa</string>
     <string name="state_image_description">Imagen de la etapa</string>
     <string name="state_view_description">Ayuda para la vista del estado</string>
     <string name="state_reload_description">Recarga la etapa</string>
     <string name="state_audio_description">El audio esta deshabilitado</string>
-    <string name="yes">Si</string>
+    <string name="yes">Sí</string>
     <string name="no">No</string>
     <string name="question">¿Pregunta?</string>
     <string name="dialog_info">Qué hacer</string>
     <string name="dialog_ok">Vale</string>
-    <string name="false_phone_call">En una emergencia real se llamaria al teléfono de emergencia.</string>
+    <string name="false_phone_call">En una emergencia real se llamaría al teléfono de emergencia.</string>
     <string name="next">Seguir</string>
 <!-- 
 CONSCIENCE CHECKING
 -->
     <string name="cons_check_title">Comprobar consciencia</string>
     <string name="cons_check_info">
-"Compruebe la consciencia. Agite a la victima de los hombros y pregúntele: ¿Está usted bien?
+"Compruebe la consciencia. Agite a la víctima de los hombros y pregúntele: ¿Está usted bien?
 ¿Responde?"
     </string>
     <string name="cons_check_info_child">
@@ -29,7 +29,7 @@ CONSCIENCE CHECKING
 ¿Responde?"
 	</string>
     <string name="cons_check_info_baby">
-"Compruebe la consciencia. Golpee suavemente la planta del pie de la victima y llámele por su nombre.
+"Compruebe la consciencia. Golpee suavemente la planta del pie de la víctima y llámele por su nombre.
 ¿Responde a estímulos o llora?"
 	</string>
     <string name="cons_check_question">¿Responde?</string>
@@ -55,12 +55,12 @@ Compruebe la consciencia periódicamente hasta la llegada al centro de salud."
 <!--
 SHOUT FOR HELP
 -->
-    <string name="shout_for_help_title">Grite pidiendo ayuda sin abandonar a la victima: ¡Socorro! ¡Auxilio!</string>
+    <string name="shout_for_help_title">Grite pidiendo ayuda sin abandonar a la víctima: ¡Socorro! ¡Auxilio!</string>
     <!-- string name="shout_for_help_question"></string-->
     <!-- string name="shout_for_help_left_btn"></string-->
     <!-- string name="shout_for_help_right_btn">Seguir</string-->
     <string name="shout_for_help_info">
-"Grite pidiendo ayuda sin abandonar a la victima: ¡Socorro! ¡Auxilio!
+"Grite pidiendo ayuda sin abandonar a la víctima: ¡Socorro! ¡Auxilio!
 Si está acompañado de otra persona, indíquele que llame al 112. Si está solo, no llame en estos momentos y siga las instrucciones siguientes."
     </string>
     
@@ -84,7 +84,7 @@ BREATHING CHECKING
 -->
     <string name="breathing_check_title">Comprobar respiración</string>
     <string name="breathing_check_info">
-"Compruebe la respiración. Acérquese a la cara de la victima y valore si:
+"Compruebe la respiración. Acérquese a la cara de la víctima y valore si:
 	1.- Mueve el pecho.
 	2.- Escucha la respiración o siente el aliento sobre su mejilla.
 
@@ -99,12 +99,12 @@ LATERAL RECOVERY POSITION
 -->
     <string name="lateral_recovery_position_title">Respira</string>
     <string name="lateral_recovery_position_info">
-"Coloque a la victima el posición lateral de seguridad. Con el paciente boca arriba:
+"Coloque a la víctima el posición lateral de seguridad. Con el paciente boca arriba:
 
 1- Eleve el brazo izquierdo.
 2- Coloque la mano derecha sobre el hombro izquierdo.
 3- Doble la rodilla derecha.
-4- Voltee a la victima hacia la izquierda."
+4- Voltee a la víctima hacia la izquierda."
 	</string>
 	<string name="lateral_recovery_position_info_child">
 "Deje al niño en la posición en la que se encuentre"
@@ -119,7 +119,7 @@ LATERAL RECOVERY POSITION
 <!--
 CALL 112
 -->
-	<string name="call_title">Respira</string>
+	<string name="call_title">Lama al 112</string>
     <string name="call_info">
 "Llame al 112 y diga:
 - Su nombre.
@@ -127,24 +127,23 @@ CALL 112
 - 'Estoy en una urgencia médica'."
 	</string>
     <!-- string name="call_question">not defined</string-->
-    <string name="call_left">112</string>
-    <string name="call_right">112 ya avisado</string>
-    
+    <string name="call_left">112 ya avisado</string>
+    <string name="call_right">Marcar 112</string>
 <!--
-START CPR
+EXPLAIN COMPRESSIONS
 -->
-	<string name="start_cpr_title">Iniciar RCP</string>
-    <string name="start_cpr_info">
+	<string name="explain_compressions_title">Como hacer las compresiones</string>
+    <string name="explain_compressions_info">
 "1- Localice este punto en el centro del pecho.
 2- Entrelace las manos.
-3- Coloque las manos sobre centro del pecho."
+3- Coloque las manos sobre centro del pecho con los brazos extendidos."
 	</string>
-    <string name="start_cpr_info_child">
-"Localice este punto en el centro del pecho."
+    <string name="explain_compressions_info_child">
+"Con el brazo extendido coloque la palma de la mano sobre este punto en el centro del pecho."
+    </string>
+    <string name="explain_compressions_info_baby">
+"Coloque los dedos índice y medio sobre este punto en el centro del pecho."
 	</string>
-    <!-- string name="start_cpr_question"></string-->
-    <!-- string name="start_cpr_left"></string-->
-    <!-- string name="start_cpr_right"></string-->
 <!--
 COMPRESSIONS
 -->
@@ -153,44 +152,48 @@ COMPRESSIONS
 "Comprima 30 veces con los brazos extendidos."
 	</string>
 	<!-- (Durante primer minuto de RCP) -->
-    <string name="compressions_info_child_1">
+    <string name="compressions_info_child">
 "Comprima 15 veces con la palma de la mano sobre el centro del pecho."
 	</string>
-    <string name="compressions_info_baby_1">
+    <string name="compressions_info_baby">
 "Comprima 15 veces con los dedos índice y corazón."
 	</string>
-	<!-- (Tras el primer minuto de RCP) -->
-    <string name="compressions_info_child_2">
-"Continué con maniobras de resucitación hasta la llegada sanitaria.Localice este punto en el centro del pecho. Comprima 15 veces con la palma de la mano sobre el centro del pecho."
+<!--
+EXPLAIN INFLATIONS
+-->
+	<string name="explain_inflations_title">Como hacer las insuflaciones</string>
+    <string name="explain_inflations_info">
+"Pince la nariz con una mano y eleve la barbilla con la otra. Coloque sus labios sobre la boca de la víctima y sople."
 	</string>
-    <string name="compressions_info_baby_2">
-"Continué con maniobras de resucitación hasta la llegada sanitaria.Localice este punto en el centro del pecho.Comprima 15 veces con los dedos índice y corazón."
+	<!-- (5 insuflaciones de rescate) -->
+    <string name="explain_inflations_info_child">
+"Pince la nariz con una mano y eleve la barbilla con la otra. Coloque sus labios sobre la boca del niño y sople."
+	</string>
+    <string name="explain_inflations_info_baby">
+"Selle la nariz y boca de la víctima con sus labios y sople."
+	</string>
+<!--
+INFLATIONS
+-->
+	<string name="inflations_title">Realizar insuflaciones</string>
+    <string name="inflations_info">
+"Insufle 2 veces."
+	</string>
+	<!-- (5 insuflaciones de rescate) -->
+    <string name="inflations_info_recovery">
+"Insufle 5 veces."
 	</string>
     <!-- string name="compressions_question"></string-->
     <!-- string name="compressions_left"></string-->
     <!-- string name="compressions_right"></string-->
 <!--
-INFLATIONS
+STAY WITH VICTIM
 -->
-	<string name="insulfations_title">Realizar insuflaciones</string>
-    <string name="insuflations_info">
-"Pince la nariz con una mano y eleve la barbilla con la otra. Coloque sus labios sobre la boca de la víctima y sople. Realice esto 2 veces."
-	</string>
-	<!-- (5 insuflaciones de rescate) -->
-    <string name="insulfations_info_child_1">
-"Pince la nariz con una mano y eleve la barbilla con la otra. Coloque sus labios sobre la boca del niño y sople. Realice esto 5 veces."
-	</string>
-    <string name="insulfations_info_baby_1">
-"Selle la nariz y boca de la victima con sus labios y sople. Realice esto 5 veces."
-	</string>
-	<!-- (2 insuflaciones durante RCP) -->
-    <string name="insulfations_info_child_2">
-"Pince la nariz con una mano y eleve la barbilla con la otra. Coloque sus labios sobre la boca del niño y sople. Realice esto 2 veces."
-	</string>
-    <string name="insulfations_info_baby_2">
-"Selle la nariz y boca de la victima con sus labios y sople. Realice esto 2 veces."
+	<string name="stay_with_victim_title">Quédese con la víctima</string>
+    <string name="stay_with_victim_info">
+"Quédese con la víctima y compruebe periódicamente si respira hasta la llegada de la ambulancia."
 	</string>
     <!-- string name="compressions_question"></string-->
-    <!-- string name="compressions_left"></string-->
-    <!-- string name="compressions_right"></string-->
+    <string name="stay_with_victim_left">Ha dejado de respirar</string>
+    <string name="stay_with_victim_right">Ha llegado la ambulancia</string>
 </resources>

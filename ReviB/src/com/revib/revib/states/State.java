@@ -177,4 +177,11 @@ public abstract class State implements OnCompletionListener {
 	public void onCompletion(MediaPlayer mp) {
 		mp.release();
 	}
+	
+	public Class<? extends State> getPreviousStateClass(){
+		return previousState.getClass();
+	}
+	
+	public void beforeGoingBack()		{/*Nothing by default*/}
+	public void beforeGoingForward()	{/*Nothing by default*/}
 }

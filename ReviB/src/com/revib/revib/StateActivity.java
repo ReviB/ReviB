@@ -74,6 +74,7 @@ public class StateActivity extends Activity {
 			if(previousState==null)
 				NavUtils.navigateUpFromSameTask(this);
 			else{
+				currentState.beforeGoingBack();
 				changeState(previousState);
 			}
 			$ret = true;
@@ -98,6 +99,7 @@ public class StateActivity extends Activity {
 		switch(viewId){
 			case R.id.state_left_btn:
 			case R.id.state_right_btn:
+				currentState.beforeGoingForward();
 				changeState(currentState.getNextState(viewId));
 				break;
 			case R.id.state_reload_btn:
@@ -141,6 +143,7 @@ public class StateActivity extends Activity {
         if ((keyCode == KeyEvent.KEYCODE_BACK)){
         	State previousState	=	currentState.getPreviousState();
         	if(previousState!=null){
+        		currentState.beforeGoingBack();
         		changeState(previousState);
         		return false;
         	}

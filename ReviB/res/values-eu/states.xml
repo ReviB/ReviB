@@ -117,7 +117,7 @@ LATERAL RECOVERY POSITION
 <!--
 CALL 112
 -->
-	<string name="call_title">112ra deitu</string>
+	<string name="call_title">Deitu 112ra</string>
     <string name="call_info">
 "112 telefonora deitu eta esan:
 - Zure izena.
@@ -125,8 +125,8 @@ CALL 112
 - 'Larrialdi mediku batean nago'."
 	</string>
     <!-- string name="call_question">not defined</string-->
-    <string name="call_left">112</string>
-    <string name="call_right">Dagoeneko deitua</string>
+    <string name="call_left">Dagoeneko deitua</string>
+    <string name="call_right">Deitu 112ra</string>
     
 <!--
 START CPR
@@ -170,31 +170,38 @@ Hatz luzea eta erakuslea bularraren erdialdean dituzularik 15 aldiz konprimatu."
     <!-- string name="compressions_left"></string-->
     <!-- string name="compressions_right"></string-->
 <!--
+EXPLAIN INFLATIONS
+-->
+	<string name="explain_inflations_title">Insuflazioak nola egin</string>
+    <string name="explain_inflations_info">
+"Itxi sudurra esku batekin eta altxatu kokotsa bestearekin. Jarri espainak biktimaren ahoaren gainean eta putz egin ezazu."
+	</string>
+	<!-- (5 insuflaciones de rescate) -->
+    <string name="explain_inflations_info_child">
+"Itxi sudurra esku batekin eta altxatu kokotsa bestearekin. Jarri espainak biktimaren ahoaren gainean eta putz egin ezazu."
+	</string>
+    <string name="explain_inflations_info_baby">
+"Haurtxoaren ahoa eta sudurra zure espainekin estali eta putz egin."
+	</string>
+<!--
 INFLATIONS
 -->
 	<string name="insulfations_title">Insuflazioak burutu</string>
     <string name="insuflations_info">
-"Itxi sudurra esku batekin eta altxatu kokotsa bestearekin. Jarri espainak biktimaren ahoaren gainean eta putz egin ezazu. Ariketa hau 2 aldiz burutu."
+"2 aldiz putz egin"
 	</string>
 	<!-- (5 insuflaciones de rescate) -->
-    <string name="insulfations_info_child_1">
-"Itxi sudurra esku batekin eta altxatu kokotsa bestearekin. Jarri
-espainak biktimaren ahoaren gainean eta putz egin ezazu. Ariketa hau 5
-aldiz burutu."
+    <string name="insulfations_info_recovery">
+"5 aldiz putz egin"
 	</string>
-    <string name="insulfations_info_baby_1">
-"Haurtxoaren ahoa eta sudurra zure espainekin estali eta putz egin. Ariketa hau 5 aldiz burutu."
-	</string>
-	<!-- (2 insuflaciones durante RCP) -->
-    <string name="insulfations_info_child_2">
-"Itxi sudurra esku batekin eta altxatu kokotsa bestearekin. Jarri
-espainak haurraren ahoaren gainean eta putz egin ezazu. Ariketa hau 2
-aldiz burutu."
-	</string>
-    <string name="insulfations_info_baby_2">
-"Haurtxoaren ahoa eta sudurra zure espainekin estali eta putz egin. Ariketa hau 2 aldiz burutu."
+<!--
+STAY WITH VICTIM
+-->
+	<string name="stay_with_victim_title">Biktimarekin geratu</string>
+    <string name="stay_with_victim_info">
+"Biktimarekin geratu anbulantzia heldu arte eta aldiro-aldiro egiaztatu arnasten jarraitzen duela."
 	</string>
     <!-- string name="compressions_question"></string-->
-    <!-- string name="compressions_left"></string-->
-    <!-- string name="compressions_right"></string-->
+    <string name="stay_with_victim_left">Arnasteari utzi dio</string>
+    <string name="stay_with_victim_right">Anbulantzia heldu da</string>
 </resources>

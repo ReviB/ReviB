@@ -31,7 +31,6 @@ public class ShoutForHelpState extends State {
 	@Override
 	public int getLeftBtnResource() {
 		return -1;
-		//return R.string.scream_for_help_left_btn;
 	}
 
 	@Override
@@ -42,7 +41,6 @@ public class ShoutForHelpState extends State {
 	@Override
 	public int getQuestionResource() {
 		return -1;
-		//return R.string.scream_for_help_question;
 	}
 
 	@Override

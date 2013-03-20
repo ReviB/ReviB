@@ -33,18 +33,14 @@
     <string name="about_version">ReviB v0.1</string>
     <string name="about_copyright">©2013 Alain Perez</string>
     <string name="about_code_license">
-        ReviB-en kodea GNU General
-        Public License (2.0) lizentziapean dago
-        Alain Perez-en eskutik.</string>
+        "ReviB-en kodea GNU General Public License (2.0) lizentziapean dago Alain Perez-en eskutik."
+    </string>
     <string name="about_artwork_license">
-        ReviB-en ilustrazio guztiak Creative Commons
-        Attribution-NonCommercial-ShareAlike 3.0
-        Unported License lizentziapean dago
-        Ines Fernandez-en eskutik.</string>
+        "ReviB-en ilustrazio guztiak Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License lizentziapean dago Ines Fernandez-en eskutik."
+    </string>
     <string name="about_warning">
-        Programa hau erabilgarri izango den
-        esperoan banatzen da baina
-        INONGO BERMERIK GABE.</string>
+        "Programa hau erabilgarri izango den esperoan banatzen da baina INONGO BERMERIK GABE."
+    </string>
 
     <!-- Age activity -->
     <string name="title_activity_age">Biktimaren heldutasuna</string>

@@ -15,6 +15,7 @@ public class SessionVariables {
 	
 	private 	Boolean	reality				=	false;
 	private 	Boolean	audioDialogShown	=	false;
+	private 	Boolean	alreadyCalled		=	false;
 
 	private 	int		age					=	ADULT;
 	private 	int		inflations			=	0;
@@ -76,5 +77,13 @@ public class SessionVariables {
 
 	public void restInflations() {
 		this.inflations--;
+	}
+
+	public Boolean hasAlreadyCalled() {
+		return alreadyCalled;
+	}
+
+	public void setAlreadyCalled(Boolean alreadyCalled) {
+		this.alreadyCalled = alreadyCalled;
 	}
 }

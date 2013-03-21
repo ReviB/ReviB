@@ -47,7 +47,15 @@ public class CompressionsState extends State {
 
 	@Override
 	public int getImageResource() {
-		return R.drawable.adult_compressions_2;
+		switch(AGE){
+			case SessionVariables.ADULT:
+				return R.drawable.adult_compressions_animation;
+			case SessionVariables.CHILD:
+				return R.drawable.child_compressions_animation;
+			case SessionVariables.BABY:
+				return R.drawable.baby_compressions_animation;
+		}
+		return -1;
 	}
 
 	@Override

@@ -95,7 +95,9 @@ Era normalean eta arazo gabe arnasten al du?"
 <!--
 LATERAL RECOVERY POSITION
 -->
-    <string name="lateral_recovery_position_title">Albokako segurtasun posizioa</string>
+	<string name="lateral_recovery_position_title_adult">Albokako segurtasun posizioa</string>
+
+    <string name="lateral_recovery_position_title">Arnasten du</string>
     <string name="lateral_recovery_position_info">
 "Biktima albokako segurtasunezko posizioan utzi. Biktima buruzgora etzunda dagoelarik:
 
@@ -127,48 +129,20 @@ CALL 112
     <!-- string name="call_question">not defined</string-->
     <string name="call_left">Dagoeneko deitua</string>
     <string name="call_right">Deitu 112ra</string>
-    
-<!--
-START CPR
--->
-	<string name="start_cpr_title">Ekin BBBari</string>
-    <string name="start_cpr_info">
-"1- Bularreko erdialdeko puntu hau bila ezazu.
-2- Eskuak gurutzatu irudian agertzen den bezala.
-3- Jarri itzazu eskuak bular gainean (aurreko puntuaren gainean)."
-	</string>
-    <string name="start_cpr_info_child">
-"Bularreko erdialdeko puntu hau bila ezazu."
-	</string>
-    <!-- string name="start_cpr_question"></string-->
-    <!-- string name="start_cpr_left"></string-->
-    <!-- string name="start_cpr_right"></string-->
 <!--
 COMPRESSIONS
 -->
-	<string name="compressions_title">Konpresioak burutu</string>
+	<string name="compressions_title">Realizar compresiones</string>
     <string name="compressions_info">
 "Besoak luzaturik dituzula 30 aldiz konprimatu."
 	</string>
 	<!-- (Durante primer minuto de RCP) -->
-    <string name="compressions_info_child_1">
+    <string name="compressions_info_child">
 "Esku-azpia bularraren erdialdean duzularik 15 aldiz konprimatu."
 	</string>
-    <string name="compressions_info_baby_1">
+    <string name="compressions_info_baby">
 "Hatz luzea eta erakuslea bularraren erdialdean dituzularik 15 aldiz konprimatu."
 	</string>
-	<!-- (Tras el primer minuto de RCP) -->
-    <string name="compressions_info_child_2">
-"Berpizten saiatzen jarraitu osasun-laguntza etorri arte.
-Esku-azpia bularraren erdialdean duzularik 15 aldiz konprimatu."
-	</string>
-    <string name="compressions_info_baby_2">
-"Berpizten saiatzen jarraitu osasun-laguntza etorri arte.
-Hatz luzea eta erakuslea bularraren erdialdean dituzularik 15 aldiz konprimatu."
-	</string>
-    <!-- string name="compressions_question"></string-->
-    <!-- string name="compressions_left"></string-->
-    <!-- string name="compressions_right"></string-->
 <!--
 EXPLAIN INFLATIONS
 -->
@@ -186,12 +160,12 @@ EXPLAIN INFLATIONS
 <!--
 INFLATIONS
 -->
-	<string name="insulfations_title">Insuflazioak burutu</string>
-    <string name="insuflations_info">
+	<string name="inflations_title">Insuflazioak burutu</string>
+    <string name="inflations_info">
 "2 aldiz putz egin"
 	</string>
 	<!-- (5 insuflaciones de rescate) -->
-    <string name="insulfations_info_recovery">
+    <string name="inflations_info_recovery">
 "5 aldiz putz egin"
 	</string>
 <!--

@@ -75,11 +75,13 @@ public class ConsCheckState extends State {
 		int resource	=	R.drawable.no_image;
 		switch(AGE){
 		case SessionVariables.ADULT:
-			resource	=	R.drawable.adult_shake_victim;
+			resource	=	R.drawable.adult_conscience_checking;
 			break;
 		case SessionVariables.CHILD:
+			resource	=	R.drawable.child_conscience_checking;
 			break;
 		case SessionVariables.BABY:
+			resource	=	R.drawable.baby_conscience_checking;
 			break;
 		}
 		return resource;

@@ -42,15 +42,16 @@ public class StayWithVictimState extends State {
 
 	@Override
 	public int getImageResource() {
+		int	res	=	R.drawable.no_image;
 		switch(AGE){
-		case SessionVariables.ADULT:
-			return R.drawable.lateral_recovery_position_4;
-		case SessionVariables.CHILD:
-			return R.drawable.no_image;
-		case SessionVariables.BABY:
-			return R.drawable.no_image;
+			case SessionVariables.ADULT:
+				return R.drawable.lateral_recovery_position_4;
+			case SessionVariables.CHILD:
+				return R.drawable.child_stay;
+			case SessionVariables.BABY:		
+				return R.drawable.baby_stay;	
 		}
-		return R.drawable.no_image;
+		return res;
 	}
 
 	@Override

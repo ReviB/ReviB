@@ -47,7 +47,16 @@ public class ExplainCompressionsState extends State {
 
 	@Override
 	public int getImageResource() {
-		return R.drawable.sternum_1;
+		int	res	=	R.drawable.no_image;
+		switch(AGE){
+			case SessionVariables.ADULT:
+				return R.drawable.adult_explain_compressions_animation;
+			case SessionVariables.CHILD:
+				return R.drawable.child_explain_compressions_1;
+			case SessionVariables.BABY:		
+				return R.drawable.baby_explain_compressions_1;	
+		}
+		return res;
 	}
 
 	@Override

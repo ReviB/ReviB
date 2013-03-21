@@ -1,6 +1,7 @@
 package com.revib.revib.states;
 
 import com.revib.revib.R;
+import com.revib.revib.session.SessionVariables;
 
 import android.app.Activity;
 import android.media.MediaPlayer;
@@ -18,12 +19,25 @@ public class LateralRecoveryPositionState extends State {
 	
 	@Override
 	public int getTitleResource(){
-		return R.string.lateral_recovery_position_title;
+
+		if(AGE==SessionVariables.ADULT){
+			return R.string.lateral_recovery_position_title_adult;
+		}else{
+			return R.string.lateral_recovery_position_title;
+		}
 	}
 
 	@Override
 	public int getInfoResource() {
-		return R.string.lateral_recovery_position_info;
+		switch(AGE){
+			case SessionVariables.ADULT:
+				return R.string.lateral_recovery_position_info;
+			case SessionVariables.CHILD:
+				return R.string.lateral_recovery_position_info_child;
+			case SessionVariables.BABY:		
+				return R.string.lateral_recovery_position_info_baby;
+		}
+		return -1;
 	}
 
 	@Override
@@ -33,7 +47,16 @@ public class LateralRecoveryPositionState extends State {
 
 	@Override
 	public int getImageResource() {
-		return R.drawable.animation_lateral_recovery_position;
+		int	res	=	R.drawable.no_image;
+		switch(AGE){
+			case SessionVariables.ADULT:
+				return R.drawable.lateral_recovery_position_animation;
+			case SessionVariables.CHILD:
+				return R.drawable.child_stay;
+			case SessionVariables.BABY:		
+				return R.drawable.baby_stay;	
+		}
+		return res;
 	}
 
 	@Override

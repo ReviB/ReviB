@@ -39,7 +39,10 @@
         "Todas las ilustraciones de ReviB están licenciadas por Ines Fernandez bajo la licencia Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License."
     </string>
     <string name="about_warning">
-        "Este programa se distribuye con la esperanza de que pueda ser útil pero SIN NINGUNA GARANTIA."
+        "AVISO: No usar ReviB si se sospecha de que la persona pueda haber sufrido daño medular (accidentes de tráfico, choques de alta energia), en tal caso llamar rápidamente al 112. Este programa se distribuye con la esperanza de que pueda ser útil pero SIN NINGUNA GARANTIA."
+    </string>
+    <string name="about_experts">
+        "Toda la información que contiene este programa ha sido revisada por las expertas en urgencias y emergencias Nuria Fernández y Leire Ruiz, según las guías 2010 de la ERC para la resucitación cardiopulmonar."
     </string>
 
     <!-- Age activity -->

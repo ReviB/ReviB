@@ -50,11 +50,13 @@ public class BreathingManeuverState extends State {
 		int resource	=	R.drawable.no_image;
 		switch(AGE){
 		case SessionVariables.ADULT:
-			resource	=	R.drawable.animation_adult_breathing_maneuver;
+			resource	=	R.drawable.adult_breathing_maneuver_animation;
 			break;
 		case SessionVariables.CHILD:
+			resource	=	R.drawable.child_breathing_maneuver_animation;
 			break;
 		case SessionVariables.BABY:
+			resource	=	R.drawable.baby_breathing_maneuver_animation;
 			break;
 		}
 		return resource;

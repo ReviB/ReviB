@@ -97,6 +97,7 @@ BREATHING CHECKING
 <!--
 LATERAL RECOVERY POSITION
 -->
+	<string name="lateral_recovery_position_title_adult">Posición lateral de seguridad</string>
     <string name="lateral_recovery_position_title">Respira</string>
     <string name="lateral_recovery_position_info">
 "Coloque a la víctima el posición lateral de seguridad. Con el paciente boca arriba:

@@ -63,11 +63,13 @@ public class BreathingCheckState extends State {
 		int resource	=	R.drawable.no_image;
 		switch(AGE){
 		case SessionVariables.ADULT:
-			resource	=	R.drawable.adult_check_breath;
+			resource	=	R.drawable.adult_breathing_check;
 			break;
 		case SessionVariables.CHILD:
+			resource	=	R.drawable.child_breathing_check;
 			break;
 		case SessionVariables.BABY:
+			resource	=	R.drawable.baby_breathing_check;
 			break;
 		}
 		return resource;

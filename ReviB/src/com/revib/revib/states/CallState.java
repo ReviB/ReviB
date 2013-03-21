@@ -24,9 +24,10 @@ public class CallState extends State {
 	@Override
 	public int getImageResource() {
 		if(AGE==SessionVariables.ADULT){
+			return R.drawable.adult_call;
+		}else{
 			return R.drawable.call;
 		}
-		return R.drawable.no_image;
 	}
 
 	@Override
@@ -66,4 +67,6 @@ public class CallState extends State {
 		return nextState;
 	}
 
+	public void beforeGoingBack()		{SessionVariables.getInstance().setAlreadyCalled(false);}
+	public void beforeGoingForward()	{SessionVariables.getInstance().setAlreadyCalled(false);}
 }

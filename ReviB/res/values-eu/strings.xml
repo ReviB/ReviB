@@ -39,7 +39,10 @@
         "ReviB-en ilustrazio guztiak Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License lizentziapean dago Ines Fernandez-en eskutik."
     </string>
     <string name="about_warning">
-        "Programa hau erabilgarri izango den esperoan banatzen da baina INONGO BERMERIK GABE."
+        "KONTUZ: Ez erabili ReviB biktimak bizkarrezur lesiorik eduki balezake (auto istripua, indar handiko golpea), kasu horretan deitu 112ra hainbat arinen. Programa hau erabilgarri izango den esperoan banatzen da baina INONGO BERMERIK GABE."
+    </string>
+    <string name="about_experts">
+        "Programa honetan jasotako informazio guztia larrialdietan adituak diren Leire Ruiz eta Nuria Fernandezek berrikusia izan da, 2010eko ERC bihotz-biriketako berpizteeen jarraibideen arabera."
     </string>
 
     <!-- Age activity -->

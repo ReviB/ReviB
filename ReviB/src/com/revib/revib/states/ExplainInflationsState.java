@@ -45,21 +45,16 @@ public class ExplainInflationsState extends State {
 
 	@Override
 	public int getImageResource() {
-		/*switch(AGE){
-		case SessionVariables.ADULT:
-			return R.raw.inflations_info;
-		case SessionVariables.CHILD:
-			if(nofinflations==0)
-				return R.raw.inflations_child_1;
-			else
-				return R.raw.inflations_child_2;
-		case SessionVariables.BABY:
-			if(nofinflations==0)
-				return R.raw.inflations_baby_1;
-			else
-				return R.raw.inflations_baby_2;				
-		}*/
-		return R.drawable.breathing_1;
+		int	res	=	R.drawable.no_image;
+		switch(AGE){
+			case SessionVariables.ADULT:
+				return R.drawable.adult_inflations_animation;
+			case SessionVariables.CHILD:
+				return R.drawable.child_inflations_animation;
+			case SessionVariables.BABY:		
+				return R.drawable.baby_inflations_animation;	
+		}
+		return res;
 	}
 
 	@Override

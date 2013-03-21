@@ -4,6 +4,8 @@ import com.revib.revib.R;
 
 import android.app.Activity;
 import android.media.MediaPlayer;
+
+import com.revib.revib.session.SessionVariables;
 import com.revib.revib.session.SleepThread;
 import com.revib.revib.StateActivity;
 
@@ -25,7 +27,13 @@ public class ShoutForHelpState extends State {
 
 	@Override
 	public int getImageResource() {
-		return R.drawable.shout;
+		int	res;
+		if(AGE==SessionVariables.ADULT){
+			res	=	R.drawable.adult_shout_for_help;
+		}else{
+			res	=	R.drawable.shout_for_help;
+		}
+		return res;
 	}
 
 	@Override

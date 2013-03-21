@@ -19,19 +19,19 @@ GENERAL
 <!-- 
 CONSCIENCE CHECKING
 -->
-    <string name="cons_check_title">Not translated</string>
+    <string name="cons_check_title">Check consciousness</string>
     <string name="cons_check_info">
-"Not translated"
+"Check consciousness. Shake the victim's shoulders and ask them: Are you alright? Do they respond? "
     </string>
     <string name="cons_check_info_child">
-"Not translated"
+"Check for consciousness. Shake the child's shoulders and ask them are you alright? Do they respond? "
 	</string>
     <string name="cons_check_info_baby">
-"Not translated"
+"Check consciousness. Tap the soles of their feet and call their name. Do they respond to stimulus or do they cry?"
 	</string>
-    <string name="cons_check_question">Not translated</string>
+    <string name="cons_check_question">Does he/she respond?</string>
     <!-- string name="cons_check_question_child"></string-->
-    <string name="cons_check_question_baby">Not translated</string>
+    <string name="cons_check_question_baby">Respond to stimulus or cry?</string>
     <!-- string name="cons_check_left_btn"></string-->
     <!-- string name="cons_check_right_btn"></string-->
     
@@ -40,13 +40,13 @@ CONSCIOUS
 -->
     <string name="conscious_title">Conscious</string>
     <string name="conscious_info">
-"Not translated."
+"The victim should go, accompanied by someone, to a health centre for a medical examination. Their consciousness needs to be checked from time to time until you get to the health centre."
 	</string>
     <!-- string name="conscious_info_child"></string-->
     <!--string name="conscious_info_baby"></string-->
     <!-- string name="conscious_question"></string-->
-    <string name="conscious_left_btn">Not translated</string>
-    <string name="conscious_right_btn">Not translated</string>
+    <string name="conscious_left_btn">He/She has lost consciousness</string>
+    <string name="conscious_right_btn">Arrived at the health centre</string>
     
 <!--
 SHOUT FOR HELP
@@ -56,7 +56,7 @@ SHOUT FOR HELP
     <!-- string name="shout_for_help_left_btn"></string-->
     <!-- string name="shout_for_help_right_btn">Seguir</string-->
     <string name="shout_for_help_info">
-"Not translated."
+"Don't leave the victim alone and shout for help. If someone else is with you ask him to call 112. If you are on your own, don´t call 112 yet and follow the instructions."
     </string>
     
 <!--
@@ -64,11 +64,11 @@ BREATHING MANEUVER
 -->
     <string name="breathing_maneuver_title">Open the airway</string>
     <string name="breathing_maneuver_info">
-"Not translated."
+"Put one hand on their forehead and the other one on their chin. Tilt their head and lift their chin."
 	</string>
     <!-- string name="breathing_maneuver_info_child"></string-->
     <string name="breathing_maneuver_info_baby">
-"Not translated."
+"Put one hand on their forehead and the other one on their chin. Gently tilt their head and lift their chin."
 	</string>
     <!-- string name="breathing_maneuver_question">¿Respira normalmente y sin dificultad?</string-->
     <!-- string name="breathing_maneuver_left"></string-->
@@ -79,22 +79,28 @@ BREATHING CHECKING
 -->
     <string name="breathing_check_title">Check for breathing</string>
     <string name="breathing_check_info">
-"Not translated"
+"Check for breathing. Look, listen, and feel for air coming out of the victim's mouth by bending your own ear down to his mouth.
+Are they breathing normally without difficulties? "
 	</string>
-    <string name="breathing_check_question">Not translated</string>
+    <string name="breathing_check_question">breathing normally without difficulties?</string>
     
 <!--
 LATERAL RECOVERY POSITION
--->
-    <string name="lateral_recovery_position_title">Lateral security position</string>
+--> 
+	<string name="lateral_recovery_position_title_adult">Lateral security position</string>
+    <string name="lateral_recovery_position_title">Breaths</string>
     <string name="lateral_recovery_position_info">
-"Not translated"
+"Once the victim is lied on their back put them to lateral security position.
+1- Rise their left arm.
+2- Put their right hand onto their left shoulder.
+3- Bend their right knee.
+4- Turn the victim over the left side."
 	</string>
 	<string name="lateral_recovery_position_info_child">
-"Not translated"
+"Don't move the child."
 	</string>
 	<string name="lateral_recovery_position_info_baby">
-"Not translated"
+"Don't move the baby."
 	</string>
     
 <!--
@@ -102,60 +108,55 @@ CALL 112
 -->
 	<string name="call_title">Call 112</string>
     <string name="call_info">
-"Not translated"
+"Call 112 and say:
+- Your name
+- Your location
+- 'I'm on a medical emergency'."
 	</string>
     <!-- string name="call_question">not defined</string-->
     <string name="call_left">112 already called</string>
     <string name="call_right">Call 112</string>
 <!--
-START CPR
--->
-	<string name="start_cpr_title">Start CPR</string>
-    <string name="start_cpr_info">
-"Untranslated"
-	</string>
-    <string name="start_cpr_info_child">
-"Untranslated"
-	</string>
-<!--
 EXPLAIN COMPRESSIONS
 -->
-	<string name="explain_compressions_title">How to compress</string>
+	<string name="explain_compressions_title">How to perform compressions</string>
     <string name="explain_compressions_info">
-"Untranslated"
+"1.Find this point in the middle of the chest.
+2.Cross your fingers.
+3.Put your crossed hands on the victim's chest, arms stretched."
 	</string>
     <string name="explain_compressions_info_child">
-"Untranslated"
+"Stretch your arm and put the palm of your hand on this point in the middle of the chest."
     </string>
     <string name="explain_compressions_info_baby">
-"Untranslated"
+"Put the index and middle finger on this point in the middle of the chest."
 	</string>
 <!--
 COMPRESSIONS
 -->
 	<string name="compressions_title">Perform compressions</string>
     <string name="compressions_info">
-"Untranslated"
+"Push 30 times."
 	</string>
     <string name="compressions_info_child">
-"Untranslated"
+"Push 15 times."
     </string>
     <string name="compressions_info_baby">
-"Untranslated"
+"Push 15 times."
 	</string>
 <!--
 EXPLAIN INFLATIONS
 -->
 	<string name="explain_inflations_title">How to ventilate</string>
     <string name="explain_inflations_info">
-""
+"Pinch their nose with your hand and lift the chin with the other. Seal your lips around the victim's mouth and blow."
 	</string>
 	<!-- (5 insuflaciones de rescate) -->
     <string name="explain_inflations_info_child">
-"Untranslated"
+"Pinch their nose with a hand and lift the chin with the other. Seal your lips around the victim's mouth and blow."
 	</string>
     <string name="explain_inflations_info_baby">
-"Untranslated"
+"Put one hand on their forehead and the other one on their chin. Gently tilt their head and lift their chin. Seal your lips around the baby's mouth and nose and blow."
 	</string>
 <!--
 INFLATIONS
@@ -165,7 +166,7 @@ INFLATIONS
 "Give 2 ventilations"
 	</string>
 	<!-- (5 insuflaciones de rescate) -->
-    <string name="inflations_info_child_1">
+    <string name="inflations_info_recovery">
 "Give 5 ventilations"
 	</string>
 <!--
@@ -173,9 +174,9 @@ STAY WITH VICTIM
 -->
 	<string name="stay_with_victim_title">Stay with the victim</string>
     <string name="stay_with_victim_info">
-"Quédese con la victima y compruebe periódicamente si respira hasta la llegada de la ambulancia."
+"Stay with the victim and check from time to time if they are breathing until the ambulance arrives."
 	</string>
     <!-- string name="compressions_question"></string-->
-    <string name="stay_with_victim_left"></string>
-    <string name="stay_with_victim_right"></string>
+    <string name="stay_with_victim_left">Victim stopped breathing</string>
+    <string name="stay_with_victim_right">Ambulance arrived</string>
 </resources>

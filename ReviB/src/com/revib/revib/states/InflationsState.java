@@ -16,7 +16,7 @@ public class InflationsState extends State {
 	@Override
 	public int getInfoResource() {
 		int	res	=	R.string.inflations_info;
-		if(AGE==SessionVariables.CHILD && nofinflations==0){
+		if(AGE!=SessionVariables.ADULT && nofinflations==0){
 			res	=	R.string.inflations_info_recovery;		
 		}
 		return res;
@@ -46,17 +46,11 @@ public class InflationsState extends State {
 		int	res	=	R.drawable.no_image;
 		switch(AGE){
 			case SessionVariables.ADULT:
-				return R.drawable.animation_adult_inflations;
-		/*case SessionVariables.CHILD:
-			if(nofinflations==0)
-				return R.raw.inflations_child_1;
-			else
-				return R.raw.inflations_child_2;
-		case SessionVariables.BABY:
-			if(nofinflations==0)
-				return R.raw.inflations_baby_1;
-			else
-				return R.raw.inflations_baby_2;*/				
+				return R.drawable.adult_inflations_animation;
+			case SessionVariables.CHILD:
+				return R.drawable.child_inflations_animation;
+			case SessionVariables.BABY:		
+				return R.drawable.baby_inflations_animation;	
 		}
 		return res;
 	}
@@ -83,10 +77,11 @@ public class InflationsState extends State {
 
 	@Override
 	public State getNextState(int buttonRes) {
-		if(AGE==SessionVariables.CHILD || AGE==SessionVariables.BABY){
+		Boolean alreadyCalled	=	SessionVariables.getInstance().hasAlreadyCalled();
+		if(AGE!=SessionVariables.ADULT){
 			if(nofinflations==0){
 				return	new	ExplainCompressionsState(activity,this);
-			}else if(nofinflations==3){
+			}else if(nofinflations==3&&!alreadyCalled){
 				return	new CallState(activity,this);
 			}
 		}

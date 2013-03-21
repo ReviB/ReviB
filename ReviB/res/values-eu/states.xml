@@ -130,18 +130,33 @@ CALL 112
     <string name="call_left">Dagoeneko deitua</string>
     <string name="call_right">Deitu 112ra</string>
 <!--
+EXPLAIN COMPRESSIONS
+-->
+	<string name="explain_compressions_title">Konpresioak nola egin</string>
+    <string name="explain_compressions_info">
+"1- Bularreko erdialdeko puntu hau bila ezazu.
+2- Eskuak gurutzatu irudian agertzen den bezala.
+3- Jarri itzazu eskuak bular gainean (aurreko puntuaren gainean)."
+	</string>
+    <string name="explain_compressions_info_child">
+"Esku-azpia bularraren erdialdean jarri irudian agertzen den puntuan."
+    </string>
+    <string name="explain_compressions_info_baby">
+"Hatz luzea eta erakuslea bularraren erdialdean jarri irudian agertzen den puntuan."
+	</string>
+<!--
 COMPRESSIONS
 -->
 	<string name="compressions_title">Realizar compresiones</string>
     <string name="compressions_info">
-"Besoak luzaturik dituzula 30 aldiz konprimatu."
+"30 aldiz konprimatu."
 	</string>
 	<!-- (Durante primer minuto de RCP) -->
     <string name="compressions_info_child">
-"Esku-azpia bularraren erdialdean duzularik 15 aldiz konprimatu."
+"15 aldiz konprimatu."
 	</string>
     <string name="compressions_info_baby">
-"Hatz luzea eta erakuslea bularraren erdialdean dituzularik 15 aldiz konprimatu."
+"15 aldiz konprimatu."
 	</string>
 <!--
 EXPLAIN INFLATIONS

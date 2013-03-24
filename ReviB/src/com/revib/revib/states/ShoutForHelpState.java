@@ -22,7 +22,7 @@ public class ShoutForHelpState extends State {
 
 	@Override
 	public int getAudioResource() {
-		return R.raw.bip;
+		return R.raw.shout_for_help;
 	}
 
 	@Override
@@ -58,23 +58,15 @@ public class ShoutForHelpState extends State {
 
 	@Override
 	public State getNextState(int buttonRes) {
-		State nextState	=	this;
-		switch(buttonRes){
-			case -1:
-			case R.id.state_right_btn:
-				nextState	=	new BreathingManeuverState(activity,this);
-				break;
-		}
-		return nextState;
+		return new BreathingManeuverState(activity,this);
 	}
 	
 	@Override
 	public void onCompletion(MediaPlayer mp) {
 		super.onCompletion(mp);
-		State	nextState	=	getNextState(-1);
 		SleepThread.getInstance().start(
 				((StateActivity) activity),
-				nextState,
+				getNextState(-1),
 				2000
 		);
 	}

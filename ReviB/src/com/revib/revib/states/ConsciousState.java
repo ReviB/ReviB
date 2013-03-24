@@ -17,7 +17,7 @@ public class ConsciousState extends State {
 
 	@Override
 	public int getAudioResource() {
-		return R.raw.bip;
+		return R.raw.conscience_healthcentre;
 	}
 
 	@Override

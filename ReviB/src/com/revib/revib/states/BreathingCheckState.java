@@ -55,7 +55,7 @@ public class BreathingCheckState extends State {
 
 	@Override
 	public int getAudioResource() {
-		return R.raw.bip;
+		return R.raw.breathing_check;
 	}
 
 	@Override

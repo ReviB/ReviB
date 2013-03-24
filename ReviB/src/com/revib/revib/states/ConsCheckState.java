@@ -54,20 +54,15 @@ public class ConsCheckState extends State {
 
 	@Override
 	public int getAudioResource() {
-		/*int $ret=-1;
 		switch(AGE){
 		case SessionVariables.ADULT:
-			$ret = R.raw.cons_check_info;
-			break;
+			return R.raw.adult_conscience_checking;
 		case SessionVariables.CHILD:
-			$ret = R.raw.cons_check_info_child;
-			break;
+			return R.raw.child_conscience_checking;
 		case SessionVariables.BABY:
-			$ret = R.raw.cons_check_info_baby;
-			break;
+			return R.raw.baby_conscience_checking;
 		}
-		return $ret;*/
-		return R.raw.message;
+		return -1;
 	}
 
 	@Override

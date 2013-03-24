@@ -27,17 +27,7 @@ public class StayWithVictimState extends State {
 
 	@Override
 	public int getAudioResource() {
-		/*
-		switch(AGE){
-			case SessionVariables.ADULT:
-				return R.raw.stay_with_victim;
-			case SessionVariables.CHILD:
-				return R.raw.stay_with_victim_child;
-			case SessionVariables.BABY:
-				return R.raw.stay_with_victim_baby;
-		}
-		 */
-		return R.raw.bip;
+		return R.raw.stay_until_ambulance;
 	}
 
 	@Override

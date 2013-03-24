@@ -26,7 +26,7 @@ public abstract class State implements OnCompletionListener {
 	public		String		TAG;
 	public		Activity	activity		=	null;
 	public		MediaPlayer mediaPlayer 	= 	null;
-	
+	public		int 		step			=	0;
 	public		Resources	res;
 	
 	public State(Activity activity,State previousState){
@@ -54,9 +54,7 @@ public abstract class State implements OnCompletionListener {
 			Resources	res		=	activity.getResources();
 			
 			// Set image
-			ImageView 	image 	=	(ImageView) activity.findViewById(R.id.state_iv);
-			image.setImageDrawable(res.getDrawable(getImageResource()));
-
+			setImage(getImageResource());
 			
 			// Set Question
 			setTextView(R.id.state_question_tv,getQuestionResource());
@@ -90,6 +88,11 @@ public abstract class State implements OnCompletionListener {
 		}else{
 			view.setVisibility(View.GONE);
 		}
+	}
+	
+	public void setImage(int resource){
+		ImageView 	image 	=	(ImageView) activity.findViewById(R.id.state_iv);
+		image.setImageDrawable(res.getDrawable(resource));
 	}
 	
 	public void setInfoDialog(){
@@ -140,15 +143,14 @@ public abstract class State implements OnCompletionListener {
 		}
 	}
 	
-	public void startAudio(){
-		int audioResource	=	getAudioResource();
+	public void startAudio(int audioResource){
 		if(audioResource!=-1){
 			try{
 				AudioFunctions.checkAudio(activity);
 				if(mediaPlayer!=null){
 					mediaPlayer.release();
 				}
-				mediaPlayer	=	MediaPlayer.create(activity,getAudioResource());
+				mediaPlayer	=	MediaPlayer.create(activity,audioResource);
 				mediaPlayer.setOnCompletionListener(this);
 				mediaPlayer.start();
 			}catch(Exception e){
@@ -170,7 +172,7 @@ public abstract class State implements OnCompletionListener {
 		SleepThread.getInstance().interrupt();
 		setStateView();
 		startAnimation();
-		startAudio();
+		startAudio(getAudioResource());
 	}
 
 	@Override
@@ -182,6 +184,16 @@ public abstract class State implements OnCompletionListener {
 		return previousState.getClass();
 	}
 	
-	public void beforeGoingBack()		{/*Nothing by default*/}
-	public void beforeGoingForward()	{/*Nothing by default*/}
+	public void beforeGoingBack()		{
+		stopMediaPlayer();
+	}
+	public void beforeGoingForward()	{
+		stopMediaPlayer();
+	}
+	public void stopMediaPlayer(){
+		if(mediaPlayer!=null){
+			mediaPlayer.stop();
+			mediaPlayer.release();
+		}
+	}
 }

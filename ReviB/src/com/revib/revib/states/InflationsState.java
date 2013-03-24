@@ -15,30 +15,20 @@ public class InflationsState extends State {
 
 	@Override
 	public int getInfoResource() {
-		int	res	=	R.string.inflations_info;
 		if(AGE!=SessionVariables.ADULT && nofinflations==0){
-			res	=	R.string.inflations_info_recovery;		
+			return	R.string.inflations_info_recovery;		
+		}else{
+			return R.string.inflations_info;
 		}
-		return res;
 	}
 
 	@Override
 	public int getAudioResource() {
-		/*switch(AGE){
-			case SessionVariables.ADULT:
-				return R.raw.inflations_info;
-			case SessionVariables.CHILD:
-				if(nofinflations==0)
-					return R.raw.inflations_child_1;
-				else
-					return R.raw.inflations_child_2;
-			case SessionVariables.BABY:
-				if(nofinflations==0)
-					return R.raw.inflations_baby_1;
-				else
-					return R.raw.inflations_baby_2;				
-		}*/
-		return R.raw.bip;
+		if(AGE!=SessionVariables.ADULT && nofinflations==0){
+			return R.raw.insuflations_5; 		
+		}else{
+			return R.raw.insuflations_2;
+		}
 	}
 
 	@Override

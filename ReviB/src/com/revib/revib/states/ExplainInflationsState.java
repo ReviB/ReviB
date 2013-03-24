@@ -26,21 +26,12 @@ public class ExplainInflationsState extends State {
 
 	@Override
 	public int getAudioResource() {
-		/*switch(AGE){
-			case SessionVariables.ADULT:
-				return R.raw.inflations_info;
-			case SessionVariables.CHILD:
-				if(nofinflations==0)
-					return R.raw.inflations_child_1;
-				else
-					return R.raw.inflations_child_2;
+		switch(AGE){
 			case SessionVariables.BABY:
-				if(nofinflations==0)
-					return R.raw.inflations_baby_1;
-				else
-					return R.raw.inflations_baby_2;				
-		}*/
-		return R.raw.bip;
+				return R.raw.baby_explain_inflations;
+			default:
+				return R.raw.explain_inflations_1;			
+		}
 	}
 
 	@Override

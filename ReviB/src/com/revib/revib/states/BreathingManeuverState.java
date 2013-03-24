@@ -1,7 +1,9 @@
 package com.revib.revib.states;
 
 import com.revib.revib.R;
+import com.revib.revib.StateActivity;
 import com.revib.revib.session.SessionVariables;
+import com.revib.revib.session.SleepThread;
 
 import android.app.Activity;
 import android.media.MediaPlayer;
@@ -14,15 +16,7 @@ public class BreathingManeuverState extends State {
 
 	@Override
 	public State getNextState(int buttonRes) {
-		State nextState	=	this;
-		switch(buttonRes){
-			case R.id.state_left_btn:
-			case R.id.state_right_btn:
-			case -1:
-				nextState	=	new BreathingCheckState(activity,this);
-				break;
-		}
-		return nextState;
+		return new BreathingCheckState(activity,this);
 	}
 
 	@Override
@@ -42,7 +36,8 @@ public class BreathingManeuverState extends State {
 
 	@Override
 	public int getAudioResource() {
-		return R.raw.bip;
+		step	=	0;
+		return R.raw.breathing_maneuver_1;
 	}
 
 	@Override
@@ -88,6 +83,20 @@ public class BreathingManeuverState extends State {
 	@Override
 	public void onCompletion(MediaPlayer mp) {
 		super.onCompletion(mp);
+		if(step==0){
+			step++;
+			if(AGE==SessionVariables.BABY){
+				startAudio(R.raw.baby_breathing_maneuver_2);
+			}else{
+				startAudio(R.raw.breathing_maneuver_2);
+			}
+		}else{
+			SleepThread.getInstance().start(
+					((StateActivity) activity),
+					getNextState(-1),
+					500
+			);
+		}
 	}
 
 }

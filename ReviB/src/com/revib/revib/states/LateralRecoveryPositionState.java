@@ -42,7 +42,15 @@ public class LateralRecoveryPositionState extends State {
 
 	@Override
 	public int getAudioResource() {
-		return R.raw.bip;
+		switch(AGE){
+		case SessionVariables.ADULT:
+			return R.raw.lateral_recovery_position_0;
+		case SessionVariables.CHILD:
+			return R.raw.lateral_recovery_position_0;
+		case SessionVariables.BABY:		
+			return R.raw.lateral_recovery_position_0;
+	}
+	return -1;
 	}
 
 	@Override

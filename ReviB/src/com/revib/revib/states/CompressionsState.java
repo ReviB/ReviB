@@ -1,6 +1,7 @@
 package com.revib.revib.states;
 
 import com.revib.revib.R;
+import com.revib.revib.R.raw;
 import com.revib.revib.session.SessionVariables;
 
 import android.app.Activity;
@@ -26,23 +27,16 @@ public class CompressionsState extends State {
 
 	@Override
 	public int getAudioResource() {
-		/*
+
 		switch(AGE){
 			case SessionVariables.ADULT:
-				return R.raw.compressions;
+				return R.raw.adult_explain_compressions_1;
 			case SessionVariables.CHILD:
-				if(nofinflations==0)
-					return R.raw.compressions_child_1;
-				else
-					return R.raw.compressions_child_2;
+				return R.raw.child_explain_compressions;
 			case SessionVariables.BABY:
-				if(nofinflations==0)
-					return R.raw.compressions_baby_1;
-				else
-					return R.raw.compressions_baby_2;				
+				return R.raw.baby_explain_compressions;	
 		}
-		 */
-		return R.raw.bip;
+		return -1;
 	}
 
 	@Override

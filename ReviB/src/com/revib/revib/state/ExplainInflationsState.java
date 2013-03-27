@@ -1,13 +1,13 @@
-package com.revib.revib.states;
+package com.revib.revib.state;
 
 import com.revib.revib.R;
 import com.revib.revib.session.SessionVariables;
 
 import android.app.Activity;
 
-public class ExplainCompressionsState extends State {
+public class ExplainInflationsState extends State {
 
-	public ExplainCompressionsState(Activity activity, State previousState) {
+	public ExplainInflationsState(Activity activity, State previousState) {
 		super(activity, previousState);
 	}
 
@@ -15,11 +15,11 @@ public class ExplainCompressionsState extends State {
 	public int getInfoResource() {
 		switch(AGE){
 			case SessionVariables.ADULT:
-				return R.string.explain_compressions_info;
+				return R.string.explain_inflations_info;
 			case SessionVariables.CHILD:
-				return R.string.explain_compressions_info_child;
+				return R.string.explain_inflations_info_child;
 			case SessionVariables.BABY:
-				return R.string.explain_compressions_info_baby;				
+				return R.string.explain_inflations_info_baby;				
 		}
 		return -1;
 	}
@@ -27,14 +27,11 @@ public class ExplainCompressionsState extends State {
 	@Override
 	public int getAudioResource() {
 		switch(AGE){
-			case SessionVariables.ADULT:
-				return R.raw.adult_explain_compressions_1;
-			case SessionVariables.CHILD:
-				return R.raw.child_explain_compressions;
 			case SessionVariables.BABY:
-				return R.raw.child_explain_compressions;			
+				return R.raw.baby_explain_inflations;
+			default:
+				return R.raw.explain_inflations_1;			
 		}
-		return -1;
 	}
 
 	@Override
@@ -42,11 +39,11 @@ public class ExplainCompressionsState extends State {
 		int	res	=	R.drawable.no_image;
 		switch(AGE){
 			case SessionVariables.ADULT:
-				return R.drawable.adult_explain_compressions_animation;
+				return R.drawable.adult_inflations_animation;
 			case SessionVariables.CHILD:
-				return R.drawable.child_explain_compressions_1;
+				return R.drawable.child_inflations_animation;
 			case SessionVariables.BABY:		
-				return R.drawable.baby_explain_compressions_1;	
+				return R.drawable.baby_inflations_animation;	
 		}
 		return res;
 	}
@@ -68,12 +65,12 @@ public class ExplainCompressionsState extends State {
 
 	@Override
 	public int getTitleResource() {
-		return R.string.explain_compressions_title;
+		return R.string.explain_inflations_title;
 	}
 
 	@Override
 	public State getNextState(int buttonRes) {
-		return new CompressionsState(activity,this);
+		return new	InflationsState(activity,this);
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.revib.revib.about;
+package com.revib.revib.dialog;
 
 import com.revib.revib.R;
 

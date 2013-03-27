@@ -1,7 +1,7 @@
 package com.revib.revib.session;
 
 import com.revib.revib.StateActivity;
-import com.revib.revib.states.State;
+import com.revib.revib.state.State;
 
 public class SleepThread implements Runnable {
 

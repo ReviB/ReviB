@@ -50,4 +50,8 @@
     <string name="age_adult">Adult (over 8 years old)</string>
     <string name="age_child">Child (between 1 and 8 years old)</string>
     <string name="age_baby">Baby (under 12 months old)</string>
+    
+    <!-- Exit dialog -->
+    <string name="exit">Close application</string>
+    <string name="exit_message">Close application?</string>
 </resources>

@@ -2,13 +2,19 @@
     <item
         android:id="@+id/menu_about"
         android:orderInCategory="100"
-        android:showAsAction="always"
+        android:showAsAction="collapseActionView"
         android:title="@string/about_revib"
         android:icon="@android:drawable/ic_menu_info_details"/>
     <item
         android:id="@+id/menu_language"
         android:orderInCategory="100"
-        android:showAsAction="always"
+        android:showAsAction="collapseActionView"
         android:title="@string/language"
+        android:icon="@drawable/menu_language"/>
+    <item
+        android:id="@+id/menu_exit"
+        android:orderInCategory="100"
+        android:showAsAction="collapseActionView"
+        android:title="@string/exit"
         android:icon="@drawable/menu_language"/>
 </menu>

@@ -1,13 +1,14 @@
 package com.revib.revib;
 
 import com.revib.revib.R;
-import com.revib.revib.about.AboutDialog;
 import com.revib.revib.audio.AudioFunctions;
-import com.revib.revib.locale.LocaleDialog;
+import com.revib.revib.dialog.AboutDialog;
+import com.revib.revib.dialog.ExitDialog;
+import com.revib.revib.dialog.LocaleDialog;
 import com.revib.revib.locale.LocaleFunctions;
 import com.revib.revib.session.SleepThread;
-import com.revib.revib.states.ConsCheckState;
-import com.revib.revib.states.State;
+import com.revib.revib.state.ConsCheckState;
+import com.revib.revib.state.State;
 
 import android.media.AudioManager;
 import android.os.Build;
@@ -86,6 +87,10 @@ public class StateActivity extends Activity {
 		case R.id.menu_about:
 			AboutDialog ad	=	new AboutDialog(this);
 			ad.startDialog();
+		    return true;
+		case R.id.menu_exit:
+			ExitDialog ed	=	new ExitDialog(this);
+			ed.startDialog();
 		    return true;
 		default:
 			return super.onOptionsItemSelected(item);

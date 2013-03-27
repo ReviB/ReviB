@@ -51,4 +51,8 @@
     <string name="age_adult">Adulto (más de 8 años)</string>
     <string name="age_child">Niño (entre 1 y 8 años)</string>
     <string name="age_baby">Bebé (menos de 12 meses)</string>
+    
+    <!-- Exit dialog -->
+    <string name="exit">Cerrar aplicación</string>
+    <string name="exit_message">¿Quieres cerrar la aplicación?</string>
 </resources>

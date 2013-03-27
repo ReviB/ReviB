@@ -1,4 +1,4 @@
-package com.revib.revib.states;
+package com.revib.revib.state;
 
 import com.revib.revib.R;
 import com.revib.revib.StateActivity;

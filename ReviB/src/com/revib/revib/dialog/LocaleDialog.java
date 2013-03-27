@@ -1,9 +1,10 @@
-package com.revib.revib.locale;
+package com.revib.revib.dialog;
 
 import com.revib.revib.MainActivity;
 import com.revib.revib.AgeActivity;
 import com.revib.revib.StateActivity;
 import com.revib.revib.R;
+import com.revib.revib.locale.LocaleFunctions;
 
 import android.app.Activity;
 import android.app.AlertDialog;

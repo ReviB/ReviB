@@ -1,6 +1,7 @@
 package com.revib.revib.state;
 
 import com.revib.revib.R;
+import com.revib.revib.dialog.ExitDialog;
 import com.revib.revib.session.SessionVariables;
 
 import android.app.Activity;
@@ -74,7 +75,9 @@ public class StayWithVictimState extends State {
 				nextState	=	new ExplainInflationsState(activity,this);
 			}
 		}else if(buttonRes==R.id.state_right_btn){
-			//Result dialog???
+			nextState	=	null;
+			ExitDialog ed	=	new ExitDialog(activity);
+			ed.startDialog();
 		}
 		return nextState;
 	}

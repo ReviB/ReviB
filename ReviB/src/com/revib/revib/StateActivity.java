@@ -104,8 +104,11 @@ public class StateActivity extends Activity {
 		switch(viewId){
 			case R.id.state_left_btn:
 			case R.id.state_right_btn:
-				currentState.beforeGoingForward();
-				changeState(currentState.getNextState(viewId));
+				State nextState	=	currentState.getNextState(viewId);
+				if(nextState!=null){
+					currentState.beforeGoingForward();
+					changeState(nextState);
+				}
 				break;
 			case R.id.state_reload_btn:
 				// Reload same state;
@@ -165,5 +168,12 @@ public class StateActivity extends Activity {
 	public void autoChangeState(State state){
 		currentState	=	state;
 		initView();
+	}
+	
+	public void stopAudio(){
+		if(currentState.mediaPlayer!=null){
+			//currentState.mediaPlayer.stop();
+			currentState.mediaPlayer.release();
+		}
 	}
 }

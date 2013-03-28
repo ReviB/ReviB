@@ -2,6 +2,7 @@ package com.revib.revib.dialog;
 
 import com.revib.revib.MainActivity;
 import com.revib.revib.R;
+import com.revib.revib.StateActivity;
 import com.revib.revib.session.SessionVariables;
 
 import android.app.Activity;
@@ -9,7 +10,6 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
-import android.os.Bundle;
 
 public class ExitDialog implements OnClickListener {
 
@@ -35,7 +35,8 @@ public class ExitDialog implements OnClickListener {
 	public void onClick(DialogInterface dialog, int which) {
 		if(which==-1){
 			Intent i = new Intent(activity,MainActivity.class);
-			
+			if(activity.getClass()==StateActivity.class)
+				((StateActivity)activity).stopAudio();
 			SessionVariables.getInstance().setExit(true);
 			activity.startActivity(i); 
 			

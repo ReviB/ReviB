@@ -7,6 +7,7 @@ import com.revib.revib.locale.LocaleFunctions;
 import com.revib.revib.session.SessionVariables;
 
 import android.media.AudioManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
@@ -41,7 +42,12 @@ public class MainActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.revib_menu, menu);
+
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+			getMenuInflater().inflate(R.menu.revib_menu, menu);
+		}else{
+			getMenuInflater().inflate(R.menu.revib_menu_old, menu);
+		}
 		return true;
 	}
 	

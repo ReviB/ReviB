@@ -81,11 +81,13 @@ public class InflationsState extends State {
 	
 	@Override
 	public void beforeGoingBack(){
+		super.beforeGoingBack();
 		SessionVariables.getInstance().restInflations();
 	}
 	
 	@Override
 	public void beforeGoingForward(){
+		super.beforeGoingForward();
 		SessionVariables.getInstance().sumInflations();
 	}
 

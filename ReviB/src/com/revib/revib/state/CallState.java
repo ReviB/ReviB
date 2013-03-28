@@ -52,7 +52,7 @@ public class CallState extends State {
 
 	@Override
 	public State getNextState(int buttonRes) {
-		State nextState	=	this;
+		State nextState	=	null;
 		if(buttonRes==R.id.state_right_btn){
 			SessionVariables.getInstance().callEmergencyNumber(activity);
 		}
@@ -67,6 +67,11 @@ public class CallState extends State {
 		return nextState;
 	}
 
-	public void beforeGoingBack()		{SessionVariables.getInstance().setAlreadyCalled(false);}
-	public void beforeGoingForward()	{SessionVariables.getInstance().setAlreadyCalled(false);}
+	public void beforeGoingBack()		{
+		super.beforeGoingBack();
+		SessionVariables.getInstance().setAlreadyCalled(false);}
+	public void beforeGoingForward()	{
+		super.beforeGoingForward();
+		SessionVariables.getInstance().setAlreadyCalled(true);
+	}
 }

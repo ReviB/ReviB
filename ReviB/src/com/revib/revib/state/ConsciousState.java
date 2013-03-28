@@ -1,6 +1,7 @@
 package com.revib.revib.state;
 
 import com.revib.revib.R;
+import com.revib.revib.dialog.ExitDialog;
 
 import android.app.Activity;
 
@@ -53,7 +54,9 @@ public class ConsciousState extends State {
 				nextState	=	new ShoutForHelpState(activity,this);
 				break;
 			case R.id.state_right_btn:
-				nextState	=	this;
+				nextState	=	null;
+				ExitDialog ed	=	new ExitDialog(activity);
+				ed.startDialog();
 				break;
 		}
 		return nextState;

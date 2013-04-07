@@ -10,7 +10,6 @@ import com.revib.revib.session.SleepThread;
 import com.revib.revib.StateActivity;
 
 public class ShoutForHelpState extends State {
-
 	public ShoutForHelpState(Activity activity, State previousState) {
 		super(activity, previousState);
 	}

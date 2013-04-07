@@ -80,6 +80,10 @@ public class SessionVariables {
 		this.inflations--;
 	}
 
+	public void restartInflations() {
+		this.inflations=0;
+	}
+
 	public Boolean hasAlreadyCalled() {
 		return alreadyCalled;
 	}

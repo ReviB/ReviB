@@ -7,7 +7,6 @@ import android.app.Activity;
 import android.media.MediaPlayer;
 
 public class BreathingCheckState extends State {
-	
 	public BreathingCheckState(Activity activity, State previousState) {
 		super(activity, previousState);
 	}
@@ -33,18 +32,6 @@ public class BreathingCheckState extends State {
 
 	@Override
 	public int getInfoResource() {
-		/*int $ret=-1;
-		switch(AGE){
-		case SessionVariables.ADULT:
-			$ret = R.string.breathing_check_info;
-			break;
-		case SessionVariables.CHILD:
-			$ret = R.string.breathing_check_info_child;
-			break;
-		case SessionVariables.BABY:
-			$ret = R.string.breathing_check_info_baby;
-			break;
-		}*/
 		return R.string.breathing_check_info;
 	}
 	
@@ -98,5 +85,11 @@ public class BreathingCheckState extends State {
 	@Override
 	public void onCompletion(MediaPlayer mp) {
 		super.onCompletion(mp);
+	}
+	
+	@Override
+	public void beforeGoingForward(){
+		super.beforeGoingForward();
+		SessionVariables.getInstance().restartInflations();
 	}
 }

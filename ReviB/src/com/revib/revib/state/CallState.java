@@ -6,7 +6,6 @@ import com.revib.revib.session.SessionVariables;
 import android.app.Activity;
 
 public class CallState extends State {
-
 	public CallState(Activity activity, State previousState) {
 		super(activity, previousState);
 	}

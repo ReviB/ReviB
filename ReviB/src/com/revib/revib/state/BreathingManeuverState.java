@@ -9,7 +9,6 @@ import android.app.Activity;
 import android.media.MediaPlayer;
 
 public class BreathingManeuverState extends State {
-
 	public BreathingManeuverState(Activity activity, State previousState) {
 		super(activity, previousState);
 	}

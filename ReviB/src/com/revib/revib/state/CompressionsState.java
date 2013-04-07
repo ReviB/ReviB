@@ -1,13 +1,14 @@
 package com.revib.revib.state;
 
 import com.revib.revib.R;
-import com.revib.revib.R.raw;
+import com.revib.revib.StateActivity;
 import com.revib.revib.session.SessionVariables;
+import com.revib.revib.session.SleepThread;
 
 import android.app.Activity;
+import android.media.MediaPlayer;
 
 public class CompressionsState extends State {
-	
 	public CompressionsState(Activity activity, State previousState) {
 		super(activity, previousState);
 	}
@@ -27,14 +28,12 @@ public class CompressionsState extends State {
 
 	@Override
 	public int getAudioResource() {
-
 		switch(AGE){
 			case SessionVariables.ADULT:
-				return R.raw.adult_explain_compressions_1;
+				return R.raw.adult_compressions;
 			case SessionVariables.CHILD:
-				return R.raw.child_explain_compressions;
 			case SessionVariables.BABY:
-				return R.raw.baby_explain_compressions;	
+				return R.raw.compressions_15;	
 		}
 		return -1;
 	}
@@ -81,4 +80,12 @@ public class CompressionsState extends State {
 		}
 	}
 
+	@Override
+	public void onCompletion(MediaPlayer mp) {
+		super.onCompletion(mp);
+		SleepThread.getInstance().start(
+				((StateActivity) activity),
+				getNextState(-1),
+				500);
+	}
 }

@@ -41,14 +41,31 @@ public class StateActivity extends Activity {
         
 		setContentView(R.layout.state_template);
 		
-		if(currentState == null)
+		if(currentState == null){
 			currentState	=	new ConsCheckState(this,null);
+		}
 		initView();
 		
 		// Show the Up button in the action bar.
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
 			getActionBar().setDisplayHomeAsUpEnabled(true);
 		}
+	}
+	
+	public void onPause(){
+		super.onPause();
+		try{
+			if(currentState.mediaPlayer.isPlaying())
+				currentState.mediaPlayer.pause();
+		}catch(Exception e){}
+	}
+	
+	public void onResume(){
+		super.onResume();
+		try{
+			if(!currentState.mediaPlayer.isPlaying())
+				currentState.mediaPlayer.start();
+		}catch(Exception e){}
 	}
 
 	@Override
@@ -71,11 +88,11 @@ public class StateActivity extends Activity {
 		case android.R.id.home:
 			
 			State previousState	=	currentState.getPreviousState();
-			
+
+			currentState.beforeGoingBack();
 			if(previousState==null)
 				NavUtils.navigateUpFromSameTask(this);
 			else{
-				currentState.beforeGoingBack();
 				changeState(previousState);
 			}
 			$ret = true;
@@ -166,14 +183,12 @@ public class StateActivity extends Activity {
 	}
 	
 	public void autoChangeState(State state){
+		currentState.beforeGoingForward();
 		currentState	=	state;
 		initView();
 	}
 	
 	public void stopAudio(){
-		if(currentState.mediaPlayer!=null){
-			//currentState.mediaPlayer.stop();
-			currentState.mediaPlayer.release();
-		}
+		currentState.stopMediaPlayer();
 	}
 }

@@ -7,7 +7,6 @@ import com.revib.revib.session.SessionVariables;
 import android.app.Activity;
 
 public class StayWithVictimState extends State {
-
 	public StayWithVictimState(Activity activity, State previousState) {
 		super(activity, previousState);
 	}

@@ -1,12 +1,14 @@
 package com.revib.revib.state;
 
 import com.revib.revib.R;
+import com.revib.revib.StateActivity;
 import com.revib.revib.session.SessionVariables;
+import com.revib.revib.session.SleepThread;
 
 import android.app.Activity;
+import android.media.MediaPlayer;
 
 public class InflationsState extends State {
-
 	private		int		nofinflations			=	0;
 	public InflationsState(Activity activity, State previousState) {
 		super(activity, previousState);
@@ -25,9 +27,9 @@ public class InflationsState extends State {
 	@Override
 	public int getAudioResource() {
 		if(AGE!=SessionVariables.ADULT && nofinflations==0){
-			return R.raw.insuflations_5; 		
+			return R.raw.inflations_5; 		
 		}else{
-			return R.raw.insuflations_2;
+			return R.raw.inflations_2;
 		}
 	}
 
@@ -91,4 +93,12 @@ public class InflationsState extends State {
 		SessionVariables.getInstance().sumInflations();
 	}
 
+	@Override
+	public void onCompletion(MediaPlayer mp) {
+		super.onCompletion(mp);
+		SleepThread.getInstance().start(
+				((StateActivity) activity),
+				getNextState(-1),
+				500);
+	}
 }

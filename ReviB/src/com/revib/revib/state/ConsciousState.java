@@ -6,7 +6,6 @@ import com.revib.revib.dialog.ExitDialog;
 import android.app.Activity;
 
 public class ConsciousState extends State {
-
 	public ConsciousState(Activity activity, State previousState) {
 		super(activity, previousState);
 	}
@@ -23,7 +22,7 @@ public class ConsciousState extends State {
 
 	@Override
 	public int getImageResource() {
-		return R.drawable.no_image;
+		return R.drawable.health_centre;
 	}
 
 	@Override

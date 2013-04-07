@@ -7,7 +7,6 @@ import android.app.Activity;
 import android.widget.Chronometer;
 
 public class ConsCheckState extends State {
-	
 	public ConsCheckState(Activity activity, State previousState) {
 		super(activity, previousState);
 

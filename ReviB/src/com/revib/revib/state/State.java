@@ -191,9 +191,14 @@ public abstract class State implements OnCompletionListener {
 		stopMediaPlayer();
 	}
 	public void stopMediaPlayer(){
-		if(mediaPlayer!=null){
-			mediaPlayer.stop();
-			mediaPlayer.release();
-		}
+		try{
+			if(mediaPlayer!=null)
+				mediaPlayer.stop();
+		}catch(Exception e){} // The mediaPlayer has been released allready
+
+		try{
+			if(mediaPlayer!=null)
+				mediaPlayer.release();
+		}catch(Exception e){}
 	}
 }

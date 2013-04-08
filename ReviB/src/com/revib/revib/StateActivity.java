@@ -86,14 +86,17 @@ public class StateActivity extends Activity {
 		boolean $ret	=	false;
 		switch (item.getItemId()) {
 		case android.R.id.home:
-			
-			State previousState	=	currentState.getPreviousState();
-
-			currentState.beforeGoingBack();
-			if(previousState==null)
-				NavUtils.navigateUpFromSameTask(this);
-			else{
-				changeState(previousState);
+			try{
+				State previousState	=	currentState.getPreviousState();
+	
+				currentState.beforeGoingBack();
+				if(previousState==null)
+					NavUtils.navigateUpFromSameTask(this);
+				else{
+					changeState(previousState);
+				}
+			}catch(Exception e){
+				e.printStackTrace();
 			}
 			$ret = true;
 			break;
@@ -166,11 +169,15 @@ public class StateActivity extends Activity {
             return super.onKeyUp(keyCode, event);
         }
         if ((keyCode == KeyEvent.KEYCODE_BACK)){
-        	State previousState	=	currentState.getPreviousState();
-        	if(previousState!=null){
-        		currentState.beforeGoingBack();
-        		changeState(previousState);
-        		return false;
+        	try{
+	        	State previousState	=	currentState.getPreviousState();
+	        	if(previousState!=null){
+	        		currentState.beforeGoingBack();
+	        		changeState(previousState);
+	        		return false;
+	        	}
+        	}catch(Exception e){
+        		e.printStackTrace();
         	}
         }
         return super.onKeyUp(keyCode, event);

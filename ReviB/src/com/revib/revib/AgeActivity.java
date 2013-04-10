@@ -32,8 +32,6 @@ public class AgeActivity extends Activity implements OnClickListener {
 		Context context		=	this.getBaseContext();
 		String locale_code	=	LocaleFunctions.getLocaleCodeVariable(context);
 		LocaleFunctions.changeCurrentLocale(context, locale_code);
-        
-		setContentView(R.layout.activity_age);
 
 		initView();
 		
@@ -100,6 +98,7 @@ public class AgeActivity extends Activity implements OnClickListener {
 	}
 	
 	public void initView(){
+		setContentView(R.layout.activity_age);
 		// Add button listeners
 		Button button = (Button) findViewById(R.id.age_adult_btn);
 		button.setOnClickListener(this);

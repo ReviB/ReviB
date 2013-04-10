@@ -89,6 +89,7 @@ public class ExplainCompressionsState extends State {
 				if(step==1){
 					setImage(R.drawable.adult_explain_compressions_2_3_animation);
 					startAudio(R.raw.adult_explain_compressions_2_3);
+					startAnimation();
 					break;
 				}else if(step==2){
 					setImage(R.drawable.adult_explain_compressions_4);

@@ -68,6 +68,9 @@ public class LateralRecoveryPositionState extends State {
 		}
 		return res;
 	}
+	
+	@Override
+	public void startAnimation(){}
 
 	@Override
 	public int getLeftBtnResource() {

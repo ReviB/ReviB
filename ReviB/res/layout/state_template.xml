@@ -121,9 +121,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
+            android:background="@drawable/selector_button_lef"
             android:onClick="onStateBtnClicked"
-            android:text="@string/no"
-            android:background="@drawable/selector_button_lef" />
+            android:padding="6dp"
+            android:text="Ha perdido la consciencia" />
 
         <ImageButton
             android:id="@+id/state_reload_btn"
@@ -140,6 +141,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:onClick="onStateBtnClicked"
+            android:padding="6dp"
             android:text="@string/yes"
             android:background="@drawable/selector_button_right" />
 

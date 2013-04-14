@@ -1,9 +1,11 @@
 package com.revib.revib.state;
 
 import com.revib.revib.R;
+import com.revib.revib.dialog.NoTelephonyDialog;
 import com.revib.revib.session.SessionVariables;
 
 import android.app.Activity;
+import android.content.pm.PackageManager;
 
 public class CallState extends State {
 	public CallState(Activity activity, State previousState) {
@@ -36,7 +38,12 @@ public class CallState extends State {
 
 	@Override
 	public int getRightBtnResource() {
-		return R.string.call_right;
+		if(activity.getPackageManager().hasSystemFeature(PackageManager.FEATURE_TELEPHONY)){
+			return R.string.call_right;
+		}else{
+			return -1;
+		}
+		
 	}
 
 	@Override
@@ -52,16 +59,21 @@ public class CallState extends State {
 	@Override
 	public State getNextState(int buttonRes) {
 		State nextState	=	null;
-		if(buttonRes==R.id.state_right_btn){
-			SessionVariables.getInstance().callEmergencyNumber(activity);
-		}
-		
-		if(super.getPreviousStateClass()==LateralRecoveryPositionState.class)
-			nextState	=	new	StayWithVictimState(activity,this);
-		else if(AGE==SessionVariables.ADULT){
-			nextState	=	new ExplainCompressionsState(activity,this);
+		if(!activity.getPackageManager().hasSystemFeature(PackageManager.FEATURE_TELEPHONY)&&(buttonRes==R.id.state_right_btn)){
+			NoTelephonyDialog ntd	=	new NoTelephonyDialog(activity);
+			ntd.startDialog();
 		}else{
-			nextState	=	new CompressionsState(activity,this);
+			if(buttonRes==R.id.state_right_btn){
+				SessionVariables.getInstance().callEmergencyNumber(activity);
+			}
+			
+			if(super.getPreviousStateClass()==LateralRecoveryPositionState.class)
+				nextState	=	new	StayWithVictimState(activity,this);
+			else if(AGE==SessionVariables.ADULT){
+				nextState	=	new ExplainCompressionsState(activity,this);
+			}else{
+				nextState	=	new CompressionsState(activity,this);
+			}
 		}
 		return nextState;
 	}

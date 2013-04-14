@@ -55,4 +55,7 @@
     <!-- Exit dialog -->
     <string name="exit">Aplikaziotik irten</string>
     <string name="exit_message">Aplikaziotik irten nahi al duzu?</string>
+    
+    <!-- No telephony dialog -->
+    <string name="no_telephony_message">Gailu honek ezin du telefono deirik egin.</string>
 </resources>

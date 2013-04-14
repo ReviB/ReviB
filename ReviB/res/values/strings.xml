@@ -54,4 +54,7 @@
     <!-- Exit dialog -->
     <string name="exit">Close application</string>
     <string name="exit_message">Close application?</string>
+    
+    <!-- No telephony dialog -->
+    <string name="no_telephony_message">This device cannot make phone calls.</string>
 </resources>

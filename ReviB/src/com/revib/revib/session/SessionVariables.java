@@ -17,6 +17,7 @@ public class SessionVariables {
 	private 	Boolean	audioDialogShown	=	false;
 	private 	Boolean	alreadyCalled		=	false;
 	private		Boolean	exit				=	false;
+	private		Boolean	paused				=	false;
 
 	private 	int		age					=	ADULT;
 	private 	int		inflations			=	0;
@@ -98,5 +99,16 @@ public class SessionVariables {
 
 	public void setExit(Boolean exit) {
 		this.exit = exit;
+	}
+
+	public Boolean isPaused() {
+		return paused;
+	}
+
+	public void pause(){
+		this.paused = true;
+	}
+	public void resume() {
+		this.paused = false;
 	}
 }

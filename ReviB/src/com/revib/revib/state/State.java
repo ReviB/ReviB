@@ -152,7 +152,9 @@ public abstract class State implements OnCompletionListener {
 				}
 				mediaPlayer	=	MediaPlayer.create(activity,audioResource);
 				mediaPlayer.setOnCompletionListener(this);
-				mediaPlayer.start();
+				if(!SessionVariables.getInstance().isPaused()){
+					mediaPlayer.start();
+				}
 			}catch(Exception e){
 				Log.w(TAG, "Audio can not be started: "+e.getMessage());
 			}

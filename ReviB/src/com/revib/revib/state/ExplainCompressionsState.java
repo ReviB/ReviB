@@ -35,7 +35,7 @@ public class ExplainCompressionsState extends State {
 			case SessionVariables.CHILD:
 				return R.raw.child_explain_compressions;
 			case SessionVariables.BABY:
-				return R.raw.child_explain_compressions;			
+				return R.raw.baby_explain_compressions;			
 		}
 		return -1;
 	}

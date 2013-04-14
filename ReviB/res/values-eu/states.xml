@@ -147,7 +147,7 @@ EXPLAIN COMPRESSIONS
 <!--
 COMPRESSIONS
 -->
-	<string name="compressions_title">Realizar compresiones</string>
+	<string name="compressions_title">Konpresioak burutu</string>
     <string name="compressions_info">
 "30 aldiz konprimatu."
 	</string>

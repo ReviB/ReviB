@@ -6,6 +6,7 @@ import com.revib.revib.dialog.AboutDialog;
 import com.revib.revib.dialog.ExitDialog;
 import com.revib.revib.dialog.LocaleDialog;
 import com.revib.revib.locale.LocaleFunctions;
+import com.revib.revib.session.SessionVariables;
 import com.revib.revib.session.SleepThread;
 import com.revib.revib.state.ConsCheckState;
 import com.revib.revib.state.State;
@@ -54,6 +55,7 @@ public class StateActivity extends Activity {
 	
 	public void onPause(){
 		super.onPause();
+		SessionVariables.getInstance().pause();
 		try{
 			if(currentState.mediaPlayer.isPlaying())
 				currentState.mediaPlayer.pause();
@@ -62,6 +64,7 @@ public class StateActivity extends Activity {
 	
 	public void onResume(){
 		super.onResume();
+		SessionVariables.getInstance().resume();
 		try{
 			if(!currentState.mediaPlayer.isPlaying())
 				currentState.mediaPlayer.start();

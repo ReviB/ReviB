@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,6 +22,12 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		if (!SessionVariables.isScreenBig(this)){
+		    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+		}else{
+		    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+		}
         // Audio buttons changes multimedia volume
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
 

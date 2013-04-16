@@ -55,7 +55,7 @@ Compruebe la consciencia periódicamente hasta la llegada al centro de salud."
 <!--
 SHOUT FOR HELP
 -->
-    <string name="shout_for_help_title">Grite pidiendo ayuda sin abandonar a la víctima: ¡Socorro! ¡Auxilio!</string>
+    <string name="shout_for_help_title">Grite pidiendo ayuda</string>
     <!-- string name="shout_for_help_question"></string-->
     <!-- string name="shout_for_help_left_btn"></string-->
     <!-- string name="shout_for_help_right_btn">Seguir</string-->

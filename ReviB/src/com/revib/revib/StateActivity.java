@@ -17,6 +17,7 @@ import android.os.Bundle;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -31,6 +32,12 @@ public class StateActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		if (!SessionVariables.isScreenBig(this)){
+		    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+		}else{
+		    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+		}
 		// Screen never sleeps
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         // Audio buttons changes multimedia volume

@@ -13,6 +13,8 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,6 +28,13 @@ public class AgeActivity extends Activity implements OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		if (!SessionVariables.isScreenBig(this)){
+		    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+		}else{
+		    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+		}
+		
         // Audio buttons changes multimedia volume
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
@@ -48,6 +57,9 @@ public class AgeActivity extends Activity implements OnClickListener {
 		return true;
 	}
 
+	@Override
+	public void onConfigurationChanged(Configuration newConfig){}
+	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {

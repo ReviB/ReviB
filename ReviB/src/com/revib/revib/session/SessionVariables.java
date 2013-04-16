@@ -3,7 +3,7 @@ package com.revib.revib.session;
 import com.revib.revib.R;
 import android.app.Activity;
 import android.content.Intent;
-import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.widget.Toast;
 
@@ -111,5 +111,15 @@ public class SessionVariables {
 	}
 	public void resume() {
 		this.paused = false;
+	}
+	
+	public static boolean isScreenBig(Activity activity){
+		int screenSize	=	activity.getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK;
+		if(screenSize==Configuration.SCREENLAYOUT_SIZE_XLARGE){
+			return true;
+		}else{
+			return false;
+		}
+		
 	}
 }

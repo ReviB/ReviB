@@ -19,9 +19,9 @@ public class CompressionsState extends State {
 			case SessionVariables.ADULT:
 				return R.string.compressions_info;
 			case SessionVariables.CHILD:
-				return R.string.explain_compressions_info_child;
+				return R.string.compressions_info_child;
 			case SessionVariables.BABY:
-				return R.string.explain_compressions_info_baby;	
+				return R.string.compressions_info_baby;	
 		}
 		return -1;
 	}
@@ -58,7 +58,11 @@ public class CompressionsState extends State {
 
 	@Override
 	public int getRightBtnResource() {
-		return R.string.next;
+		if(SessionVariables.getInstance().isReal()){
+			return -1;
+		}else{
+			return R.string.skip;
+		}
 	}
 
 	@Override

@@ -7,6 +7,7 @@ import com.revib.revib.locale.LocaleFunctions;
 import com.revib.revib.session.SessionVariables;
 
 import android.media.AudioManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.annotation.TargetApi;
@@ -23,7 +24,6 @@ import android.widget.Button;
 import android.support.v4.app.NavUtils;
 
 public class AgeActivity extends Activity implements OnClickListener {
-
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +66,9 @@ public class AgeActivity extends Activity implements OnClickListener {
 		case android.R.id.home:
 			NavUtils.navigateUpFromSameTask(this);
 			return true;
-
+		case R.id.menu_rate:
+			startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id="+getPackageName())));
+			return true;
 		case R.id.menu_language:
 			LocaleDialog ld	=	new LocaleDialog(this);
 			ld.startDialog();

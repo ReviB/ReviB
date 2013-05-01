@@ -16,6 +16,7 @@ GENERAL
     <string name="dialog_ok">Vale</string>
     <string name="false_phone_call">En una emergencia real se llamaría al teléfono de emergencia.</string>
     <string name="next">Seguir</string>
+    <string name="skip">Saltar paso</string>
 <!-- 
 CONSCIENCE CHECKING
 -->
@@ -60,8 +61,8 @@ SHOUT FOR HELP
     <!-- string name="shout_for_help_left_btn"></string-->
     <!-- string name="shout_for_help_right_btn">Seguir</string-->
     <string name="shout_for_help_info">
-"Grite pidiendo ayuda sin abandonar a la víctima: ¡Socorro! ¡Auxilio!
-Si está acompañado de otra persona, indíquele que llame al 112. Si está solo, no llame en estos momentos y siga las instrucciones siguientes."
+"Si está acompañado de otra persona, indíquele que llame al 112. Si está solo, no llame en estos momentos y siga las instrucciones siguientes.
+Grite pidiendo ayuda sin abandonar a la víctima: ¡Socorro! ¡Auxilio!"
     </string>
     
 <!--

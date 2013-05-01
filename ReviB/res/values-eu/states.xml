@@ -16,6 +16,7 @@ GENERAL
     <string name="dialog_ok">Ados</string>
     <string name="false_phone_call">Benetako larrialdi batean larrialdien telefonora deituko litzateke.</string>
     <string name="next">Jarraitu</string>
+    <string name="skip">Saltatu hurratsa</string>
 <!-- 
 CONSCIENCE CHECKING
 -->
@@ -60,8 +61,8 @@ SHOUT FOR HELP
     <!-- string name="shout_for_help_left_btn"></string-->
     <!-- string name="shout_for_help_right_btn"></string-->
     <string name="shout_for_help_info">
-"Biktima utzi gabe laguntza eske oihu egin: Laguntza!
-Beste norbait zurekin badago, esan iezaiozu 112 telefonora deitzeko. Bakarrik bazaude ez deitu oraindik eta jarraitu hurrengo argibideekin."
+"Beste norbait zurekin badago, esan iezaiozu 112 telefonora deitzeko. Bakarrik bazaude ez deitu oraindik eta jarraitu hurrengo argibideekin.
+Biktima utzi gabe laguntza eske oihu egin: Laguntza!"
     </string>
 <!--
 BREATHING MANEUVER

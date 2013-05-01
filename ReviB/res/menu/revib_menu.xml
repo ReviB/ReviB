@@ -3,16 +3,20 @@
         android:id="@+id/menu_overflow"
         android:icon="@android:drawable/ic_menu_more"
         android:showAsAction="always"
-        android:title="More">
+        android:title="@string/more">
         <menu>
            <item
-		        android:id="@+id/menu_about"
-		        android:title="@string/about_revib"
-		        android:icon="@android:drawable/ic_menu_info_details"/>
+		        android:id="@+id/menu_rate"
+		        android:title="@string/rate_app"
+		        android:icon="@drawable/star_bw"/>
 		    <item
 		        android:id="@+id/menu_language"
 		        android:title="@string/language"
 		        android:icon="@drawable/menu_language"/>
+           <item
+		        android:id="@+id/menu_about"
+		        android:title="@string/about_revib"
+		        android:icon="@android:drawable/ic_menu_info_details"/>
 		    <item
 		        android:id="@+id/menu_exit"
 		        android:title="@string/exit"

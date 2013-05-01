@@ -61,7 +61,7 @@ public class ExplainCompressionsState extends State {
 
 	@Override
 	public int getRightBtnResource() {
-		return R.string.next;
+		return R.string.skip;
 	}
 
 	@Override

@@ -13,8 +13,10 @@
     If you want to hear the instructions, please raise the volume.</string>
 
     <!-- Settings activity -->
-    <string name="settings">Settings</string>
+    <string name="more">More</string>
     <string name="language">Language</string>
+    <string name="rate_app">Rate the app</string>
+    <string name="nothing"></string>
 
     <string-array name="language_list">
         <item>English</item>
@@ -52,7 +54,7 @@
     <string name="age_baby">Baby (under 12 months old)</string>
     
     <!-- Exit dialog -->
-    <string name="exit">Close application</string>
+    <string name="exit">Exit</string>
     <string name="exit_message">Close application?</string>
     
     <!-- No telephony dialog -->

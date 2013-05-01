@@ -54,7 +54,11 @@ public class InflationsState extends State {
 
 	@Override
 	public int getRightBtnResource() {
-		return R.string.next;
+		if(SessionVariables.getInstance().isReal()){
+			return -1;
+		}else{
+			return R.string.skip;
+		}
 	}
 
 	@Override

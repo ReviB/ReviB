@@ -4,7 +4,6 @@
     <!-- MainActivity -->
     <string name="app_name">ReviB RCP</string>
     <string name="main_question">¿Es una emergencia de verdad o es que quieres entrenar la Reanimación Cardio-Pulmonar?</string>
-    <string name="settings">Ajustes</string>
     <string name="real_cpr">Emergencia real</string>
     <string name="practice_cpr">Practicar RCP</string>
     
@@ -14,7 +13,10 @@
         Por favor, sube el volumen si quieres escuchar las instrucciones.</string>
 
     <!-- SettingsActivity -->
+    <string name="more">Más</string>
     <string name="language">Idioma</string>
+    <string name="rate_app">Valora la aplicación</string>
+    <string name="nothing"></string>
 
     <string-array name="language_list">
         <item>English</item>
@@ -53,7 +55,7 @@
     <string name="age_baby">Bebé (menos de 12 meses)</string>
     
     <!-- Exit dialog -->
-    <string name="exit">Cerrar aplicación</string>
+    <string name="exit">Salir</string>
     <string name="exit_message">¿Quieres cerrar la aplicación?</string>
     
     <!-- No telephony dialog -->

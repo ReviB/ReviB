@@ -65,7 +65,7 @@ public class BreathingManeuverState extends State {
 	@Override
 	public int getRightBtnResource() {
 		//return R.string.breathing_maneuver_right;
-		return R.string.next;
+		return R.string.skip;
 	}
 
 	@Override

@@ -12,6 +12,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.res.Resources;
+import android.os.Build;
 
 public class LocaleDialog implements OnClickListener {
 
@@ -38,6 +39,7 @@ public class LocaleDialog implements OnClickListener {
  	   Resources res			=	context.getResources();
  	   String[] language_codes =	res.getStringArray(R.array.language_code_list);
  	   
+ 	   
  	   LocaleFunctions.changeCurrentLocale(context,language_codes[pos]);
  	   
  	   if(activity.getClass().equals(MainActivity.class)){
@@ -46,6 +48,9 @@ public class LocaleDialog implements OnClickListener {
  		   ((AgeActivity)activity).initView();
  	   }else if(activity.getClass().equals(StateActivity.class)){
  		   ((StateActivity)activity).initView();
+ 	   }
+ 	   if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+ 		   activity.invalidateOptionsMenu();
  	   }
 	}
 }

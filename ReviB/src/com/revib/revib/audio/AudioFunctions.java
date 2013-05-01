@@ -3,7 +3,6 @@ package com.revib.revib.audio;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.media.AudioManager;
 import android.util.Log;
 
@@ -31,20 +30,18 @@ public class AudioFunctions {
 	
 	public static void setAudioDialog(Activity activity){
 		try{
+			AudioListener listener	=	new AudioListener(activity);
 			SessionVariables	sv	=	SessionVariables.getInstance();
 			AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
 					activity);
-	 
+			
+			alertDialogBuilder.setMessage(R.string.audio_dialog_message);
+			
 			// set title
 			alertDialogBuilder.setTitle(R.string.audio_dialog_title);
- 
+ 			
 			// set dialog message
-			alertDialogBuilder.setMessage(R.string.audio_dialog_message);
-			alertDialogBuilder.setNeutralButton(R.string.dialog_ok, new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog,int id) {
-					dialog.cancel();
-				}
-			  });
+			alertDialogBuilder.setNeutralButton(R.string.dialog_ok,listener);
  
 			// create alert dialog
 			AlertDialog alertDialog = alertDialogBuilder.create();
@@ -61,4 +58,20 @@ public class AudioFunctions {
 		AudioManager	audioManager		= 	(AudioManager)activity.getSystemService(Context.AUDIO_SERVICE);
 		return audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
 	}
+	
+	/*public static int getMaxVolume(Activity activity){
+		int maxVolume	=	0;
+		try{
+			AudioManager am	=	(AudioManager)activity.getSystemService(Context.AUDIO_SERVICE);
+			maxVolume		=	am.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return maxVolume;
+	}
+	
+	public static void setVolume(Activity activity,int vol){
+		AudioManager am	=	(AudioManager)activity.getSystemService(Context.AUDIO_SERVICE);
+	    am.setStreamVolume(AudioManager.STREAM_MUSIC, vol, 0);
+	}*/
 }

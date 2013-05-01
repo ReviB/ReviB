@@ -124,7 +124,7 @@
             android:background="@drawable/selector_button_lef"
             android:onClick="onStateBtnClicked"
             android:padding="6dp"
-            android:text="Ha perdido la consciencia" />
+            android:text="" />
 
         <ImageButton
             android:id="@+id/state_reload_btn"

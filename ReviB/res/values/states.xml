@@ -16,6 +16,7 @@ GENERAL
     <string name="dialog_ok">OK</string>
     <string name="false_phone_call">In a real emergency a dial will appear with the emergency phone number.</string>
     <string name="next">Continue</string>
+    <string name="skip">Skip</string>
 <!-- 
 CONSCIENCE CHECKING
 -->
@@ -56,7 +57,7 @@ SHOUT FOR HELP
     <!-- string name="shout_for_help_left_btn"></string-->
     <!-- string name="shout_for_help_right_btn">Seguir</string-->
     <string name="shout_for_help_info">
-"Don't leave the victim alone and shout for help. If someone else is with you ask him to call 112. If you are on your own, don´t call 112 yet and follow the instructions."
+" If someone else is with you ask him to call 112. If you are on your own, don´t call 112 yet and follow the instructions.Don't leave the victim alone and shout for help: help!"
     </string>
     
 <!--
@@ -64,11 +65,11 @@ BREATHING MANEUVER
 -->
     <string name="breathing_maneuver_title">Open the airway</string>
     <string name="breathing_maneuver_info">
-"Put one hand on their forehead and the other one on their chin. Tilt their head and lift their chin."
+"Put the victim on their back. Put one hand on their forehead and the other one on their chin. Tilt their head back and lift their chin."
 	</string>
     <!-- string name="breathing_maneuver_info_child"></string-->
     <string name="breathing_maneuver_info_baby">
-"Put one hand on their forehead and the other one on their chin. Gently tilt their head and lift their chin."
+"Put the victim on their back. Put one hand on their forehead and the other one on their chin. Gently tilt their head back and lift their chin."
 	</string>
     <!-- string name="breathing_maneuver_question">¿Respira normalmente y sin dificultad?</string-->
     <!-- string name="breathing_maneuver_left"></string-->
@@ -79,22 +80,21 @@ BREATHING CHECKING
 -->
     <string name="breathing_check_title">Check for breathing</string>
     <string name="breathing_check_info">
-"Check for breathing. Look, listen, and feel for air coming out of the victim's mouth by bending your own ear down to his mouth.
-Are they breathing normally without difficulties? "
+"Check for breathing. Look, listen, and feel for air coming out of the mouth by bending your own ear down to their mouth. "
 	</string>
-    <string name="breathing_check_question">breathing normally without difficulties?</string>
+    <string name="breathing_check_question">Breathing normally without difficulties?</string>
     
 <!--
 LATERAL RECOVERY POSITION
 --> 
-	<string name="lateral_recovery_position_title_adult">Lateral security position</string>
+	<string name="lateral_recovery_position_title_adult">Recovery position</string>
     <string name="lateral_recovery_position_title">Breaths</string>
     <string name="lateral_recovery_position_info">
-"Once the victim is lied on their back put them to lateral security position.
-1- Rise their left arm.
+"Put them into recovery position.
+1- Raise their left arm.
 2- Put their right hand onto their left shoulder.
 3- Bend their right knee.
-4- Turn the victim over the left side."
+4- Turn the victim over and onto the left side."
 	</string>
 	<string name="lateral_recovery_position_info_child">
 "Don't move the child."
@@ -121,15 +121,18 @@ EXPLAIN COMPRESSIONS
 -->
 	<string name="explain_compressions_title">How to perform compressions</string>
     <string name="explain_compressions_info">
-"1.Find this point in the middle of the chest.
-2.Cross your fingers.
-3.Put your crossed hands on the victim's chest, arms stretched."
+"How to perform compressions
+1.Find this point in the middle of the chest.
+2.Interlock your fingers.
+3.Put your interlocked hands on the victim's chest, arms stretched."
 	</string>
     <string name="explain_compressions_info_child">
-"Stretch your arm and put the palm of your hand on this point in the middle of the chest."
+"How to perform compressions:
+Stretch your arm and put the palm of your hand on this point in the middle of the chest."
     </string>
     <string name="explain_compressions_info_baby">
-"Put the index and middle finger on this point in the middle of the chest."
+"How to perform compressions:
+Put the index and middle finger on this point in the middle of the chest."
 	</string>
 <!--
 COMPRESSIONS
@@ -147,27 +150,30 @@ COMPRESSIONS
 <!--
 EXPLAIN INFLATIONS
 -->
-	<string name="explain_inflations_title">How to ventilate</string>
+	<string name="explain_inflations_title">How to give ventilations</string>
     <string name="explain_inflations_info">
-"Pinch their nose with your hand and lift the chin with the other. Seal your lips around the victim's mouth and blow."
+"How to give ventilations:
+Pinch their nose with your hand and lift the chin with the other. Seal your lips around the victim's mouth and blow."
 	</string>
 	<!-- (5 insuflaciones de rescate) -->
     <string name="explain_inflations_info_child">
-"Pinch their nose with a hand and lift the chin with the other. Seal your lips around the victim's mouth and blow."
+"How to give ventilations:
+Pinch their nose with a hand and lift the chin with the other. Seal your lips around the victim's mouth and blow."
 	</string>
     <string name="explain_inflations_info_baby">
-"Put one hand on their forehead and the other one on their chin. Gently tilt their head and lift their chin. Seal your lips around the baby's mouth and nose and blow."
+"How to give ventilations:
+Seal your lips around the baby's mouth and nose and blow."
 	</string>
 <!--
 INFLATIONS
 -->
 	<string name="inflations_title">Perform ventilations</string>
     <string name="inflations_info">
-"Give 2 ventilations"
+"Give 2 ventilations."
 	</string>
 	<!-- (5 insuflaciones de rescate) -->
     <string name="inflations_info_recovery">
-"Give 5 ventilations"
+"Give 5 ventilations."
 	</string>
 <!--
 STAY WITH VICTIM

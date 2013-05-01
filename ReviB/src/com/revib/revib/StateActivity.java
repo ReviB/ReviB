@@ -12,11 +12,13 @@ import com.revib.revib.state.ConsCheckState;
 import com.revib.revib.state.State;
 
 import android.media.AudioManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -27,7 +29,6 @@ import android.support.v4.app.NavUtils;
 
 public class StateActivity extends Activity {
 	private State currentState			=	null;
-	
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -110,6 +111,9 @@ public class StateActivity extends Activity {
 			}
 			$ret = true;
 			break;
+		case R.id.menu_rate:
+			startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id="+getPackageName())));
+			return true;
 		case R.id.menu_language:
 			LocaleDialog ld	=	new LocaleDialog(this);
 			ld.startDialog();

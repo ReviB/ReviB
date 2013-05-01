@@ -3,11 +3,8 @@ package com.revib.revib.state;
 import com.revib.revib.R;
 
 import android.app.Activity;
-import android.media.MediaPlayer;
 
 import com.revib.revib.session.SessionVariables;
-import com.revib.revib.session.SleepThread;
-import com.revib.revib.StateActivity;
 
 public class ShoutForHelpState extends State {
 	public ShoutForHelpState(Activity activity, State previousState) {
@@ -60,13 +57,14 @@ public class ShoutForHelpState extends State {
 		return new BreathingManeuverState(activity,this);
 	}
 	
+	/*
 	@Override
 	public void onCompletion(MediaPlayer mp) {
 		super.onCompletion(mp);
-		SleepThread.getInstance().start(
+		/*SleepThread.getInstance().start(
 				((StateActivity) activity),
 				getNextState(-1),
 				2000
 		);
-	}
+	}*/
 }

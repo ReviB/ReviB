@@ -7,7 +7,7 @@ import com.revib.revib.locale.LocaleFunctions;
 import com.revib.revib.session.SessionVariables;
 
 import android.media.AudioManager;
-import android.os.Build;
+import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
@@ -18,7 +18,6 @@ import android.view.MenuItem;
 import android.view.View;
 
 public class MainActivity extends Activity {
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -41,6 +40,7 @@ public class MainActivity extends Activity {
 	@Override
 	public void onRestart(){
 		super.onRestart();
+		initView();
 		if(SessionVariables.getInstance().getExit()){
 			finish();
 		}
@@ -49,12 +49,12 @@ public class MainActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+		/*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
 			getMenuInflater().inflate(R.menu.revib_menu, menu);
 		}else{
 			getMenuInflater().inflate(R.menu.revib_menu_old, menu);
-		}
+		}*/
+		getMenuInflater().inflate(R.menu.revib_menu, menu);
 		return true;
 	}
 	
@@ -62,6 +62,9 @@ public class MainActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		int itemId	=	item.getItemId();
 		switch (itemId) {
+		case R.id.menu_rate:
+			startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id="+getPackageName())));
+			return true;
 		case R.id.menu_language:
 			LocaleDialog ld	=	new LocaleDialog(this);
 			ld.startDialog();
@@ -100,5 +103,9 @@ public class MainActivity extends Activity {
 	public void initView(){
 		setContentView(R.layout.activity_main);
 		setTitle(getResources().getString(R.string.app_name));
+	}
+	
+	public void rateMe(View v){
+		startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id="+getPackageName())));
 	}
 }

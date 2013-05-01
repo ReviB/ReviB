@@ -14,7 +14,10 @@
         Mesedez, igo ezazu bolumena aplikazioaren instrukzioak entzun nahi badituzu.</string>
 
     <!-- SettingsActivity -->
+    <string name="more">Gehiago</string>
     <string name="language">Hizkuntza</string>
+    <string name="rate_app">Aplikazioa baloratu</string>
+    <string name="nothing"></string>
 
     <string-array name="language_list">
         <item>English</item>
@@ -53,7 +56,7 @@
     <string name="age_baby">Haurtxoa (12 hilabete baino gutxiago)</string>
     
     <!-- Exit dialog -->
-    <string name="exit">Aplikaziotik irten</string>
+    <string name="exit">Irten</string>
     <string name="exit_message">Aplikaziotik irten nahi al duzu?</string>
     
     <!-- No telephony dialog -->

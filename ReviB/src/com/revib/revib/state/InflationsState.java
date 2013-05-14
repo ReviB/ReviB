@@ -7,6 +7,7 @@ import com.revib.revib.session.SleepThread;
 
 import android.app.Activity;
 import android.media.MediaPlayer;
+import android.widget.ImageButton;
 
 public class InflationsState extends State {
 	private		int		nofinflations			=	0;
@@ -70,7 +71,17 @@ public class InflationsState extends State {
 	public int getTitleResource() {
 		return R.string.inflations_title;
 	}
+	
+	@Override
+	public int getPlayBtnVisibility(){
+		return ImageButton.VISIBLE;
+	}
 
+	@Override
+	public int getPauseBtnVisibility(){
+		return ImageButton.VISIBLE;
+	}
+	
 	@Override
 	public State getNextState(int buttonRes) {
 		Boolean alreadyCalled	=	SessionVariables.getInstance().hasAlreadyCalled();

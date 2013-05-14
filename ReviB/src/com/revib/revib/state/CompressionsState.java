@@ -7,6 +7,7 @@ import com.revib.revib.session.SleepThread;
 
 import android.app.Activity;
 import android.media.MediaPlayer;
+import android.widget.ImageButton;
 
 public class CompressionsState extends State {
 	public CompressionsState(Activity activity, State previousState) {
@@ -74,7 +75,17 @@ public class CompressionsState extends State {
 	public int getTitleResource() {
 		return R.string.compressions_title;
 	}
+	
+	@Override
+	public int getPlayBtnVisibility(){
+		return ImageButton.VISIBLE;
+	}
 
+	@Override
+	public int getPauseBtnVisibility(){
+		return ImageButton.VISIBLE;
+	}
+	
 	@Override
 	public State getNextState(int buttonRes) {
 		if(AGE==SessionVariables.ADULT && super.getPreviousStateClass()==ExplainCompressionsState.class){

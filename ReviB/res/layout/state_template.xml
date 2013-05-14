@@ -68,7 +68,7 @@
 	            android:paddingTop="0dp"
 	            android:textColor="@android:color/secondary_text_dark_nodisable" />
 
-	        <Chronometer
+	        <!-- Chronometer
 	            android:id="@+id/time_full_2"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
@@ -80,24 +80,10 @@
 	            android:paddingRight="25dp"
 	            android:paddingTop="0dp"
 	            android:textColor="@android:color/secondary_text_dark_nodisable"
-	            android:visibility="gone" />
+	            android:visibility="gone" /-->
 
 	        </LinearLayout>
 
-	        <!-- Chronometer
-	            android:id="@+id/time_full"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentTop="true"
-	            android:layout_centerHorizontal="true"
-	            android:background="@drawable/clock_background"
-	            android:gravity="center"
-	            android:paddingBottom="0dp"
-	            android:paddingLeft="25dp"
-	            android:paddingRight="25dp"
-	            android:paddingTop="0dp"
-	            android:textColor="@android:color/secondary_text_dark_nodisable" /-->
-            
     </RelativeLayout>
 
     <TextView
@@ -127,6 +113,15 @@
             android:text="" />
 
         <ImageButton
+            android:id="@+id/state_pause_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/state_pause_description"
+            android:onClick="onStateBtnClicked"
+            android:src="@android:drawable/ic_media_pause"
+            android:visibility="gone" />
+
+        <ImageButton
             android:id="@+id/state_reload_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -134,6 +129,15 @@
             android:background="@drawable/selector_button_reload"
             android:src="@android:drawable/ic_popup_sync"
         	android:contentDescription="@string/state_reload_description" />
+
+        <ImageButton
+            android:id="@+id/state_play_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/state_play_description"
+            android:onClick="onStateBtnClicked"
+            android:src="@android:drawable/ic_media_play"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/state_right_btn"

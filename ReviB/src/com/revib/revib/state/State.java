@@ -51,6 +51,14 @@ public abstract class State implements OnCompletionListener {
 				ib.setVisibility(ImageButton.VISIBLE);
 			}
 			
+			ImageButton	play_ib	=	(ImageButton)	activity.findViewById(R.id.state_play_btn);
+			play_ib.setEnabled(false);
+			play_ib.setVisibility(getPlayBtnVisibility());
+			
+			ImageButton	pause_ib=	(ImageButton)	activity.findViewById(R.id.state_pause_btn);
+			pause_ib.setEnabled(true);
+			pause_ib.setVisibility(getPauseBtnVisibility());
+
 			Resources	res		=	activity.getResources();
 			
 			// Set image
@@ -132,6 +140,14 @@ public abstract class State implements OnCompletionListener {
 	abstract public int getQuestionResource();
 	abstract public int getTitleResource();
 	
+	public int getPlayBtnVisibility(){
+		return ImageButton.GONE;
+	}
+	
+	public int getPauseBtnVisibility(){
+		return ImageButton.GONE;
+	}
+	
 	// Multimedia
 	public void startAnimation(){
 		try{
@@ -192,6 +208,7 @@ public abstract class State implements OnCompletionListener {
 	public void beforeGoingForward()	{
 		stopMediaPlayer();
 	}
+	
 	public void stopMediaPlayer(){
 		try{
 			if(mediaPlayer!=null)
@@ -199,8 +216,31 @@ public abstract class State implements OnCompletionListener {
 		}catch(Exception e){} // The mediaPlayer has been released allready
 
 		try{
-			if(mediaPlayer!=null)
+			if(mediaPlayer!=null){
 				mediaPlayer.release();
+			}
 		}catch(Exception e){}
+	}
+	public void pauseMediaPlayer(){
+		try{
+			if(mediaPlayer!=null){
+				mediaPlayer.pause();
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+	
+	public Boolean resumeMediaPlayer(){
+		Boolean ret	=	false;
+		try{
+			if(mediaPlayer!=null){
+				mediaPlayer.start();
+				ret	=	true;
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return ret;
 	}
 }

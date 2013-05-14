@@ -25,6 +25,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageButton;
 import android.support.v4.app.NavUtils;
 
 public class StateActivity extends Activity {
@@ -135,10 +136,11 @@ public class StateActivity extends Activity {
 	
 	public void onStateBtnClicked(View v) {
 		int viewId		=	v.getId();
+		State nextState;
 		switch(viewId){
 			case R.id.state_left_btn:
 			case R.id.state_right_btn:
-				State nextState	=	currentState.getNextState(viewId);
+				nextState	=	currentState.getNextState(viewId);
 				if(nextState!=null){
 					currentState.beforeGoingForward();
 					changeState(nextState);
@@ -148,6 +150,23 @@ public class StateActivity extends Activity {
 				// Reload same state;
 				SleepThread.getInstance().interrupt();
 				initView();
+				break;
+			case R.id.state_pause_btn:
+				currentState.pauseMediaPlayer();
+				SleepThread.getInstance().interrupt();
+				((ImageButton)	findViewById(R.id.state_play_btn)).setEnabled(true);
+				((ImageButton)	findViewById(R.id.state_pause_btn)).setEnabled(false);
+				break;
+			case R.id.state_play_btn:
+				if(!currentState.resumeMediaPlayer()){
+					nextState	=	currentState.getNextState(-1);
+					if(nextState!=null){
+						currentState.beforeGoingForward();
+						changeState(nextState);
+					}
+				}
+				((ImageButton)	findViewById(R.id.state_play_btn)).setEnabled(false);
+				((ImageButton)	findViewById(R.id.state_pause_btn)).setEnabled(true);
 				break;
 			case R.id.state_iv:
 			case R.id.state_rl:
@@ -208,7 +227,7 @@ public class StateActivity extends Activity {
 		currentState	=	state;
 		initView();
 	}
-	
+
 	public void stopAudio(){
 		currentState.stopMediaPlayer();
 	}

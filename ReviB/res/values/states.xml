@@ -8,6 +8,8 @@ GENERAL
     <string name="state_image_description">State image</string>
     <string name="state_view_description">View help for state</string>
     <string name="state_reload_description">Reload the state</string>
+    <string name="state_pause_description">Pause the state</string>
+    <string name="state_play_description">Play the state</string>
     <string name="state_audio_description">Audio is disabled</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>

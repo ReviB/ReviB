@@ -52,7 +52,7 @@ public class SleepThread implements Runnable {
 		if(runner!= null && runner.isAlive()){
 			try{
 				runner.interrupt();
-				runner	=	null;
+				runner=null;
 			}catch(Exception e){
 				//Toast.makeText(activity, "SleepThread interrupt error: "+e.getMessage(), Toast.LENGTH_LONG).show();
 				e.printStackTrace();

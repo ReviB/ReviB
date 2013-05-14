@@ -8,6 +8,8 @@ GENERAL
     <string name="state_image_description">Egoeraren irudia</string>
     <string name="state_view_description">Egoeraren ikuspenerako laguntza</string>
     <string name="state_reload_description">Egoera birkargatu</string>
+    <string name="state_pause_description">Egoera gelditu</string>
+    <string name="state_play_description">Egoera martxan jarri</string>
     <string name="state_audio_description">Soinua ezgaituta dago</string>
     <string name="yes">Bai</string>
     <string name="no">Ez</string>

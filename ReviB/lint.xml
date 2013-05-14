@@ -4,6 +4,7 @@
         <ignore path="src/com/revib/revib/locale/LocaleFunctions.java" />
     </issue>
     <issue id="NewApi">
+        <ignore path="src/com/revib/revib/dialog/LocaleDialog.java" />
         <ignore path="src/com/revib/revib/settings/SettingsActivity.java" />
     </issue>
 </lint>

@@ -3,7 +3,6 @@
 	<!-- EU -->
     <!-- MainActivity -->
     <string name="app_name">ReviB BBB</string>
-    <string name="settings">Ezarpenak</string>
     <string name="main_question">Benetako larrialdi batean zaude edo Bihotz-Biriketako Bizkortzean trebatu nahiko zenuke?</string>
     <string name="real_cpr">Benetako larrialdia</string>
     <string name="practice_cpr">BBB-an trebatu</string>

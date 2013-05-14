@@ -93,7 +93,7 @@ public class BreathingManeuverState extends State {
 			SleepThread.getInstance().start(
 					((StateActivity) activity),
 					getNextState(-1),
-					500
+					50000
 			);
 		}
 	}

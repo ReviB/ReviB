@@ -89,8 +89,18 @@ public class StateActivity extends Activity {
 	
 	@Override
 	public void onWindowFocusChanged (boolean hasFocus){
-		if(hasFocus)
+		super.onWindowFocusChanged(hasFocus);
+		View decorView	=	getWindow().getDecorView();
+		if(hasFocus){
 			currentState.startAnimation();
+			
+			// Add Immersive mode
+			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
+				decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+												| View.SYSTEM_UI_FLAG_FULLSCREEN
+												| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+			}
+		}
 	}
 
 	@Override
